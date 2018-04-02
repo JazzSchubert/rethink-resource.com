@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+  body, html {
+    overflow: hidden;
+    padding-bottom: 700px !important;
+  }
+
+  body {
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	background-color: rgba(33,33,33,1.00);
+	transform: translateZ(0);
+  }
+.text-is-white{
+	color: rgba(255,255,255,1);
+}
+.tmask {
+    font-size: 150px; font-family: Verdana; font-weight: bold;
+    background: url(C16.jpg);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.stats {
+	color: #777777;
+	margin-bottom: 0.3vw;
+}
+.gallery {
+	display: flex;
+	clear: both;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	width: 100%;
+	transform: translateY(50vw);
+	padding-bottom: 1.5vw;
+}
+.thumbnail {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+.tntext{
+	text-align: left;
+	width: 15vw;
+}
+.tnright{
+	padding-top: 0.5vw;
+	align-items: flex-end;
+	text-align: right;
+	width: 15vw;
+}
+.gallery .thumbnail p {
+	font-size: 1vw;
+	margin-top: 0.2vw;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color: #AAAAAA;
+}
+.gallery .thumbnail h3{
+	font-size: 1.2vw;
+}
+.logofoot{
+	width: 12vw;
+	padding-top:  1.25vw;
+	padding-bottom: 0.75vw;
+	padding-right: -1vw;
+}
+.infomail{
+	text-decoration: underline;	
+}
+.phonumber{
+	text-decoration: underline;	
+}
+.legaldc{
+	column-count: 4;
+	color: rgba(255,255,255,1);
+	padding-top: 12vw;
+	padding-left: 3vw;
+	padding-right: 2vw;
+	position: inherit;
+	display: none;
+	z-index: 9;
+}
+.legaldc h3{
+	font-size: 1.4vw;
+	padding-left: 3vw;
+}
+.legaldc div{
+	padding-top: 2vw;
+}
+.legaldc h4{
+	padding-bottom: 0.5vw;
+	font-size: 1.2vw;
+}
+.legaldc p{
+	font-size: 0.8vw;
+	padding-bottom: 0.3vw;
+}
+.logodisc{
+	position: absolute;
+	width: 3vw;
+	margin-left: -1.5vw;
+}
+
+/*Checkbutton disclaimer*/
+
+.legaldc input { display: none; }
+
+#dsccb1:checked ~ div div .legaldc {
+	display: inherit;
+}
+
+input:checked:nth-child(1) + #navigationbar {
+	visibility: hidden;
+	display: none;
+}
+
+.clicklink{
+	font-size: 1vw;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color: #A3A3A3;
+}
+.clicklink:hover {
+	cursor: pointer;
+	color: rgba(250,250,250,1);
+}

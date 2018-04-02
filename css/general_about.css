@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+.about {
+	padding-left: 5vw;
+	padding-right: 5vw;
+	display: flex;
+	align-items: stretch;
+	background-color: rgba(255,255,255,1);
+	/*margin-top: 0px; */
+}
+.about .text-column{
+	padding-top: 5.5vw;
+	padding-bottom: 5vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+ .about .quote{
+	padding-top: 3.5vw;
+	padding-bottom: 3vw;
+}
+.about#about1{
+	height: 40vw;
+}
+.about#about2{
+	height: 50vw;
+}
+
+.hidden {
+	display: none;
+}
+.text-column {
+	width: 40vw;
+	font-size: 1.2vw;
+	font-weight: 150;
+	text-align: left;
+	line-height: 1.44vw;
+	float: right;
+	color: #666666;
+}
+.design-container{
+	width: 20vw;
+}
+.quote {
+	width: 30vw;
+	text-align: left;
+	line-height: 2.4vw;
+	color: #777777;
+	font-size: 2vw;
+}
+.quotew {
+	width: inherit;
+}
+.quotew p{
+	width: inherit;
+}
+.has-lots-of-text{
+	font-size: 1.8vw;
+	font-weight: 100;
+	line-height: 2.2vw;
+}
+.bar {
+	padding-top: 2vw;
+	font-weight: 200;
+	float: left;
+	line-height: 2.7vw;
+}
+.is-lowered{
+	padding-top: 5vw;
+}
+.tag {
+	padding-top: 5vh;
+	font-size: 1.5vw;
+	font-weight: 150;
+	float: left;
+}
+.is-indented{
+	padding-left: 5vw;
+}
+#truck{
+	/*position: absolute;
+	top: 3.5vw; left: 5vw;*/
+	width: 25vw;
+}
+#receivingFloor{
+	position: absolute;
+	top: 13.5vw; left: 35vw;
+	width: 11.7647vw;
+}
+#indicator100{
+	position: absolute;
+	top: 26.8vw; left: 42.5vw;
+	width: 4.04412vw;
+}
+#vertical-conveyor{
+	position: absolute;
+    top: 88.2vw; left: 46.6vw;
+    width: 2.8676vw;
+}
+#process-flow-arrow{
+	position: absolute;
+    top: 112.75vw; left: 48.5vw;
+    width: 10.3676vw;
+}

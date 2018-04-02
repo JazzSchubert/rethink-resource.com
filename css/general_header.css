@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+header{
+	float: left;
+	width: 100vw;
+	height: 5vw;
+	position: fixed;
+	z-index: 9;
+}
+nav{
+	margin: 0 auto;
+	float: right;
+	width: auto;
+	text-align: left;
+	margin-right: 2vw;
+}
+header nav ul {
+	list-style: none;
+	float: right;
+}
+nav ul li {
+	float: left;
+	font-size: 1.4vw;
+	text-align: left;
+	margin-top: 1.7vw;
+	margin-right: 1.7vw;
+	letter-spacing: 0.15vw;
+	font-weight: bold;
+}
+ul li a {
+	transition: .3s ease;
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+}
+.black-navbar{
+	color: rgba(33,33,33,1);
+}
+.white-bg-navbar{
+	background-color: rgba(255,255,255,1);
+
+}
+.dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+}
+.dropdown-content a {
+	display: block;
+	font-size: 1.05vw;
+    float: none;
+	margin-top: 0.5vw;
+    text-align: left;
+    transition: .9s ease;
+}
+.dropdown-content{
+	color: rgba(255,255,255,0);
+}
+header nav ul li a:hover{
+	background: green; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right top, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,255), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* Standard syntax */
+	-webkit-text-fill-color: transparent;
+  	-webkit-background-clip: text;
+	transition: .3s ease;
+	/*color: rgba(133,133,133,1);*/
+}
+.dropdown:hover .dropdown-content, .dropdown-content:hover{
+	transition: .9s ease;
+	visibility: visible;
+}
+
+/* IMAGE */
+
+.logosmall{
+	float: left;
+	width: 3vw;
+	margin-top: 1.1vw;
+	margin-left: 1.5vw;
+}
+
+/* HEADLINE */
+
+.headline {
+	text-align: left;
+	padding-left: 12vw;
+	padding-top: 21vw;
+	letter-spacing: 0.15vw;
+
+}
+.headline_description {
+	text-align: left;
+	padding-left: 12.5vw;
+	padding-top: 3.7vw;
+	width: 60vw;
+	float: left;
+	font-weight: lighter;
+	line-height: 3.2vw;
+	margin-top: 0vw;
+	margin-right: 0vw;
+	margin-bottom: 0vw;
+	margin-left: 0vw;
+}
+.hidden{
+    visibility: hidden;
+}
+.visible{
+	visibility: visible;
+}
+.fade-out{
+	color: rgba(255,255,255,0);
+	transition: 0.5s ease;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+.fade-in{
+	color: rgba(255,255,255,1);
+	transition: 0.5s ease;
+	-webkit-transition: all 0.5s ease-in-out;
+}

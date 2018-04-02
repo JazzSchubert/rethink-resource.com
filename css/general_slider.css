@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.slider {
+	position: relative;
+	overflow: hidden;
+	height: 30vw;
+	width: 300vw;
+	margin: 0;
+	left: 0;
+}
+
+.slider .slide#sld-1 {
+	position: relative;
+	width: 500vw;
+	z-index: 6;
+	animation: slidy 20s infinite;
+}
+
+.slide_head {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	font-size: 3vw;
+	text-align: center;
+	width: 80vw;
+	padding-top: 7.5vw;
+	padding-left: 10vw;
+	padding-right: 10vw;
+	color: rgba(255,255,255,1);
+}
+.slide_link {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	font-size: 1.8vw;
+	text-align: left;
+	width: 100vw;
+	padding-top: 25vw;
+	padding-left: 60vw;
+	color: rgba(255,255,255,1);
+}
+
+#slhead1{
+	left: 0vw;
+}
+#sllink1{
+	left: 0vw;
+}
+#slhead2{
+	left: 100vw;
+}
+#sllink2{
+	left: 100vw;
+}
+#slhead3{
+	left: 200vw;
+}
+#sllink3{
+	left: 200vw;
+}
+
+.slider .slide img {
+	width: 100vw;
+	z-index: 1;
+	float:left;
+}
+
+.slider {
+	/*animation: slidy 40s infinite;*/
+}
+
+input:checked:nth-child(1) ~ .slide#sld-1 {
+	position: relative;
+	z-index: 6;
+	animation: 0;
+	transition: left 0.8s ease;
+	left: 0vw;
+}input:checked:nth-child(2) ~ .slide#sld-1 {
+	position: relative;
+	z-index: 6;
+	animation: 0;
+	transition: left 0.8s ease;
+	left: -100vw;
+}input:checked:nth-child(3) ~ .slide#sld-1 {
+	position: relative;
+	z-index: 6;
+	animation: 0;
+	transition: left 0.8s ease;
+	left: -200vw;
+}
+
+/* BUTTONS BEGIN HERE */
+
+.slider input { display: none; }
+
+.nav-dots {
+	width: 100vw;
+	height: 2vw;
+	padding-top: 26vw;
+	display: block;
+	position: fixed;
+	text-align: center;
+	z-index: 7;
+}
+.nav-dots .nav-dot {
+	top: 0.4vw;
+	width: 1.2vw;
+	height: 1.2vw;
+	margin: 0 0.3vw;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0,0,0,0.6);
+}
+.nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(80,80,80, 0.8);
+}
+
+/*.nav-dots label#img-dot-1 + */
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3{
+	background: rgba(0, 0, 0, 1);
+}
+
+@keyframes slidy {
+	0%{
+		left: 0vw;
+	}
+	21%{
+		left: 0vw;
+	}
+	24%{
+		left: -100vw;
+	}
+	45%{
+		left: -100vw;
+	}
+	48%{
+		left: -200vw;
+	}
+	69%{
+		left: -200vw;
+	}
+	72%{
+		left: -100vw;
+	}
+	93%{
+		left: -100vw;
+	}
+	96%{
+		left: 0vw;
+	}
+}

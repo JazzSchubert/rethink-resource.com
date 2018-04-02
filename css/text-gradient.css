@@ -1,0 +1,25 @@
+@supports (mix-blend-mode: lighten) {
+
+.quotew {
+    content: '';
+    /*display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;*/
+    display: inline-block;
+    background: -webkit-linear-gradient(right top, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(to bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,255), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* Standard syntax */
+    pointer-events: none;
+}
+.quotew .gradient1{
+    /*position: relative;*/
+    color: #000;
+    background: #fff;
+    mix-blend-mode: screen;
+}
+.quotew {
+    mix-blend-mode: multiply;
+}
+}
