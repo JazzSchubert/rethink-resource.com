@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* iParallax base styles
+  --------------------------------------------- */
+
+.iparallax {
+    /*height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    /*clear: both;
+    /*font-size: 100%;*/
+}
+
+  .aparallax__group {
+    position: relative;
+    /*height: 500px; /* fallback for older browsers */
+    height: 50vw;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .bparallax__group {
+    position: relative;
+    /*height: 500px; /* fallback for older browsers */
+    height: 50vw;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  
+  .cparallax__group {
+    position: relative;
+    /*height: 500px; /* fallback for older browsers */
+    height: 50vw;
+    -webkit-transform-style: flat;
+    transform-style: flat;
+    height: initial;
+    min-height: initial;
+    /*overflow-y: auto;*/
+    /*transform: translateY(50vw) translateY(-100vh);*/
+  }
+
+  .iparallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .iparallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+
+  .iparallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+  .iparallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+
+  .iparallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }
+
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  /* style the groups
+  --------------------------------------------- */
+
+  #group0 {
+	font-size: 3vw;
+  transform: translateY(50vw) translateY(-100vh);
+  }
+  #landing-image{
+    width: 100vw;
+  }
+  #circado-closing-image{
+    transform: translateY(0);
+    width: 100vw;
+  }
+.header-translate{
+    transform: translateY(25vh) translateY(-12.5vw);
+}
+.shift-foooter{
+    margin-top: 0vw;
+    /*transform: translateY(35vw) translateY(-35vh);*/
+}
+  #group1 {
+    z-index: 5; /* slide over group 2 */
+  }
+  #group1 .iparallax__layer--base {
+    background: rgba(255,255,255,1);
+  }
+  #group2 {
+    z-index: 3; /* slide under groups 1 and 3 */
+    /*transform: translateZ(0px) scale(1.0, 1.0);*/
+  }
+  /*#closing-container{
+    /*transform: translateZ(-300px) scale(3, 3);
+    /*transform: translate3d(0,0,0);
+  }
+
+    /*background: green; /* For browsers that do not support gradients */
+    /*background: -webkit-linear-gradient(right top, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Safari 5.1 to 6.0 */
+    /*background: -o-linear-gradient(bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient(bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Firefox 3.6 to 15 */
+    /*background: linear-gradient(to bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,255), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* Standard syntax */
