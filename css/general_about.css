@@ -28,7 +28,9 @@
 .about#about2{
 	height: 50vw;
 }
-
+.about#aboutc{
+	height: 50vw;
+}
 .hidden {
 	display: none;
 }
@@ -45,7 +47,7 @@
 	width: 20vw;
 }
 .design-box{
-	height: 22vw;
+	height: 25vw;
 }
 .quote {
 	width: 30vw;
@@ -90,12 +92,12 @@
 }
 #screenshot1{
 	position: absolute;
-	top: 7vw; left: 5vw;
+	top: 7vw; left: 7vw;
 	width: 25vw;
 }
 #screenshot2{
 	position: absolute;
-	top: 15vw; left: 15vw;
+	top: 15vw; left: 17vw;
 	width: 25vw;
 }
 #receivingFloor{
