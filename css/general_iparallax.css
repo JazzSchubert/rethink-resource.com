@@ -1,8 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/* iParallax base styles
-  --------------------------------------------- */
+/* --- iParallax base styles --- */
 
 .iparallax {
     /*height: 500px; /* fallback for older browsers */
@@ -11,77 +10,52 @@
     overflow-y: scroll;
     -webkit-perspective: 300px;
     perspective: 300px;
-    /*clear: both;
-    /*font-size: 100%;*/
+    /*clear: both;*/
 }
-
-  .aparallax__group {
+.parallaxGroup {
     position: relative;
     /*height: 500px; /* fallback for older browsers */
-    height: 50vw;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-  }
-
-  .bparallax__group {
-    position: relative;
-    /*height: 500px; /* fallback for older browsers */
-    height: 120vw;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-  
-  .cparallax__group {
-    position: relative;
-    /*height: 500px; /* fallback for older browsers */
-    height: 50vw;
-    -webkit-transform-style: flat;
+}
+.hackyGroup {
     transform-style: flat;
     height: initial;
     min-height: initial;
-    /*overflow-y: auto;*/
-    /*transform: translateY(50vw) translateY(-100vh);*/
-  }
-
-  .iparallax__layer {
+}
+.iparallaxLayer {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-  }
-
-  .iparallax__layer--fore {
+}
+.foregroundLayer {
     -webkit-transform: translateZ(90px) scale(.7);
     transform: translateZ(90px) scale(.7);
     z-index: 1;
-  }
-
-  .iparallax__layer--base {
+}
+.baseLayer {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
-  }
-
-  .iparallax__layer--back {
+}
+.backgroundLayer {
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
     z-index: 3;
-  }
-
-  .iparallax__layer--deep {
+}
+.deepBackgroundLayer {
     -webkit-transform: translateZ(-600px) scale(3);
     transform: translateZ(-600px) scale(3);
     z-index: 2;
-  }
-
-  * {
+}
+* {
     margin:0;
     padding:0;
-  }
+}
 
-  /* style the groups
-  --------------------------------------------- */
+/* --- style the groups --- */
 
   #group0 {
 	font-size: 3vw;
@@ -104,16 +78,12 @@
   #group1 {
     z-index: 5; /* slide over group 2 */
   }
-  #group1 .iparallax__layer--base {
+  #group1 .baseLayer {
     background: rgba(255,255,255,1);
   }
   #group2 {
     z-index: 3; /* slide under groups 1 and 3 */
     /*transform: translateZ(0px) scale(1.0, 1.0);*/
-  }
-  /*#closing-container{
-    /*transform: translateZ(-300px) scale(3, 3);
-    /*transform: translate3d(0,0,0);
   }
 
     /*background: green; /* For browsers that do not support gradients */
