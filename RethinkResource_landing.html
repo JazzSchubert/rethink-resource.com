@@ -77,17 +77,20 @@ function OnScrollDiv () {
 
 <body>
 		
-<!-- Navigation -->
-
 <input type="checkbox" name="disccb" id="dsccb1" class="hidden"/>
 
+<!-- Navigation -->
+
 <header id="navigationbar">
-	<img class="visible logosmall" src="images/ReRe_Icon_RGB_white.png" alt="image" id="top-page-logo-white"/>
-	<img class="hidden logosmall" src="images/ReRe_Icon_RGB_color.png" alt="image" id="top-page-logo-color"/>
+	<div class="logosmall-container">
+	<img class="logosmall visible" src="images/ReRe_Icon_RGB_white.png" alt="image" id="top-page-logo-white"/>
+	<img class="logosmall hidden" src="images/ReRe_Icon_RGB_color.png" alt="image" id="top-page-logo-color"/>
+	<a  href="RethinkResource_landing.html"></a>
+	</div>
     <nav>
       	<ul>
 			<li class="dropdown">
-   				<a href="#about" name="dropbtn">ABOUT 
+   				<a href="RethinkResource_about.html" name="dropbtn">ABOUT 
     			</a>
 			</li> 
 	        <li class="dropdown">
@@ -107,7 +110,7 @@ function OnScrollDiv () {
 			  	</div>
 			</li>
 			<li class="dropdown">
-   				<a href="#about" name="dropbtn">CIRCADO 
+   				<a href="RethinkResource_Circado.html" name="dropbtn">CIRCADO 
     		  	</a>
 			</li>
 	        <li class="dropdown">
@@ -126,24 +129,22 @@ function OnScrollDiv () {
 
 <div class="iparallax" id="scrollcontainer" onscroll="OnScrollDiv ()">
 
-<div id="group0" class="aparallax__group">
-	<div class="iparallax__layer iparallax__layer--base">
-	</div>
-	<div class="iparallax__layer iparallax__layer--back">
+<div id="group0" class="parallaxGroup height-is-50">
+	<div class="iparallaxLayer backgroundLayer">
 		<h2 class="headline text-is-white fade-in header-translate" id="page-headline">Turning Waste into Opportunities
 		</h2>
 		<p class="headline_description text-is-white fade-in header-translate" id="page-caption">
 		RethinkResource facilitiates Material Efficiency for the Producing Industry.
 		</p>
 	</div>
-	<div class="iparallax__layer iparallax__layer--deep">
+	<div class="iparallaxLayer deepBackgroundLayer">
 		<img src="images/RethinkResource_Island_bad.jpg" alt="RethinkResource Island" id="landing-image">
 	</div>
 </div>
 
 
-<div id="group1" class="bparallax__group">
-  	<div class="iparallax__layer iparallax__layer--base">
+<div id="group1" class="parallaxGroup height-is-120">
+  	<div class="iparallaxLayer baseLayer">
 
 		<div class="about" id="about1">
 			<div class="quote">
@@ -209,7 +210,7 @@ function OnScrollDiv () {
 			</div>
 	    	<div class="text-column">
 				<h3>How do you leverage unused potential?</h3>
-				<p>Circular innovation is triggered by the existence of a side stream that is currently undervalued. We apply cutting-edge science and expertise/ our wide range of expertise between product innovation and process engineering/ activate our network to explore material properties and discover value by asking “What is the wasted side-stream, and what can it become?”</p>
+				<p>Circular innovation is triggered by the existence of a side stream that is currently undervalued. We apply  our wide range of expertise between product innovation and process engineering and activate our network to explore material properties and discover value by asking “What is the wasted side-stream, and what can it become?”</p>
 				<p>Not every innovation is an invention. Sometimes, it is about scaling up niche innovations and taking them to the mainstream. Sometimes it is about reproducing established innovations in a new industry, or just about making a new cross-industry link between buyers and sellers of secondary resources. In some cases, it is about highlighting the application of secondary resources and creating that critical upcycling value that conscious consumers love.</p>
 				<p>Whatever your case is, we provide the network and knowhow to implement the right upcycling innovations for your industry. We manage the process of open innovation with supplier and partner companies across Europe, and at the same time we take a close look at various business cases and reduce them to a concrete portfolio while they gain traction. It is particularly important to us to assist you with the implementation in order to create sustainable added value.</p><br>
 				<p class="is-indented">See what others have done in our UPCYCLING section</p>
@@ -220,8 +221,8 @@ function OnScrollDiv () {
 </div>
 
 	
-<div id="group2" class="cparallax__group">
-	<div class="iparallax__layer iparallax__layer--base" id="closing-container">
+<div id="group2" class="parallaxGroup height-is-50 hackyGroup">
+	<div class="iparallaxLayer baseLayer" id="closing-container">
 		<div class="legaldc">
 		<img class="visible logodisc" src="images/ReRe_Icon_RGB_white.png" alt="image" id="disclaimer-logo-white"/>
 		<h3>Datenschutzbestimmungen von RethinkResource</h3>
@@ -282,32 +283,32 @@ function OnScrollDiv () {
 
 <div class="gallery shift-footer">
 	<ul class="thumbnail tntext">
-    	<h3 class="stats">Service</h3>
-    	<p>Team</p>
-		<p>Kontak</p>
-		<p>Newsletter</p>
-		<p>FAQ</p>
-    </ul>
+    	<h3 class="stats">RethinkResource</h3>
+    	<p>Press</p>
+		<p>Jobs</p>
+		<p>Downloads</p>
+		<label for="dsccb1" class="clicklink" id="clicklink1">Disclaimer</label>
+	</ul>
     <ul class="thumbnail tntext">
 	    <h3 class="stats">About Us</h3>
-	    <p>Blog</p>
-		<p>Firmengeschichte</p>
-		<p>Umweltschutz</p>
-		<p>Auszeichnungen</p>
+		<p>Values</p>
+		<p>Team</p>
+		<p>Partner</p>
+		<p>Testemonials</p>
     </ul>
     <ul class="thumbnail tntext">
-    	<h3 class="stats">RethinkResource</h3>
-    	<p>Jobs</p>
-		<p>Impressum</p>
-		<label for="dsccb1" class="clicklink" id="clicklink1">Disclaimer</label>
-		<p>AGB</p>
+    	<h3 class="stats">Social Media</h3>
+    	<p>Blag</p>
+		<p>LinkedIn</p>
+		<p>Twatter</p>
+		<p>Facebook</p>
     </ul>
 	<ul class="thumbnail tnright">
 		<img class="logofoot" src="images/ReRe_Logo_RGB_white.png" alt="image"/>
     	<h3 class="stats">&copy; RethinkResource GmbH</h3>
     	<p>Technoparkstrasse 1</p>
 		<p>CH-8005 Zürich</p>
-		<p class="phonumber">+41 44 500 24 11</p>
+		<p class="phonumber">+41 79 726 35 00</p>
 		<p class="infomail">info@rethink-resource.com</p>
     </ul>
 </div>

@@ -21,6 +21,20 @@
     -webkit-background-clip: text;
     color: transparent;
 }
+
+/* -- Height of parallax groups -- */
+
+.height-is-50{
+	height: 50vw;
+}
+.height-is-120{
+	height: 120vw;
+}
+.height-is-230{
+	height: 230vw;
+}
+
+
 .stats {
 	color: #777777;
 	margin-bottom: 0.3vw;

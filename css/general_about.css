@@ -28,7 +28,16 @@
 .about#about2{
 	height: 50vw;
 }
-
+.about#about3{
+	position: relative;
+	/*display: inline-block;*/
+	height: 230vh;
+	text-align: center;
+	display: block;
+}
+.about#aboutc{
+	height: 50vw;
+}
 .hidden {
 	display: none;
 }
@@ -43,6 +52,9 @@
 }
 .design-container{
 	width: 20vw;
+}
+.design-box{
+	height: 25vw;
 }
 .quote {
 	width: 30vw;
@@ -83,6 +95,16 @@
 #truck{
 	/*position: absolute;
 	top: 3.5vw; left: 5vw;*/
+	width: 25vw;
+}
+#screenshot1{
+	position: absolute;
+	top: 7vw; left: 7vw;
+	width: 25vw;
+}
+#screenshot2{
+	position: absolute;
+	top: 15vw; left: 17vw;
 	width: 25vw;
 }
 #receivingFloor{

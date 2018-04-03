@@ -14,7 +14,7 @@
 	position: relative;
 	width: 500vw;
 	z-index: 6;
-	animation: slidy 20s infinite;
+	animation: slidy 24s infinite;
 }
 
 .slide_head {
