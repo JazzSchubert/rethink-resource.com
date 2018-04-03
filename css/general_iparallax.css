@@ -33,11 +33,16 @@
 .foregroundLayer {
     -webkit-transform: translateZ(90px) scale(.7);
     transform: translateZ(90px) scale(.7);
-    z-index: 1;
+    z-index: 6;
 }
 .baseLayer {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    z-index: 5;
+}
+.nearBackgroundLayer {
+    -webkit-transform: translateZ(-150px) scale(1.5);
+    transform: translateZ(-150px) scale(1.5);
     z-index: 4;
 }
 .backgroundLayer {
@@ -60,6 +65,7 @@
   #group0 {
 	font-size: 3vw;
   transform: translateY(50vw) translateY(-100vh);
+  z-index: 3
   }
   #landing-image{
     width: 100vw;
@@ -68,6 +74,9 @@
     transform: translateY(0);
     width: 100vw;
   }
+#team-image{
+    width:100vw;
+}
 .header-translate{
     transform: translateY(25vh) translateY(-12.5vw);
 }
@@ -85,7 +94,16 @@
     z-index: 3; /* slide under groups 1 and 3 */
     /*transform: translateZ(0px) scale(1.0, 1.0);*/
   }
-
+#groupa3{
+    font-size: 3vw;
+    z-index: 4;
+    /*transform: translateY(50vw) translateY(-100vh);*/
+}
+#groupa4{
+    z-index: 5;
+    background: rgba(255,255,255,1);
+    /*transform: translateY(-20vw);*/
+}
     /*background: green; /* For browsers that do not support gradients */
     /*background: -webkit-linear-gradient(right top, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Safari 5.1 to 6.0 */
     /*background: -o-linear-gradient(bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Opera 11.1 to 12.0 */

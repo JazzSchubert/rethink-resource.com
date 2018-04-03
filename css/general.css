@@ -27,13 +27,26 @@
 .height-is-50{
 	height: 50vw;
 }
+.height-is-70{
+	height: 70vw;
+}
+.height-is-90{
+	height: 90vw;
+}
 .height-is-120{
 	height: 120vw;
+}
+.height-is-160{
+	height: 160vw;
 }
 .height-is-230{
 	height: 230vw;
 }
 
+.shift-is-10-20{
+	transform: translateY(-10vw);
+    margin-bottom: -20vw;
+}
 
 .stats {
 	color: #777777;

@@ -47,7 +47,7 @@ function OnScrollDiv () {
 		}
 
 
-		if (relativeScrollHeight >= 90 && relativeScrollHeight < 335 && !(relativeScrollHeight >= 175 && relativeScrollHeight < 230)){
+		if (relativeScrollHeight >= 90 && relativeScrollHeight < 535 && !(relativeScrollHeight >= 260 && relativeScrollHeight < 380)){
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.add("black-navbar");
 			}
@@ -58,7 +58,7 @@ function OnScrollDiv () {
 			colorLogo.classList.remove("hidden");
 			colorLogo.classList.add("visible");
 		}
-		if (relativeScrollHeight < 90 || relativeScrollHeight >= 335 || (relativeScrollHeight >= 175 && relativeScrollHeight < 230)){
+		if (relativeScrollHeight < 90 || relativeScrollHeight >= 535 || (relativeScrollHeight >= 260 && relativeScrollHeight < 380)){
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.remove("black-navbar");
 			}
@@ -144,7 +144,7 @@ function OnScrollDiv () {
 </div>
 
 
-<div id="group1" class="parallaxGroup height-is-230">
+<div id="group1" class="parallaxGroup height-is-90">
   	<div class="iparallaxLayer baseLayer">
 
 		<div class="about" id="about1">
@@ -155,18 +155,7 @@ function OnScrollDiv () {
 				</p>
 				</div>
 			</div>
-			<div class="design-container">
-				<img src="img/Receiving_Floor_Process_Flow.png" alt="receiving floor image" id="receivingFloor"/>
-				<div class="landing-linesshape3"></div>
-				<img src="img/Number_Indicator_Process_Flow.png" alt="number indicator image" id="indicator100"/>
-				<div class="landing-linesshape1"></div>
-				<div class="landing-linesshape2"></div>
-				<div class="landing-linesshape4"></div>
-				<div class="square-box" id="landing-box1"></div>
-				<img src="img/Conveyor_vertical_Process_Flow.png" alt="vertical conveyor image" id="vertical-conveyor"/>
-				<div class="square-box-with-diagonal" id="landing-box2"></div>
-				<img src="img/Arrow_Process_Flow.png" alt="process flow arrow image" id="process-flow-arrow"/>
-			</div>
+			<div class="design-container"></div>
 	    	<div class="text-column">
 	    		<h3>Welcome!</h3>
 				<p>We are RethinkResource, a Swiss startup with the mission to turn industrial side streams into sustainable and profitable business opportunities.</p>
@@ -176,7 +165,7 @@ function OnScrollDiv () {
 			</div>
 	    </div>
 		  
-		<div class="slider">
+		<!--div class="slider">
 			<input type="radio" name="radio-btn" id="img-1" />
 			<input type="radio" name="radio-btn" id="img-2" />
 			<input type="radio" name="radio-btn" id="img-3" />
@@ -197,7 +186,7 @@ function OnScrollDiv () {
 		    	<label for="img-2" class="nav-dot" id="img-dot-2"></label>
 	    		<label for="img-3" class="nav-dot" id="img-dot-3"></label>
 	   	 	</ul>			
-		</div>	
+		</div-->	
 		  
 		<div class="about" id="about2">
 			<div class="quote">
@@ -217,6 +206,26 @@ function OnScrollDiv () {
 				<p class="is-indented">See what others have done in our UPCYCLING section</p>
 			</div>
 	    </div>
+
+	</div>
+	</div>
+
+<div id="groupa3" class="parallaxGroup height-is-50 shift-is-10-20">
+	<div class="iparallaxLayer baseLayer"></div>
+	<div class="iparallaxLayer nearBackgroundLayer">
+		<h2 class="headline text-is-white fade-in header-translate" id="team-headline">Meet our Team
+		</h2>
+		<p class="headline_description text-is-white fade-in" id="team-caption">
+		RethinkResource facilitiates Material Efficiency for the Producing Industry.
+		</p>
+	</div>
+	<div class="iparallaxLayer backgroundLayer">
+		<img src="img/team_colour.jpg" alt="RethinkResource Island" id="team-image">
+	</div>
+</div>
+
+<div id="groupa4" class="parallaxGroup height-is-160">
+  	<div class="iparallaxLayer baseLayer">
 
 	<div class="about" id="about3">
 		<div class="card">
