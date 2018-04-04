@@ -112,19 +112,9 @@ header > div > a{
 	margin-bottom: 0vw;
 	margin-left: 0vw;
 }
-.hidden{
-    visibility: hidden;
+.header-translate-vh-vw{
+    transform: translateY(25vh) translateY(-12.5vw);
 }
-.visible{
-	visibility: visible;
-}
-.fade-out{
-	color: rgba(255,255,255,0);
-	transition: 0.5s ease;
-	-webkit-transition: all 0.5s ease-in-out;
-}
-.fade-in{
-	color: rgba(255,255,255,1);
-	transition: 0.5s ease;
-	-webkit-transition: all 0.5s ease-in-out;
+.header-translate-is-12-vw{
+	transform: translateY(-12.5vw);
 }

@@ -36,6 +36,12 @@
 .height-is-120{
 	height: 120vw;
 }
+.height-is-130{
+	height: 130vw;
+}
+.height-is-140{
+	height: 140vw;
+}
 .height-is-160{
 	height: 160vw;
 }
@@ -47,6 +53,35 @@
 	transform: translateY(-10vw);
     margin-bottom: -20vw;
 }
+
+.hidden{
+    visibility: hidden;
+}
+.visible{
+	visibility: visible;
+}
+.fade-out{
+	color: rgba(255,255,255,0);
+	transition: 0.5s ease;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+.fade-in{
+	color: rgba(255,255,255,1);
+	transition: 0.5s ease;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+
+.design-container{
+	width: 20vw;
+}
+.design-box{
+	height: 25vw;
+}
+.design-bar-h-5-w-90{
+	width: 90vw;
+	height: 5vw;
+}
+
 
 .stats {
 	color: #777777;
