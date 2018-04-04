@@ -63,6 +63,7 @@
 
 .hidden{
     visibility: hidden;
+    display: none;
 }
 .visible{
 	visibility: visible;

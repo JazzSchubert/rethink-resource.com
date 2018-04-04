@@ -16,7 +16,7 @@
 
 <script>
 
-object.addEventListener ("scroll", handler, useCapture);
+document.getElementById("scrollcontainer").addEventListener ("scroll", handler, useCapture);
 
 function OnScrollDiv () {
 
@@ -35,8 +35,7 @@ function OnScrollDiv () {
 			pageCaption.classList.remove("fade-in");
 			pageHeadline.classList.add("fade-out");
 			pageCaption.classList.add("fade-out");
-		}
-		if (relativeScrollHeight < 50) {
+		} else {
 			pageHeadline.classList.remove("fade-out");
 			pageCaption.classList.remove("fade-out");
 			pageHeadline.classList.add("fade-in");
@@ -54,8 +53,7 @@ function OnScrollDiv () {
 			whiteLogo.classList.add("hidden");
 			colorLogo.classList.remove("hidden");
 			colorLogo.classList.add("visible");
-		}
-		if (relativeScrollHeight < 90 || relativeScrollHeight >= 335 || (relativeScrollHeight >= 175 && relativeScrollHeight < 230)){
+		} else {
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.remove("black-navbar");
 			}
@@ -136,7 +134,7 @@ function OnScrollDiv () {
 		</p>
 	</div>
 	<div class="iparallaxLayer deepBackgroundLayer">
-		<img src="img/Circado_bad.jpg" alt="RethinkResource Island" id="landing-image">
+		<img src="img/Circado_bad.jpg" alt="RethinkResource Island" class="width-is-100" id="landing-image">
 	</div>
 </div>
 
@@ -144,7 +142,7 @@ function OnScrollDiv () {
 <div id="group1" class="parallaxGroup height-is-50">
   	<div class="iparallaxLayer baseLayer">
 
-		<div class="about" id="aboutc">
+		<div class="about background-is-white" id="aboutc">
 			<div class="quote">
 				<img src="img/Circado_Screenshot_1.png" alt="circado screenshot list" id="screenshot1"/>
 				<img src="img/Circado_Screenshot_2.png" alt="circado screenshot map" id="screenshot2"/>
@@ -224,7 +222,7 @@ function OnScrollDiv () {
 			</li>
 			</div>
 		</div>
-		<img src="img/Circado_streets_bad.jpg" alt="Circado Streets" id="closing-image"/>
+		<img src="img/Circado_streets_bad.jpg" alt="Circado Streets" class="width-is-100" id="closing-image"/>
 	</div>
 </div>
 

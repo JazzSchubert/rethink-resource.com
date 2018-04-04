@@ -19,12 +19,33 @@
 
 <script>
 
-object.addEventListener ("scroll", handler, useCapture);
+document.getElementById("scrollcontainer").addEventListener ("scroll", handler, useCapture);
 
 function OnScrollDiv () {
 
-    const div = document.getElementById ("scrollcontainer");
-    var relativeScrollHeight = (div.scrollTop / window.innerWidth * 200).toFixed(1);
+	const div = document.getElementById ("scrollcontainer");
+
+    var ww = window.innerWidth;
+
+    var group4height = ((6720 + ww / 10) / ww * 100).toFixed(2);
+    var group6height = ((1680 + ww / 10) / ww * 100).toFixed(2);
+
+    if (828 <= ww && ww < 1245) {
+    	group4height = ((2240 + ww / 10) / ww * 100).toFixed(2);
+    	group6height = ((1120 + ww / 10) / ww * 100).toFixed(2);
+    }
+    else if (1245 <= ww && ww < 1661) {
+    	group4height = ((1680 + ww / 10) / ww * 100).toFixed(2);
+    	group6height = ((560 + ww / 10) / ww * 100).toFixed(2);
+    }
+    else if (1661 <= ww) {
+    	group4height = ((1120 + ww / 10) / ww * 100).toFixed(2);
+    	group6height = ((560 + ww / 10) / ww * 100).toFixed(2);
+    }
+
+    var RSH = (div.scrollTop / ww * 100).toFixed(2);
+
+
 	const navbarelements = document.getElementsByName("dropbtn");
 	const pageHeadline = document.getElementById("page-headline");
 	const pageCaption = document.getElementById("page-caption");
@@ -35,38 +56,35 @@ function OnScrollDiv () {
 	const valuesImage = document.getElementById("values-image");
 	const partnersImage = document.getElementById("partners-image");
 
-		if (relativeScrollHeight >= 50) {
+		if (RSH >= 25) {
 			pageHeadline.classList.remove("fade-in");
 			pageCaption.classList.remove("fade-in");
 			pageHeadline.classList.add("fade-out");
 			pageCaption.classList.add("fade-out");
-		}
-		if (relativeScrollHeight < 50) {
+		} else {
 			pageHeadline.classList.remove("fade-out");
 			pageCaption.classList.remove("fade-out");
 			pageHeadline.classList.add("fade-in");
 			pageCaption.classList.add("fade-in");
 		}
 
-		if (relativeScrollHeight >= 580) {
+		if (RSH - group4height - group6height >= 100) {
 			valuesImage.classList.remove("hidden")
 			valuesImage.classList.add("visible")
-		}
-		if (relativeScrollHeight < 580) {
+		} else {
 			valuesImage.classList.remove("visible")
 			valuesImage.classList.add("hidden")
 		}
 
-		if (relativeScrollHeight >= 750) {
+		if (RSH - group4height - group6height >= 180) {
 			partnersImage.classList.remove("hidden")
 			partnersImage.classList.add("visible")
-		}
-		if (relativeScrollHeight < 750) {
+		} else {
 			partnersImage.classList.remove("visible")
 			partnersImage.classList.add("hidden")
 		}
 
-		if (relativeScrollHeight >= 90 && relativeScrollHeight < 535 && !(relativeScrollHeight >= 260 && relativeScrollHeight < 380)){
+		if (RSH >= 45 && RSH - group4height < 170 && !(RSH >= 142 && RSH < 165) || (RSH -group4height >= 198 && RSH - group4height - group6height < 200) || (RSH - group4height - group6height >= 225 && RSH - group4height - group6height < 278) || (RSH - group4height - group6height >= 305 && RSH - group4height - group6height < 400) || (RSH - group4height - group6height >= 428 && RSH - group4height - group6height < 470)) {
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.add("black-navbar");
 			}
@@ -76,8 +94,7 @@ function OnScrollDiv () {
 			whiteLogo.classList.add("hidden");
 			colorLogo.classList.remove("hidden");
 			colorLogo.classList.add("visible");
-		}
-		if (relativeScrollHeight < 90 || relativeScrollHeight >= 535 || (relativeScrollHeight >= 260 && relativeScrollHeight < 380)){
+		} else {
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.remove("black-navbar");
 			}
@@ -88,7 +105,7 @@ function OnScrollDiv () {
 			colorLogo.classList.remove("visible");
 			colorLogo.classList.add("hidden");
 		}
-}
+};
 	
 </script>
 

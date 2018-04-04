@@ -18,7 +18,7 @@
 
 <script>
 
-object.addEventListener ("scroll", handler, useCapture);
+document.getElementById("scrollcontainer").addEventListener ("scroll", handler, useCapture);
 
 function OnScrollDiv () {
 
@@ -37,8 +37,7 @@ function OnScrollDiv () {
 			pageCaption.classList.remove("fade-in");
 			pageHeadline.classList.add("fade-out");
 			pageCaption.classList.add("fade-out");
-		}
-		if (relativeScrollHeight < 50) {
+		} else {
 			pageHeadline.classList.remove("fade-out");
 			pageCaption.classList.remove("fade-out");
 			pageHeadline.classList.add("fade-in");
@@ -56,8 +55,7 @@ function OnScrollDiv () {
 			whiteLogo.classList.add("hidden");
 			colorLogo.classList.remove("hidden");
 			colorLogo.classList.add("visible");
-		}
-		if (relativeScrollHeight < 90 || relativeScrollHeight >= 335 || (relativeScrollHeight >= 175 && relativeScrollHeight < 230)){
+		} else {
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.remove("black-navbar");
 			}
