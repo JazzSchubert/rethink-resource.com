@@ -8,8 +8,6 @@
 	padding-right: 5vw;
 	display: flex;
 	align-items: stretch;
-	background-color: rgba(255,255,255,1);
-	/*margin-top: 0px; */
 }
 .about .text-column{
 	padding-top: 5.5vw;
@@ -22,16 +20,15 @@
 	padding-top: 3.5vw;
 	padding-bottom: 3vw;
 }
-.about#about1{
+.about#about1, .about#about6{
 	height: 40vw;
 }
-.about#about2{
+.about#about2, .about#about7, .about#about8{
 	height: 50vw;
 }
-.about#about3{
+.about#about3, .about#about4{
 	position: relative;
 	/*display: inline-block;*/
-	height: 230vh;
 	text-align: center;
 	display: block;
 }

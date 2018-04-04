@@ -4,7 +4,6 @@
 /* --- iParallax base styles --- */
 
 .iparallax {
-    /*height: 500px; /* fallback for older browsers */
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -14,7 +13,6 @@
 }
 .parallaxGroup {
     position: relative;
-    /*height: 500px; /* fallback for older browsers */
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
@@ -67,16 +65,6 @@
   transform: translateY(50vw) translateY(-100vh);
   z-index: 3
   }
-  #landing-image{
-    width: 100vw;
-  }
-  #closing-image{
-    transform: translateY(0);
-    width: 100vw;
-  }
-#team-image{
-    width:100vw;
-}
 
 .shift-foooter{
     margin-top: 0vw;
@@ -85,9 +73,6 @@
   #group1 {
     z-index: 5; /* slide over group 2 */
   }
-  #group1 .baseLayer {
-    background: rgba(255,255,255,1);
-  }
   #group2 {
     z-index: 3; /* slide under groups 1 and 3 */
     /*transform: translateZ(0px) scale(1.0, 1.0);*/
@@ -95,25 +80,39 @@
 
 /* -- Team group height dependent on number of columns -- */
 
-#groupa3{
+#groupa3, #groupa5, #groupa7, #groupa9, #groupa11, #groupa13{
     font-size: 3vw;
     z-index: 4;
 }
-
 #groupa4{
     z-index: 5;
-    background: rgba(255,255,255,1);
     height: calc(6720px + 10vw);
 }
-
+#groupa6{
+    z-index: 5;
+    height: calc(1680px + 10vw);
+}
+#groupa8, #groupa10, #groupa12{
+    z-index: 5;
+}
 @media (min-width: 828px) {
   #groupa4{
     height: calc(2240px + 10vw);
   }
+  #groupa6{
+    height: calc(1120px + 10vw);
+  }
 }
-
 @media (min-width: 1245px) {
   #groupa4{
     height: calc(1680px + 10vw);
+  }
+  #groupa6{
+    height: calc(560px + 10vw);
+  }
+}
+@media (min-width: 1661px) {
+  #groupa4{
+    height: calc(1120px + 10vw);
   }
 }
