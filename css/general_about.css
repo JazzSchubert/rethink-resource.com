@@ -44,6 +44,9 @@
 	float: right;
 	color: #666666;
 }
+.text-column p span{
+	font-weight: bold;
+}
 .quote {
 	width: 30vw;
 	text-align: left;
@@ -73,7 +76,17 @@
 	font-weight: 100;
 	line-height: 2.3vw;
 }
-
+#values-left {
+	padding-top: 10.5vw;
+	padding-bottom: 2vw;
+}
+#values-left .quotew{
+	height: 37.5vw;
+}
+#values-left .quotew p{
+	height: 7.5vw;
+	padding-top: 0;
+}
 .is-a-little-lowered{
 	padding-top: 2vw;
 }
