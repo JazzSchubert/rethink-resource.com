@@ -75,6 +75,16 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+.iconcontain{
+	position: relative;
+	max-height: 80px;
+	max-width: 180px;
+	overflow: hidden;
+	margin-left: 0;
+}
+.iconcontain img{
+	object-fit: contain;
+}
 .teamimg{
 	width: 100%;
 }
@@ -89,6 +99,10 @@
 }
 .personaltitle{
 	padding-top: 15px;
+}
+.presstitle{
+	padding-top: 8px;
+	font-size: 1.1em;
 }
 .titleline {
 	font-size: 7px;

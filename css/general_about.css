@@ -26,7 +26,7 @@
 .about#about2, .about#about7, .about#about8{
 	height: 50vw;
 }
-.about#about3, .about#about4{
+.about#about3, .about#about4, .about#about8{
 	position: relative;
 	/*display: inline-block;*/
 	text-align: center;
@@ -102,6 +102,22 @@
 .is-indented{
 	padding-left: 5vw;
 }
+.design-box-press{
+	position: relative;
+	display: inline-block;
+    /*background: #FFFFFF;*/
+    width: 220px;
+    height: 220px;
+	color: #777777;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
+	/*-webkit-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
+	-moz-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
+	box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);*/
+	text-align: left;
+}
 #truck{
 	/*position: absolute;
 	top: 3.5vw; left: 5vw;*/
@@ -136,4 +152,18 @@
 	position: absolute;
     top: 112.75vw; left: 48.5vw;
     width: 10.3676vw;
+}
+#goodimage{
+	display: inline-block;
+}
+#goodimage img{
+	width: 80px;
+	height: 80px;
+}
+#tasteimage img{
+	height: 80px;
+}
+/*#goodtitle{
+	display: inline;
+	width: 110px;
 }

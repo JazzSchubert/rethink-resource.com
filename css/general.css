@@ -92,7 +92,10 @@
 	width: 90vw;
 	height: 5vw;
 }
-
+.design-bar-h-2-w-90{
+	width: 90vw;
+	height: 1.5vw;
+}
 
 .stats {
 	color: #777777;
