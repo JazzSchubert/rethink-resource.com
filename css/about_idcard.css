@@ -5,10 +5,10 @@
 	position: relative;
 	display: inline-block;
 	border-radius: 7px;
-    background: #FFFFFF;
-	-webkit-box-shadow: -2px 2px 7px 0px rgba(140,140,140,0.5);
-	-moz-box-shadow: -2px 2px 7px 0px rgba(140,140,140,0.5);
-	box-shadow: -2px 2px 7px 0px rgba(140,140,140,0.5);
+    /*background: #FFFFFF;*/
+	-webkit-box-shadow: -1.7px 2px 7px 0.3px rgba(140,140,140,0.5);
+	-moz-box-shadow: -1.7px 2px 7px 0.3px rgba(140,140,140,0.5);
+	box-shadow: -1.7px 2px 7px 0.3px rgba(140,140,140,0.5);
     padding: 25px;
     width: 270px;
     height: 470px;
@@ -18,6 +18,37 @@
 	margin-left: 25px;
 	margin-right: 25px;
 	text-align: left;
+	overflow: hidden;
+}
+.recommendation {
+  position: absolute;
+  top: 17px;
+  left: -25px;
+  z-index: 10;
+  display: inline-block;
+  font-size: 15px;
+  width: 110px;
+  text-align: center;
+  padding: 3px 0;
+  color: rgba(66,66,66,1);
+  transform: rotate(-45deg);
+  border: 1px solid #666666;
+  background: linear-gradient(to left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,255), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1));
+}
+.general {
+  position: absolute;
+  top: 40px;
+  left: -40px;
+  z-index: 10;
+  display: inline-block;
+  font-size: 11px;
+  width: 175px;
+  text-align: center;
+  padding: 3px 0;
+  color: rgba(66,66,66,1);
+  transform: rotate(-45deg);
+  border: 1px solid #666666;
+  background: linear-gradient(to left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,255), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1));
 }
 .circontain{
 	width: 100%;
@@ -66,10 +97,22 @@
 	flex-direction: row;
 }
 .titleline:before, .titleline:after{
-  content: "";
-  flex: 1 1;
-  border-bottom: 1px solid #F8F8F8;
-  margin: auto;
+	content: "";
+	flex: 1 1;
+	border-bottom: 1px solid #F8F8F8;
+	margin: auto;
+}
+.grey-titleline {
+	font-size: 7px;
+	padding-top: 12px;
+	display: flex;
+	flex-direction: row;
+}
+.grey-titleline:before, .grey-titleline:after{
+	content: "";
+  	flex: 1 1;
+  	border-bottom: 1px solid #DDDDDD;
+  	margin: auto;
 }
 .personaltitlelong{
 	padding-top: 3px;
@@ -77,6 +120,12 @@
 .personalstats{
 	padding-top: 8px;
 	padding-bottom: 8px;
+}
+.personal-short-cv{
+	padding-top: 6px;
+	padding-bottom: 8px;
+	height: 160px;
+	font-size: 13px;
 }
 .tinydescription{
 	font-weight: bold;

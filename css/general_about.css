@@ -57,16 +57,25 @@
 .quotew p{
 	width: inherit;
 }
-.has-lots-of-text{
-	font-size: 1.8vw;
-	font-weight: 100;
-	line-height: 2.2vw;
-}
 .bar {
 	padding-top: 2vw;
 	font-weight: 200;
 	float: left;
 	line-height: 2.7vw;
+}
+.has-lots-of-text{
+	font-size: 1.8vw;
+	font-weight: 100;
+	line-height: 2.2vw;
+}
+.really-has-lots-of-text{
+	font-size: 1.7vw;
+	font-weight: 100;
+	line-height: 2.3vw;
+}
+
+.is-a-little-lowered{
+	padding-top: 2vw;
 }
 .is-lowered{
 	padding-top: 5vw;

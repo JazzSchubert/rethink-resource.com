@@ -18,6 +18,9 @@
 .background-is-white{
 	background-color: rgba(255,255,255,1);
 }
+.background-is-grey{
+	background: linear-gradient(to left top, rgba(235,235,235,1), rgba(250,250,250,1));
+}
 .tmask {
     font-size: 150px; font-family: Verdana; font-weight: bold;
     background: url(C16.jpg);
