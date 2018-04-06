@@ -19,14 +19,8 @@
 
 <script>
 
-document.getElementById("scrollcontainer").addEventListener ("scroll", handler, useCapture);
-
-
-
 
 function OnScrollDiv () {
-
-	const div = document.getElementById ("scrollcontainer");
 
     var ww = window.innerWidth;
 
@@ -53,7 +47,7 @@ function OnScrollDiv () {
     	group12height = ((560 + ww / 10) / ww * 100).toFixed(2);
     }
 
-    var RSH = (div.scrollTop / ww * 100).toFixed(2);
+    var RSH = (document.getElementById("scrollcontainer").scrollTop / ww * 100).toFixed(2);
 
 
 	const navbarelements = document.getElementsByName("dropbtn");
@@ -124,8 +118,11 @@ function OnScrollDiv () {
 			colorLogo.classList.remove("visible");
 			colorLogo.classList.add("hidden");
 		}
+	requestAnimationFrame(OnScrollDiv);
 }
-	
+
+requestAnimationFrame(OnScrollDiv);
+
 </script>
 
 </head>
@@ -181,9 +178,9 @@ function OnScrollDiv () {
     </nav>
 </header>
 
-<!-- Parallax Scrolling Section -->
+<!-- Parallax Scrolling Section onscroll="OnScrollDiv ()"-->
 
-<div class="iparallax" id="scrollcontainer" onscroll="OnScrollDiv ()">
+<div class="iparallax" id="scrollcontainer">
 
 <div id="groupa0" class="parallaxGroup height-is-50">
 	<div class="iparallaxLayer backgroundLayer">
@@ -632,7 +629,7 @@ function OnScrollDiv () {
 <div id="groupa5" class="parallaxGroup height-is-50 shift-is-10-20">
 	<div class="iparallaxLayer baseLayer"></div>
 	<div class="iparallaxLayer nearBackgroundLayer">
-		<h2 class="headline text-is-white fade-in header-translate-is-25-vw" id="board-headline">Board of Directors
+		<h2 class="headline text-is-white fade-in header-translate-is-25-vw" id="board-headline">Board of Advisors
 		</h2>
 		<p class="headline_description text-is-white fade-in header-translate-is-25-vw" id="board-caption">
 		RethinkResource facilitiates Material Efficiency for the Producing Industry.
