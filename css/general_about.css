@@ -9,6 +9,9 @@
 	display: flex;
 	align-items: stretch;
 }
+#about6{
+	display: block;
+}
 .about .text-column{
 	padding-top: 5.5vw;
 	padding-bottom: 5vw;
@@ -41,13 +44,20 @@
 	float: right;
 	color: #666666;
 }
+.text-column p span{
+	font-weight: bold;
+}
 .logo-column{
 	width: 40vw;
 	display: flex;
 	flex-wrap: wrap;
 }
-.text-column p span{
-	font-weight: bold;
+.logo-row{
+	width: 90vw;
+	display: flex;
+	flex-wrap: wrap;
+	height: 26vw;
+	padding-top: 4vw;
 }
 .quote {
 	width: 30vw;
@@ -56,11 +66,32 @@
 	color: #777777;
 	font-size: 2vw;
 }
-.quotew {
+.quotew, .quoteb {
 	width: inherit;
+}
+.quoteb{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: 35vw;
+	padding-bottom: 5vw;
 }
 .quotew p{
 	width: inherit;
+}
+.quoteb p{
+	width: 25vw;
+	padding-left: 2.5vw;
+	padding-right: 2.5vw;
+	font-size: 1.7vw;
+}
+.quote-bar {
+	width: 90vw;
+	text-align: left;
+	line-height: 2.4vw;
+	color: #666666;
+	font-size: 2vw;
 }
 .bar {
 	padding-top: 2vw;
@@ -79,14 +110,15 @@
 	line-height: 2.3vw;
 }
 #values-left {
-	padding-top: 10.5vw;
-	padding-bottom: 2vw;
+	padding-top: 11vw;
+	padding-bottom: 1vw;
+	text-align: right;
 }
 #values-left .quotew{
-	height: 37.5vw;
+	height: 38vw;
 }
 #values-left .quotew p{
-	height: 7.5vw;
+	height: 7.6vw;
 	padding-top: 0;
 }
 .is-a-little-lowered{
@@ -96,7 +128,7 @@
 	padding-top: 5vw;
 }
 .tag {
-	padding-top: 5vh;
+	padding-top: 2.5vw;
 	font-size: 1.5vw;
 	font-weight: 150;
 	float: left;
@@ -115,17 +147,17 @@
 	margin-bottom: 20px;
 	margin-left: 15px;
 	margin-right: 15px;
-	-webkit-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
+	/*-webkit-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
 	-moz-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
-	box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
+	box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);*/
 	text-align: left;
 }
 .design-box-partner{
 	position: relative;
 	display: inline-block;
     /*background: #FFFFFF;*/
-    width: 15vw;
-    height: 10vw;
+    width: 13vw;
+    height: 8vw;
 	color: #777777;
 	margin: 2.5vw;
 	/*-webkit-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
@@ -178,7 +210,17 @@
 #tasteimage img{
 	height: 80px;
 }
-/*#goodtitle{
-	display: inline;
-	width: 110px;
+#testemonials .tag{
+	padding-top: 1.2vw;
+	font-size: 1.4vw;
+	font-style: italic;
+}
+#testemonials .bar{
+	padding-top: 3.3vw;
+}
+#testemonials .tag span{
+	font-style: normal;
+}
+#seife{
+	height: 6vw;
 }

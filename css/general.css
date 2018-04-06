@@ -21,6 +21,9 @@
 .background-is-grey{
 	background: linear-gradient(to left top, rgba(235,235,235,1), rgba(250,250,250,1));
 }
+.background-is-white-ish{
+	background: linear-gradient(to left top, rgba(245,245,245,1), rgba(255,255,255,1));
+}
 .tmask {
     font-size: 150px; font-family: Verdana; font-weight: bold;
     background: url(C16.jpg);
@@ -87,6 +90,12 @@
 
 .design-container{
 	width: 20vw;
+}
+.design-container-is-14{
+	width: 14vw;
+}
+.design-container-is-6{
+	width: 6vw;
 }
 .design-box{
 	height: 25vw;
@@ -210,4 +219,14 @@ input:checked:nth-child(1) + #navigationbar {
 .clicklink:hover {
 	cursor: pointer;
 	color: rgba(250,250,250,1);
+}
+.text-column p a {
+	text-decoration: none;
+	background: green; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right top, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,255), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* Standard syntax */
+	-webkit-text-fill-color: transparent;
+  	-webkit-background-clip: text;
 }

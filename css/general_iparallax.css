@@ -77,12 +77,19 @@
     z-index: 3; /* slide under groups 1 and 3 */
     /*transform: translateZ(0px) scale(1.0, 1.0);*/
   }
+#partners-image{
+   transform: translateY(-20vw) translateY(10vh);
+}
+#values-image{
+   transform: translateY(-10vw) translateY(5vh);
+}
 
 /* -- Team group height dependent on number of columns -- */
 
 #groupa3, #groupa5, #groupa7, #groupa9, #groupa11, #groupa13{
     font-size: 3vw;
     z-index: 4;
+    pointer-events: none;
 }
 #groupa4{
     z-index: 5;
