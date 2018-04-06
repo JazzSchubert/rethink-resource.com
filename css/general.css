@@ -30,6 +30,9 @@
 
 /* -- Height of parallax groups -- */
 
+.height-is-40{
+	height: 40vw;
+}
 .height-is-50{
 	height: 50vw;
 }
@@ -94,7 +97,11 @@
 }
 .design-bar-h-2-w-90{
 	width: 90vw;
-	height: 2vw;
+	height: 2.5vw;
+}
+.design-bar-h-2-w-40{
+	width: 40vw;
+	height: 2.5vw;
 }
 
 .stats {

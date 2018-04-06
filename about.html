@@ -21,6 +21,9 @@
 
 document.getElementById("scrollcontainer").addEventListener ("scroll", handler, useCapture);
 
+
+
+
 function OnScrollDiv () {
 
 	const div = document.getElementById ("scrollcontainer");
@@ -60,6 +63,7 @@ function OnScrollDiv () {
 	const dropDownContent = document.getElementById("dropdown-cont");
 	const whiteLogo = document.getElementById("top-page-logo-white");
 	const colorLogo = document.getElementById("top-page-logo-color");
+	const teamImage = document.getElementById("team-image");
 	const valuesImage = document.getElementById("values-image");
 	const partnersImage = document.getElementById("partners-image");
 
@@ -75,7 +79,15 @@ function OnScrollDiv () {
 			pageCaption.classList.add("fade-in");
 		}
 
-		if (RSH - group4height - group6height >= 60) {
+		if (RSH >= 25) {
+			teamImage.classList.remove("hidden")
+			teamImage.classList.add("visible")
+		} else {
+			teamImage.classList.remove("visible")
+			teamImage.classList.add("hidden")
+		}
+
+		if (RSH - group4height - group6height >= 86) {
 			valuesImage.classList.remove("hidden")
 			valuesImage.classList.add("visible")
 		} else {
@@ -83,7 +95,7 @@ function OnScrollDiv () {
 			valuesImage.classList.add("hidden")
 		}
 
-		if (RSH - group4height - group6height >= 140) {
+		if (RSH - group4height - group6height >= 150) {
 			partnersImage.classList.remove("hidden")
 			partnersImage.classList.add("visible")
 		} else {
@@ -138,7 +150,7 @@ function OnScrollDiv () {
     			</a>
 			</li> 
 	        <li class="dropdown">
-   				<a href="#about" name="dropbtn">UPCYCLING 
+   				<a href="upcycling.html" name="dropbtn">UPCYCLING 
     			</a>
 			</li>
 			<li class="dropdown">
@@ -173,7 +185,7 @@ function OnScrollDiv () {
 
 <div class="iparallax" id="scrollcontainer" onscroll="OnScrollDiv ()">
 
-<div id="group0" class="parallaxGroup height-is-50">
+<div id="groupa0" class="parallaxGroup height-is-50">
 	<div class="iparallaxLayer backgroundLayer">
 		<h2 class="headline text-is-white fade-in header-translate-vh-vw" id="page-headline">About RethinkResource
 		</h2>
@@ -225,7 +237,7 @@ function OnScrollDiv () {
 		</p>
 	</div>
 	<div class="iparallaxLayer backgroundLayer">
-		<img src="img/team_colour.jpg" alt="RethinkResource Island" id="team-image" class="width-is-100">
+		<img src="img/team_colour.jpg" alt="RethinkResource Island" id="team-image" class="width-is-100 hidden">
 	</div>
 </div>
 
@@ -390,7 +402,7 @@ function OnScrollDiv () {
 					<div class="cutoutcircle"></div>
 				</div>
 				<div class="imgcontain">
-					<img class="teamimg" src="img/Fabienne.png" alt="limage">
+					<img class="teamimg" src="img/Fabienne.jpg" alt="limage">
 				</div>
 				<div class="personalhead">
 					<p class="personalname">Fabienne Th&ouml;ni</p>
@@ -754,45 +766,90 @@ function OnScrollDiv () {
 <div id="groupa10" class="parallaxGroup height-is-90">
   	<div class="iparallaxLayer baseLayer">
 		
-		<div class="about background-is-white" id="about6">
+		<div class="about background-is-white height-is-90" id="about6">
 			<div class="quote">
-				<img src="img/LKW_Process_Flow.png" alt="truck image" id="truck"/>
 				<div class="quotew">
-				<p class="bar is-lowered gradient1">“There is a way to do it better. Find it!”</p><br>
-				<p class="tag gradient1"> - Thomas Edison</p>
+				<p class="bar really-has-lots-of-text gradient1">"RethinkResource puts circular economy in practice by connecting the dots and leveraging upon it. Proud to have them as EIT RisingFoodStars, and so swift, efficient and energetic to work with! Watch out; This is truly a company on the rise."</p><br>
+				<p class="tag gradient1"> - Annick Verween, Manager Rising Food Stars, EIT Food</p>
+
+				<p class="bar really-has-lots-of-text gradient1">"Ein tolles junges Team - mit breiter Expertise, präziser Analyse, schnellen Entscheidungswegen und grossem Netzwerk, werden kreative Lösungen erarbeitet und speditiv umgesetzt – sehr professionell. Kompliment!"</p><br>
+				<p class="tag gradient1"> - Andreas Frank, Marketing, Verkauf &amp; Entwicklung, Swissmill, Division der Coop</p>
+
+				<p class="bar really-has-lots-of-text gradient1">"Your recent launch of the online platform Circado is a great achievement in such a short period of time. You are making a real difference in the circular economy, helping companies to better use side streams to source more sustainable and valuable materials and reduce waste from the environment. I wish you lots of success on your continuing and exciting journey."</p><br>
+				<p class="tag gradient1"> - Chris Thoen, Head of Global Science and Technology, Givaudan</p>
 				</div>
+
+
+
 			</div>
 			<div class="design-container"></div>
-	    	<div class="text-column">
-				<h3>Swiss Roots</h3>
-				<p>We combine Switzerland’s deep-rooted innovation culture with the agility of a vibrant start-up.</p>
-				<h3>Hub For Real Innovation</h3>
-				<p>We unite academia, industry, technology experts, start-ups and public institutions under one roof.</p>
-				<h3>Circular Expertise</h3>
-				<p>We are not classic consultants with a niche interest – circularity is everything we do.</p>
-				<h3>We Get Our Hands Dirty</h3>
-				<p>With your side-stream.</p>
-				<h3>We Want You To Succeed</h3>
-				<p>We commit all we have to validate our mission towards a regenerative economy.</p>
-			</div>
-	    </div>
+	    	<div class="logo-column">
 
-		<div class="about background-is-white" id="about7">
-			<div class="quote">
-				<div class="quotew">
-				<p class="gradient1 bar has-lots-of-text is-lowered">"In the current environment, competitive advantage flows to companies that know how to do more with less.</p><br>
-				<p class="bar has-lots-of-text gradient1"> Winning organizations are embedding sustainability into their business models and governance processes to capture growth opportunities, resource advantages, and cost savings."</p><br>
-				<p class="tag gradient1"> - The Boston Consulting Group</p>
+			<div class="design-bar-h-2-w-40"></div>
+
+				<div class="design-box-partner">
+					<div class="logocontain">
+						<img class="teamimg" src="img/EIT_Food_RFS_logo.png" alt="limage">
+						<a href="https://www.foodaktuell.ch/digitaler-markt-fuer-lebensmittelnebenstroeme/"></a>
+					</div>
 				</div>
-			</div>
-			<div class="design-container">
-			</div>
-	    	<div class="text-column">
-				<h3>How do you leverage unused potential?</h3>
-				<p>Circular innovation is triggered by the existence of a side stream that is currently undervalued. We apply  our wide range of expertise between product innovation and process engineering and activate our network to explore material properties and discover value by asking “What is the wasted side-stream, and what can it become?”</p>
-				<p>Not every innovation is an invention. Sometimes, it is about scaling up niche innovations and taking them to the mainstream. Sometimes it is about reproducing established innovations in a new industry, or just about making a new cross-industry link between buyers and sellers of secondary resources. In some cases, it is about highlighting the application of secondary resources and creating that critical upcycling value that conscious consumers love.</p>
-				<p>Whatever your case is, we provide the network and knowhow to implement the right upcycling innovations for your industry. We manage the process of open innovation with supplier and partner companies across Europe, and at the same time we take a close look at various business cases and reduce them to a concrete portfolio while they gain traction. It is particularly important to us to assist you with the implementation in order to create sustainable added value.</p><br>
-				<p class="is-indented">See what others have done in our UPCYCLING section</p>
+
+				<div class="design-box-partner">
+					<div class="logocontain">
+						<img class="teamimg" src="img/Logo_Buhler.png" alt="limage">
+						<a href="https://www.foodaktuell.ch/digitaler-markt-fuer-lebensmittelnebenstroeme/"></a>
+					</div>
+				</div>
+
+				<div class="design-box-partner">
+					<div class="logocontain">
+						<img class="teamimg" src="img/DIL_logo.png" alt="limage">
+						<a href="https://www.foodaktuell.ch/digitaler-markt-fuer-lebensmittelnebenstroeme/"></a>
+					</div>
+				</div>		
+
+				<div class="design-box-partner">
+					<div class="logocontain">
+						<img class="teamimg" src="img/ethz_logo.jpg" alt="limage">
+						<a href="https://www.foodaktuell.ch/digitaler-markt-fuer-lebensmittelnebenstroeme/"></a>
+					</div>
+				</div>
+
+				<div class="design-box-partner">
+					<div class="logocontain">
+						<img class="teamimg" src="img/SFR_logo.jpg" alt="limage">
+						<a href="https://www.foodaktuell.ch/digitaler-markt-fuer-lebensmittelnebenstroeme/"></a>
+					</div>
+				</div>
+
+				<div class="design-box-partner">
+					<div class="logocontain">
+						<img class="teamimg" src="img/oebu_logo.png" alt="limage">
+						<a href="https://www.foodaktuell.ch/digitaler-markt-fuer-lebensmittelnebenstroeme/"></a>
+					</div>
+				</div>
+
+				<div class="design-box-partner">
+					<div class="logocontain">
+						<img class="teamimg" src="img/juliusbaerfoundation.png" alt="limage">
+						<a href="https://www.foodaktuell.ch/digitaler-markt-fuer-lebensmittelnebenstroeme/"></a>
+					</div>
+				</div>
+
+				<div class="design-box-partner">
+					<div class="logocontain">
+						<img class="teamimg" src="img/seif_logo.jpg" alt="limage">
+						<a href="https://www.foodaktuell.ch/digitaler-markt-fuer-lebensmittelnebenstroeme/"></a>
+					</div>
+				</div>
+
+				<div class="design-box-partner">
+					<div class="logocontain">
+						<img class="teamimg" src="img/MassChallenge_logo.jpg" alt="limage">
+						<a href="https://www.foodaktuell.ch/digitaler-markt-fuer-lebensmittelnebenstroeme/"></a>
+					</div>
+				</div>
+
 			</div>
 	    </div>
 

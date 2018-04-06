@@ -85,6 +85,16 @@
 .iconcontain img{
 	object-fit: contain;
 }
+.logocontain{
+	height: inherit;
+	width: inherit;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+.logocontain img{
+	object-fit: contain;
+}
 .teamimg{
 	width: 100%;
 }
