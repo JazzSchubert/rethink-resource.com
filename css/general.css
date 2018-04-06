@@ -15,6 +15,15 @@
 .text-is-white{
 	color: rgba(255,255,255,1);
 }
+.background-is-white{
+	background-color: rgba(255,255,255,1);
+}
+.background-is-grey{
+	background: linear-gradient(to left top, rgba(235,235,235,1), rgba(250,250,250,1));
+}
+.background-is-white-ish{
+	background: linear-gradient(to left top, rgba(245,245,245,1), rgba(255,255,255,1));
+}
 .tmask {
     font-size: 150px; font-family: Verdana; font-weight: bold;
     background: url(C16.jpg);
@@ -24,16 +33,85 @@
 
 /* -- Height of parallax groups -- */
 
+.height-is-40{
+	height: 40vw;
+}
 .height-is-50{
 	height: 50vw;
 }
+.height-is-70{
+	height: 70vw;
+}
+.height-is-90{
+	height: 90vw;
+}
 .height-is-120{
 	height: 120vw;
+}
+.height-is-130{
+	height: 130vw;
+}
+.height-is-140{
+	height: 140vw;
+}
+.height-is-160{
+	height: 160vw;
 }
 .height-is-230{
 	height: 230vw;
 }
 
+.width-is-100{
+	width: 100vw;
+}
+
+.shift-is-10-20{
+	transform: translateY(-10vw);
+    margin-bottom: -20vw;
+}
+
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+.visible{
+	visibility: visible;
+}
+.fade-out{
+	color: rgba(255,255,255,0);
+	transition: 0.5s ease;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+.fade-in{
+	color: rgba(255,255,255,1);
+	transition: 0.5s ease;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+
+.design-container{
+	width: 20vw;
+}
+.design-container-is-14{
+	width: 14vw;
+}
+.design-container-is-6{
+	width: 6vw;
+}
+.design-box{
+	height: 25vw;
+}
+.design-bar-h-5-w-90{
+	width: 90vw;
+	height: 5vw;
+}
+.design-bar-h-2-w-90{
+	width: 90vw;
+	height: 2.5vw;
+}
+.design-bar-h-2-w-40{
+	width: 40vw;
+	height: 2.5vw;
+}
 
 .stats {
 	color: #777777;
@@ -141,4 +219,14 @@ input:checked:nth-child(1) + #navigationbar {
 .clicklink:hover {
 	cursor: pointer;
 	color: rgba(250,250,250,1);
+}
+.text-column p a {
+	text-decoration: none;
+	background: green; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right top, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,255), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* Standard syntax */
+	-webkit-text-fill-color: transparent;
+  	-webkit-background-clip: text;
 }

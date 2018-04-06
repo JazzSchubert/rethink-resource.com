@@ -18,7 +18,7 @@
 
 <script>
 
-object.addEventListener ("scroll", handler, useCapture);
+document.getElementById("scrollcontainer").addEventListener ("scroll", handler, useCapture);
 
 function OnScrollDiv () {
 
@@ -37,8 +37,7 @@ function OnScrollDiv () {
 			pageCaption.classList.remove("fade-in");
 			pageHeadline.classList.add("fade-out");
 			pageCaption.classList.add("fade-out");
-		}
-		if (relativeScrollHeight < 50) {
+		} else {
 			pageHeadline.classList.remove("fade-out");
 			pageCaption.classList.remove("fade-out");
 			pageHeadline.classList.add("fade-in");
@@ -56,8 +55,7 @@ function OnScrollDiv () {
 			whiteLogo.classList.add("hidden");
 			colorLogo.classList.remove("hidden");
 			colorLogo.classList.add("visible");
-		}
-		if (relativeScrollHeight < 90 || relativeScrollHeight >= 335 || (relativeScrollHeight >= 175 && relativeScrollHeight < 230)){
+		} else {
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.remove("black-navbar");
 			}
@@ -85,16 +83,16 @@ function OnScrollDiv () {
 	<div class="logosmall-container">
 	<img class="logosmall visible" src="img/ReRe_Icon_RGB_white.png" alt="image" id="top-page-logo-white"/>
 	<img class="logosmall hidden" src="img/ReRe_Icon_RGB_color.png" alt="image" id="top-page-logo-color"/>
-	<a  href="RethinkResource_landing.html"></a>
+	<a  href="index.html"></a>
 	</div>
     <nav>
       	<ul>
 			<li class="dropdown">
-   				<a href="RethinkResource_about.html" name="dropbtn">ABOUT 
+   				<a href="about.html" name="dropbtn">ABOUT 
     			</a>
 			</li> 
 	        <li class="dropdown">
-   				<a href="#about" name="dropbtn">UPCYCLING 
+   				<a href="upcycling.html" name="dropbtn">UPCYCLING 
     			</a>
 			</li>
 			<li class="dropdown">
@@ -110,7 +108,7 @@ function OnScrollDiv () {
 			  	</div>
 			</li>
 			<li class="dropdown">
-   				<a href="RethinkResource_Circado.html" name="dropbtn">CIRCADO 
+   				<a href="circado.html" name="dropbtn">CIRCADO 
     		  	</a>
 			</li>
 	        <li class="dropdown">
@@ -138,7 +136,7 @@ function OnScrollDiv () {
 		</p>
 	</div>
 	<div class="iparallaxLayer deepBackgroundLayer">
-		<img src="img/RethinkResource_Island_bad.jpg" alt="RethinkResource Island" id="landing-image">
+		<img src="img/RethinkResource_Island_bad.jpg" alt="RethinkResource Island" class="width-is-100" id="landing-image">
 	</div>
 </div>
 
@@ -146,7 +144,7 @@ function OnScrollDiv () {
 <div id="group1" class="parallaxGroup height-is-120">
   	<div class="iparallaxLayer baseLayer">
 
-		<div class="about" id="about1">
+		<div class="about background-is-white height-is-40" id="about1">
 			<div class="quote">
 				<img src="img/LKW_Process_Flow.png" alt="truck image" id="truck"/>
 				<div class="quotew">
@@ -198,7 +196,7 @@ function OnScrollDiv () {
 	   	 	</ul>			
 		</div>	
 		  
-		<div class="about" id="about2">
+		<div class="about background-is-white" id="about2">
 			<div class="quote">
 				<div class="quotew">
 				<p class="gradient1 bar has-lots-of-text is-lowered">"In the current environment, competitive advantage flows to companies that know how to do more with less.</p><br>
@@ -275,7 +273,7 @@ function OnScrollDiv () {
 			</li>
 			</div>
 		</div>
-		<img src="img/sweet-ice-cream-photography-258300_bad.jpg" alt="RethinkResource Circle" id="closing-image"/>
+		<img src="img/sweet-ice-cream-photography-258300_bad.jpg" alt="RethinkResource Circle" class="width-is-100" id="closing-image"/>
 	</div>
 </div>
 

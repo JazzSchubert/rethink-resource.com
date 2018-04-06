@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<title>RethinkResource</title>
+<link href="css/general.css" rel="stylesheet" type="text/css">
+<link href="css/general_header.css" rel="stylesheet" type="text/css">
+<link href="css/general_iparallax.css" rel="stylesheet" type="text/css">
+<link href="css/general_about.css" rel="stylesheet" type="text/css">
+<link href="css/general_slider.css" rel="stylesheet" type="text/css">
+<link href="css/general_lines.css" rel="stylesheet" type="text/css">
+<link href="css/text-gradient.css" rel="stylesheet" type="text/css">
+
+
+
+<script>
+
+document.getElementById("scrollcontainer").addEventListener ("scroll", handler, useCapture);
+
+function OnScrollDiv () {
+
+    const div = document.getElementById ("scrollcontainer");
+    var relativeScrollHeight = (div.scrollTop / window.innerWidth * 200).toFixed(1);
+	const navbarelements = document.getElementsByName("dropbtn");
+	const pageHeadline = document.getElementById("page-headline");
+	const pageCaption = document.getElementById("page-caption");
+	const navigationBar = document.getElementById("navigationbar");
+	const dropDownContent = document.getElementById("dropdown-cont");
+	const whiteLogo = document.getElementById("top-page-logo-white");
+	const colorLogo = document.getElementById("top-page-logo-color");
+
+		if (relativeScrollHeight >= 50) {
+			pageHeadline.classList.remove("fade-in");
+			pageCaption.classList.remove("fade-in");
+			pageHeadline.classList.add("fade-out");
+			pageCaption.classList.add("fade-out");
+		} else {
+			pageHeadline.classList.remove("fade-out");
+			pageCaption.classList.remove("fade-out");
+			pageHeadline.classList.add("fade-in");
+			pageCaption.classList.add("fade-in");
+		}
+
+
+		if (relativeScrollHeight >= 90 && relativeScrollHeight < 335 && !(relativeScrollHeight >= 175 && relativeScrollHeight < 230)){
+			for (var i = 0; i < navbarelements.length; i++) {
+				navbarelements[i].classList.add("black-navbar");
+			}
+			navigationBar.classList.add("white-bg-navbar");
+			dropDownContent.classList.add("white-bg-navbar");
+			whiteLogo.classList.remove("visible");
+			whiteLogo.classList.add("hidden");
+			colorLogo.classList.remove("hidden");
+			colorLogo.classList.add("visible");
+		} else {
+			for (var i = 0; i < navbarelements.length; i++) {
+				navbarelements[i].classList.remove("black-navbar");
+			}
+			navigationBar.classList.remove("white-bg-navbar");
+			dropDownContent.classList.remove("white-bg-navbar");
+			whiteLogo.classList.remove("hidden");
+			whiteLogo.classList.add("visible");
+			colorLogo.classList.remove("visible");
+			colorLogo.classList.add("hidden");
+		}
+}
+	
+</script>
+
+</head>
+
+
+<body>
+		
+<input type="checkbox" name="disccb" id="dsccb1" class="hidden"/>
+
+<!-- Navigation -->
+
+<header id="navigationbar">
+	<div class="logosmall-container">
+	<img class="logosmall visible" src="img/ReRe_Icon_RGB_white.png" alt="image" id="top-page-logo-white"/>
+	<img class="logosmall hidden" src="img/ReRe_Icon_RGB_color.png" alt="image" id="top-page-logo-color"/>
+	<a  href="index.html"></a>
+	</div>
+    <nav>
+      	<ul>
+			<li class="dropdown">
+   				<a href="about.html" name="dropbtn">ABOUT 
+    			</a>
+			</li> 
+	        <li class="dropdown">
+   				<a href="upcycling.html" name="dropbtn">UPCYCLING 
+    			</a>
+			</li>
+			<li class="dropdown">
+   				<a href="#about" name="dropbtn" id="dropbutton">CAPABILITIES 
+    			</a>
+				<div class="dropdown-content" id="dropdown-cont">
+	     			<a href="#" name="dropbtn">CIRCULAR ECOSYSTEM
+	     			</a>
+	  			    <a href="#" name="dropbtn">SIDE STREAM VALORISATION
+	  			    </a>
+	   			    <a href="#" name="dropbtn">UPCYCLING SOLUTIONS
+	   			    </a>
+			  	</div>
+			</li>
+			<li class="dropdown">
+   				<a href="circado.html" name="dropbtn">CIRCADO 
+    		  	</a>
+			</li>
+	        <li class="dropdown">
+   				<a href="#about" name="dropbtn">BLOG 
+    			</a>
+			</li>
+	        <li class="dropdown">
+   			  	<a href="#about" name="dropbtn">CONTACT 
+    		  	</a>
+			</li>
+      	</ul>
+    </nav>
+</header>
+
+<!-- Parallax Scrolling Section -->
+
+<div class="iparallax" id="scrollcontainer" onscroll="OnScrollDiv ()">
+
+<div id="group0" class="parallaxGroup height-is-50">
+	<div class="iparallaxLayer backgroundLayer">
+		<h2 class="headline text-is-white fade-in header-translate" id="page-headline">Turning Waste into Opportunities
+		</h2>
+		<p class="headline_description text-is-white fade-in header-translate" id="page-caption">
+		RethinkResource facilitiates Material Efficiency for the Producing Industry.
+		</p>
+	</div>
+	<div class="iparallaxLayer deepBackgroundLayer">
+		<img src="img/RethinkResource_Island_bad.jpg" alt="RethinkResource Island" class="width-is-100" id="landing-image">
+	</div>
+</div>
+
+
+<div id="group1" class="parallaxGroup height-is-120">
+  	<div class="iparallaxLayer baseLayer">
+
+		<div class="about background-is-white" id="about1">
+			<div class="quote">
+				<img src="img/LKW_Process_Flow.png" alt="truck image" id="truck"/>
+				<div class="quotew">
+				<p class="bar is-lowered gradient1">“There is a way to do it better. Find it!”</p><br>
+				<p class="tag gradient1"> - Thomas Edison</p>
+				</div>
+			</div>
+			<div class="design-container">
+				<img src="img/Receiving_Floor_Process_Flow.png" alt="receiving floor image" id="receivingFloor"/>
+				<div class="landing-linesshape3"></div>
+				<img src="img/Number_Indicator_Process_Flow.png" alt="number indicator image" id="indicator100"/>
+				<div class="landing-linesshape1"></div>
+				<div class="landing-linesshape2"></div>
+				<div class="landing-linesshape4"></div>
+				<div class="square-box" id="landing-box1"></div>
+				<img src="img/Conveyor_vertical_Process_Flow.png" alt="vertical conveyor image" id="vertical-conveyor"/>
+				<div class="square-box-with-diagonal" id="landing-box2"></div>
+				<img src="img/Arrow_Process_Flow.png" alt="process flow arrow image" id="process-flow-arrow"/>
+			</div>
+	    	<div class="text-column">
+	    		<h3>Welcome!</h3>
+				<p>We are RethinkResource, a Swiss startup with the mission to turn industrial side streams into sustainable and profitable business opportunities.</p>
+				<p>We believe that a responsible handling of resources is key to the resilient value chains of a sustainable future. This is why we see industrial side streams as strategic assets – with long-term competitive advantages. We focus on extracting the value in these stranded assets within the constraints of a modern production system.</p>
+	    		<p>Our daily business is the search and implementation of the best possible innovations through resource efficiency. Our team works with a hands-on approach to provide the necessary project management and business cases for the creation of sustainable consumer products, through open innovation, in collaboration with our customers and partners.</p>
+	    		<p>We understand our customers’ wish for a responsible handling of material streams.</p>
+			</div>
+	    </div>
+		  
+		<div class="slider">
+			<input type="radio" name="radio-btn" id="img-1" />
+			<input type="radio" name="radio-btn" id="img-2" />
+			<input type="radio" name="radio-btn" id="img-3" />
+
+			<div class="slide" id="sld-1">
+				<p class="slide_head" id="slhead1">Create success stories, aligned with the current operations, to champion a new mindset.</p>
+				<p class="slide_link" id="sllink1">&#8594; read more about Ecosystem &amp; Strategy ...</p>
+				<p class="slide_head" id="slhead2">The realization of a closed system impacts our perception of the use of resources.</p>
+				<p class="slide_link" id="sllink2">&#8594; read more about Side-Stream Valorisation ...</p>
+				<p class="slide_head" id="slhead3">Circular innovation is triggered by the existence of a side stream that is currently undervalued.</p>			
+				<p class="slide_link" id="sllink3">&#8594; read more about Upcycling Solutions ...</p>
+				<img src="img/adam-krowitz-386852_bad.jpg" alt="image" id="slideimg1">
+				<img src="img/aaron-burden-151465_bad.jpg" alt="image">
+				<img src="img/RethinkResource_field_bad.jpg" alt="image">
+			</div>
+		  	<ul class="nav-dots">
+				<label for="img-1" class="nav-dot" id="img-dot-1"></label>
+		    	<label for="img-2" class="nav-dot" id="img-dot-2"></label>
+	    		<label for="img-3" class="nav-dot" id="img-dot-3"></label>
+	   	 	</ul>			
+		</div>	
+		  
+		<div class="about background-is-white" id="about2">
+			<div class="quote">
+				<div class="quotew">
+				<p class="gradient1 bar has-lots-of-text is-lowered">"In the current environment, competitive advantage flows to companies that know how to do more with less.</p><br>
+				<p class="bar has-lots-of-text gradient1"> Winning organizations are embedding sustainability into their business models and governance processes to capture growth opportunities, resource advantages, and cost savings."</p><br>
+				<p class="tag gradient1"> - The Boston Consulting Group</p>
+				</div>
+			</div>
+			<div class="design-container">
+			</div>
+	    	<div class="text-column">
+				<h3>How do you leverage unused potential?</h3>
+				<p>Circular innovation is triggered by the existence of a side stream that is currently undervalued. We apply  our wide range of expertise between product innovation and process engineering and activate our network to explore material properties and discover value by asking “What is the wasted side-stream, and what can it become?”</p>
+				<p>Not every innovation is an invention. Sometimes, it is about scaling up niche innovations and taking them to the mainstream. Sometimes it is about reproducing established innovations in a new industry, or just about making a new cross-industry link between buyers and sellers of secondary resources. In some cases, it is about highlighting the application of secondary resources and creating that critical upcycling value that conscious consumers love.</p>
+				<p>Whatever your case is, we provide the network and knowhow to implement the right upcycling innovations for your industry. We manage the process of open innovation with supplier and partner companies across Europe, and at the same time we take a close look at various business cases and reduce them to a concrete portfolio while they gain traction. It is particularly important to us to assist you with the implementation in order to create sustainable added value.</p><br>
+				<p class="is-indented">See what others have done in our UPCYCLING section</p>
+			</div>
+	    </div>
+
+	</div>
+</div>
+
+	
+<div id="group2" class="parallaxGroup height-is-50 hackyGroup">
+	<div class="iparallaxLayer baseLayer" id="closing-container">
+		<div class="legaldc">
+		<img class="visible logodisc" src="img/ReRe_Icon_RGB_white.png" alt="image" id="disclaimer-logo-white"/>
+		<h3>Datenschutzbestimmungen von RethinkResource</h3>
+		<div>
+			<li>
+				<h4>Die Sicherheit der Nutzer steht an erster Stelle</h4>
+				<p>RethinkResource GmbH (nachfolgend RethinkResource) respektiert die Privatsphäre der Nutzer der Webseite und des Online-Shops. Diese Datenschutzbestimmungen bilden die Grundlage für die Bearbeitung der personenbezogenen Daten und geben Aufschluss, welche Art von Nutzerdaten durch RethinkResource gesammelt werden und wie RethinkResource diese Daten verwendet. RethinkResource hält die geltenden Datenschutzrechte ein und verarbeitet die Personendaten einzig zu den Zwecken, für welche die Daten übermittelt wurden.</p>
+				<p>Diese Datenschutzbestimmungen werden von Zeit zu Zeit angepasst, ergänzt oder geändert. Mit jedem neuen Aufruf oder Besuch der Webseite gilt die jeweils aktuelle, abrufbare Version.</p>
+			</li>
+			<li>
+				<h4>Art der erfassten Daten</h4>
+				<p>Beim Besuch der Webseite von RethinkResource werden statistische Besucherdaten darüber erhoben, welche Teile des Webangebots vom jeweiligen Nutzer besonders häufig besucht werden. Hierbei können z.B. Daten hinsichtlich des vom Nutzer verwendeten Browsers, Betriebssystems, Weblogs und anderer Verbindungsdaten, erfasst werden, unabhängig davon, ob deren Erfassung für unsere oder andere Zwecke erforderlich ist. In diesem Zusammenhang ist es teilweise erforderlich, dass sogenannte Cookies zum Einsatz kommen. Diese gesammelten Daten beinhalten keinen Personenbezug oder sind genügend anonymisiert, um keine Rückschlüsse auf Ihre Person machen zu können.</p>
+				<p>RethinkResource nimmt keine automatische Sammlung von persönlichen Daten der Nutzer wie z.B. dem Namen, der Anschrift, Telefonnummer oder E-Mail-Adresse, vor. Eine Ausnahme davon bilden Angaben, welche der Nutzer freiwillig an RethinkResource übermittelt, indem Webseite-Formulare ausgefüllt werden oder RethinkResource auf andere Weise über die Webseite kontaktiert wird.</p>
+			</li>
+			<li>
+				<h4>Einsatz von Cookies</h4>
+				<p>Um den Webauftritt für die Nutzer laufend zu verbessern, kann RethinkResource Cookies einsetzen. Cookies sind kleine Software-Informationen, die durch Browser (z.B. Internet Explorer oder Mozilla Firefox) auf der Computerfestplatte des Nutzers abgespeichert werden, um die Nutzung der Webseite zu erleichtern (z.B. Sprachwahl, Warenkorb, etc.). Diese Cookies sind vollständig anonymisiert und enthalten keine Personendaten. Zu keinem Zeitpunkt wird Spionage-Software installiert oder verwendet, um auf dem Computer gespeicherte Daten und Informationen zugreifen zu können.</p>
+				<p>Die meisten Browser akzeptieren solche Cookies automatisch, jedoch können die Browser so konfiguriert werden, dass sie keine Cookies annehmen oder abspeichern. Einzelheiten hierzu sind der Bedienungsanleitung bzw. der Hilfe-Funktion des Browsers zu entnehmen.</p>
+			</li>
+			<li>
+				<h4>Verwendung der Daten</h4>
+				<p>Die anonymisierten Daten, welche beim Aufruf der RethinkResource-Webseite mittels Cookies festgehalten werden, können zu Analysezwecken, zur Optimierung der Webseite und für die Messung der Performance eingesetzt werden. RethinkResource kann dafür folgende Drittanbieter einsetzen, die teilweise eigene Datenschutzregelungen haben, auf welche RethinkResource keinen Einfluss hat:</p>
+				<h4>Google Analytics</h4>
+				<p>Daten, die Benutzer von sich aus als Nutzer des Internetauftritts übermitteln, dürfen von RethinkResource zum Zweck der Verbesserung der Webseite sowie der individuellen Betreuung der Nutzer verwendet werden. Dazu gehören unter anderem das Versenden von Informationen, Angeboten oder die Benachrichtigung mit Bezug auf die Produktpalette oder auf Dienstleistungen an. Der Versand des RethinkResource-Newsletters erfolgt nur, wenn der Nutzer dies wünscht (Newsletter Opt-in-Verfahren).</p>
+			</li>
+			<li>
+				<h4>Social-Media Content</h4>
+				<p>RethinkResource kann auf seiner Webseite Social Media Plugins, z.B. von Facebook, Google+ oder Twitter verwenden. Diese Plattformen haben eigene Datenschutzregelungen, auf welche RethinkResource keinen Einfluss hat.</p>
+				<p>Wünscht der Nutzer, dass keine dieser Plugins geladen werden, wird empfohlen, sich vom entsprechenden Social-Media-Dienst auszuloggen. Des Weiteren können verschiedene Browser so eingestellt oder mit Add-Ons (z.B. Facebook-Blocker) ergänzt werden, dass die Social-Media-Plugins nicht geladen werden.</p>
+			</li>
+			<li>
+				<h4>Weitergabe Ihrer Daten</h4>
+				<p>RethinkResource sowie allfällige Tochter- und Zweiggesellschaften in der Unternehmensgruppe können personenbezogenen Daten gemäss diesen Datenschutzbestimmungen nutzen. Darüber hinaus werden die personenbezogenen Daten gegenüber Dritten nicht offenlegen.</p>
+				<p>Ausgenommen davon ist, wenn der Nutzer der Weitergabe der Daten an Unternehmen, die nicht mit RethinkResource verbunden sind, zugestimmt hat oder wenn RethinkResource hierzu gesetzlich, behördlich oder gerichtlich verpflichtet wird. Ausserdem wenn Dienstleister, welche RethinkResource in der Datenverarbeitung, der Verwaltung der Webseite oder auf sonstige Weise sowie bei der Erbringung der vom Nutzer angeforderten Produkte und Dienstleistungen unterstützen, beigezogen werden. Diese Dritten werden verpflichtet, das gleiche Mass an Sicherheit und Datenschutz einzuhalten, wie RethinkResource.</p>
+			</li>
+			<li>
+				<h4>Datensicherheit</h4>
+				<p>Die Übermittlung von Daten über das Internet ist leider nicht absolut sicher. RethinkResource arbeitet mit Dienstleistern und Internetanbietern zusammen, welche angemessene technische und organisatorische Sicherheitsvorkehrungen treffen, um die personenbezogenen Daten der Nutzer zu schützen. RethinkResource kann jedoch keine Garantie für die Sicherheit der vom Nutzer übermittelten Daten übernehmen. Jede Datenübertragung erfolgt daher auf eigenes Risiko.</p>
+			</li>
+			<li>
+				<h4>Ihre Informations- und Widerrufsrechte</h4>
+				<p>Selbstverständlich steht es jedem Nutzer frei, RethinkResource jederzeit – beispielsweise in einer E-Mail – mitzuteilen, dass die personenbezogenen Daten zukünftig nicht zur Kontaktaufnahme verwendet werden sollen. Auch die Teilnahme an den besonderen Services der RethinkResource-Webseite, wie dem Newsletter-Service, kann jederzeit widerrufen werden.</p>
+				<p>Zusätzlich besteht die Möglichkeit, Informationen zur Verarbeitung der Daten einzuholen oder eine Kopie der personenbezogenen Daten, welche über die RethinkResource-Webseite erhoben wurden, zu verlangen. Entsprechende Anfragen sind bitte schriftlich an RethinkResource GmbH (Technoparkstrasse 1, CH-8005 Zürich) oder info@rethink-resource.com zu richten.</p>
+			</li>
+			<li>
+				<h4>Schlussbestimmungen</h4>
+				<p>Sollten sich einzelne Bestimmungen oder Teile dieser Datenschutzbestimmungen als nichtig oder unwirksam erweisen, so wird dadurch die Gültigkeit der Datenschutzbestimmungen im Übrigen nicht berührt.</p>
+				<p>Der Gerichtsstand ist Zürich und das anwendbare Recht Schweizer Recht.</p>
+				<p>(Version 26. Februar 2014)</p>
+			</li>
+			</div>
+		</div>
+		<img src="img/sweet-ice-cream-photography-258300_bad.jpg" alt="RethinkResource Circle" class="width-is-100" id="closing-image"/>
+	</div>
+</div>
+
+<!--input type="checkbox" name="disccb2" id="dsccb2" class="hidden"/-->
+
+<div class="gallery shift-footer">
+	<ul class="thumbnail tntext">
+    	<h3 class="stats">RethinkResource</h3>
+    	<p>Press</p>
+		<p>Jobs</p>
+		<p>Downloads</p>
+		<label for="dsccb1" class="clicklink" id="clicklink1">Disclaimer</label>
+	</ul>
+    <ul class="thumbnail tntext">
+	    <h3 class="stats">About Us</h3>
+		<p>Values</p>
+		<p>Team</p>
+		<p>Partner</p>
+		<p>Testemonials</p>
+    </ul>
+    <ul class="thumbnail tntext">
+    	<h3 class="stats">Social Media</h3>
+    	<p>Blag</p>
+		<p>LinkedIn</p>
+		<p>Twatter</p>
+		<p>Facebook</p>
+    </ul>
+	<ul class="thumbnail tnright">
+		<img class="logofoot" src="img/ReRe_Logo_RGB_white.png" alt="image"/>
+    	<h3 class="stats">&copy; RethinkResource GmbH</h3>
+    	<p>Technoparkstrasse 1</p>
+		<p>CH-8005 Zürich</p>
+		<p class="phonumber">+41 79 726 35 00</p>
+		<p class="infomail">info@rethink-resource.com</p>
+    </ul>
+</div>
+
+</div>
+	
+</body>
+</html>
