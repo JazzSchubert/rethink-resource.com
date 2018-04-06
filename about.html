@@ -29,18 +29,25 @@ function OnScrollDiv () {
 
     var group4height = ((6720 + ww / 10) / ww * 100).toFixed(2);
     var group6height = ((1680 + ww / 10) / ww * 100).toFixed(2);
+    var group12height = ((2520 + ww / 10) / ww * 100).toFixed(2);
 
     if (828 <= ww && ww < 1245) {
     	group4height = ((2240 + ww / 10) / ww * 100).toFixed(2);
     	group6height = ((1120 + ww / 10) / ww * 100).toFixed(2);
-    }
-    else if (1245 <= ww && ww < 1661) {
+    } else if (1245 <= ww && ww < 1661) {
     	group4height = ((1680 + ww / 10) / ww * 100).toFixed(2);
     	group6height = ((560 + ww / 10) / ww * 100).toFixed(2);
-    }
-    else if (1661 <= ww) {
+    } else if (1661 <= ww) {
     	group4height = ((1120 + ww / 10) / ww * 100).toFixed(2);
     	group6height = ((560 + ww / 10) / ww * 100).toFixed(2);
+    }
+
+    if (561 <= ww && ww < 845) {
+    	group12height = ((1400 + ww / 10) / ww * 100).toFixed(2);
+    } else if (845 <= ww && ww < 1411) {
+    	group12height = ((840 + ww / 10) / ww * 100).toFixed(2);
+    } else if (1411 <= ww) {
+    	group12height = ((560 + ww / 10) / ww * 100).toFixed(2);
     }
 
     var RSH = (div.scrollTop / ww * 100).toFixed(2);
@@ -84,7 +91,7 @@ function OnScrollDiv () {
 			partnersImage.classList.add("hidden")
 		}
 
-		if (RSH >= 45 && RSH - group4height < 130 && !(RSH >= 102 && RSH < 125) || (RSH -group4height >= 158 && RSH - group4height - group6height < 160) || (RSH - group4height - group6height >= 185 && RSH - group4height - group6height < 238) || (RSH - group4height - group6height >= 265 && RSH - group4height - group6height < 360) || (RSH - group4height - group6height >= 388 && RSH - group4height - group6height < 430)) {
+		if (RSH >= 45 && RSH - group4height < 130 && !(RSH >= 102 && RSH < 125) || (RSH -group4height >= 158 && RSH - group4height - group6height < 160) || (RSH - group4height - group6height >= 185 && RSH - group4height - group6height < 238) || (RSH - group4height - group6height >= 265 && RSH - group4height - group6height < 360) || (RSH - group4height - group6height >= 388 && RSH - group4height - group6height - group12height < 380)) {
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.add("black-navbar");
 			}
@@ -105,7 +112,7 @@ function OnScrollDiv () {
 			colorLogo.classList.remove("visible");
 			colorLogo.classList.add("hidden");
 		}
-};
+}
 	
 </script>
 
@@ -806,10 +813,10 @@ function OnScrollDiv () {
 	</div>
 </div>
 
-<div id="groupa12" class="parallaxGroup height-is-50">
-  	<div class="iparallaxLayer baseLayer">
+<div id="groupa12" class="parallaxGroup">
+  	<div class="iparallaxLayer baseLayer background-is-white">
 		  
-		<div class="about background-is-white" id="about8">
+		<div class="about" id="about8">
 		<div class="design-bar-h-2-w-90"></div>
 
 		<div class="design-box-press">
