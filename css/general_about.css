@@ -71,9 +71,9 @@
 }
 .quoteb{
 	display: flex;
-	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
 	height: 35vw;
 	padding-bottom: 5vw;
 }
@@ -81,10 +81,14 @@
 	width: inherit;
 }
 .quoteb p{
-	width: 25vw;
-	padding-left: 2.5vw;
-	padding-right: 2.5vw;
-	font-size: 1.7vw;
+	width: 20vw;
+	padding-left: 0vw;
+	padding-right: 0vw;
+	font-size: 1.45vw;
+	line-height: 2vw;
+}
+.quoteb .tag{
+	font-size: 1.3vw;
 }
 .quote-bar {
 	width: 90vw;
@@ -211,7 +215,7 @@
 	height: 80px;
 }
 #testemonials .tag{
-	padding-top: 1.2vw;
+	padding-top: 0.5vw;
 	font-size: 1.4vw;
 	font-style: italic;
 }
