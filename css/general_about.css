@@ -99,6 +99,7 @@
 }
 .bar {
 	padding-top: 2vw;
+	margin-top: -0.01vw;
 	font-weight: 200;
 	float: left;
 	line-height: 2.7vw;
@@ -130,9 +131,11 @@
 }
 .is-lowered{
 	padding-top: 5vw;
+	margin-top: -0.01vw;
 }
 .tag {
 	padding-top: 2.5vw;
+	margin-top: -0.01vw;
 	font-size: 1.5vw;
 	font-weight: 150;
 	float: left;
