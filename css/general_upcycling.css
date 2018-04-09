@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.upcycler {
+	position: relative;
+	overflow: hidden;
+	width: 95vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	padding-right: 5vw;
+}
+.product-picture {
+	overflow: hidden;
+	height: inherit;
+}
+.product-picture img{
+	object-fit: cover;
+	height: inherit;
+	width: inherit;
+}
+#petlamp-container{
+	height: 28vw;
+	padding-bottom: 2vw;
+}
+#petlamp-image{
+	object-fit: contain;
+}
+#tschipps-container{
+	padding-left: 5vw;
+}
+#tschipps-image{
+	object-fit: contain;
+}
+#pure-waste-container{
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	height: 26vw;
+}
+#pure-waste-textiles-image{
+	object-fit: contain;
+}
+#greentom-container{
+	padding-bottom: 2vw;
+	padding-left: 4vw;
+	width: 46vw;
+	height: 28vw;
+}
+#greentom-image{
+	object-fit: contain;
+}
+#pinatex-container{
+	padding-left: 6vw;
+	width: 34vw;
+}
+#pinatex-image{
+	object-fit: contain;
+}
+#timberland-container{
+	padding-left: 4vw;
+	width: 41vw;
+}
+#timberland-image{
+	object-fit: contain;
+}
+#freitag-container{
+	padding-left: 4vw;
+	width: 50vw;
+}
+#freitag-image{
+	object-fit: contain
+}
+#patagonia-container{
+	padding-left: 7vw;
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+	width: 33vw;
+	height: 24vw;
+}
+#patagonia-image{
+	object-fit: contain;
+}
+#coco-pallet-container{
+	padding-left: 7vw;
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+	width: 31vw;
+	height: 24vw;
+}
+#coco-pallet-image{
+	object-fit: contain;
+}
+#solidus-container{
+	padding-left: 5vw;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	width: 30vw;
+	height: 26vw;
+}
+#solidus-image{
+	object-fit: contain;
+}
+#bio-lutions-container{
+	padding-left: 5vw;
+	padding-top: 5vw;
+	padding-bottom: 5vw;
+	width: 30vw;
+	height: 20vw;
+}
+#bio-lutions-image{
+	object-fit: contain;
+}
+#toast-container{
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	padding-left: 3vw;
+	width: 47vw;
+	height: 26vw;
+}
+#toast-image{
+	object-fit: contain;
+}
+#okara-container{
+	padding-left: 7vw;
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+	width: 31vw;
+	height: 24vw;
+}
+#okara-image{
+	object-fit: contain;
+}
