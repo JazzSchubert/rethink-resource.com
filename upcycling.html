@@ -13,6 +13,7 @@
 <link href="css/general_slider.css" rel="stylesheet" type="text/css">
 <link href="css/general_lines.css" rel="stylesheet" type="text/css">
 <link href="css/text-gradient.css" rel="stylesheet" type="text/css">
+<link href="css/general_upcycling.css" rel="stylesheet" type="text/css">
 
 
 
@@ -44,23 +45,26 @@ function OnScrollDiv () {
 			pageCaption.classList.add("fade-in");
 		}
 
-
-		if (relativeScrollHeight >= 90 && relativeScrollHeight < 335 && !(relativeScrollHeight >= 175 && relativeScrollHeight < 230)){
+		if (relativeScrollHeight >= 98 && relativeScrollHeight < 1952){
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.add("black-navbar");
 			}
-			navigationBar.classList.add("white-bg-navbar");
+			navigationBar.classList.add("half-white-bg-navbar");
 			dropDownContent.classList.add("white-bg-navbar");
+		} else {
+			for (var i = 0; i < navbarelements.length; i++) {
+				navbarelements[i].classList.remove("black-navbar");
+			}
+			navigationBar.classList.remove("half-white-bg-navbar");
+			dropDownContent.classList.remove("white-bg-navbar");
+		}
+
+		if (relativeScrollHeight >= 90 && relativeScrollHeight < 1950 && !(relativeScrollHeight >= 150 && relativeScrollHeight < 210) && !(relativeScrollHeight >= 270 && relativeScrollHeight < 330) && !(relativeScrollHeight >= 390 && relativeScrollHeight < 450) && !(relativeScrollHeight >= 510 && relativeScrollHeight < 570) && !(relativeScrollHeight >= 630 && relativeScrollHeight < 690) && !(relativeScrollHeight >= 750 && relativeScrollHeight < 810) && !(relativeScrollHeight >= 870 && relativeScrollHeight < 930) && !(relativeScrollHeight >= 990 && relativeScrollHeight < 1050) && !(relativeScrollHeight >= 1110 && relativeScrollHeight < 1170) && !(relativeScrollHeight >= 1230 && relativeScrollHeight < 1290) && !(relativeScrollHeight >= 1350 && relativeScrollHeight < 1410) && !(relativeScrollHeight >= 1470 && relativeScrollHeight < 1530) && !(relativeScrollHeight >= 1590 && relativeScrollHeight < 1650) && !(relativeScrollHeight >= 1710 && relativeScrollHeight < 1770) && !(relativeScrollHeight >= 1830 && relativeScrollHeight < 1890)){
 			whiteLogo.classList.remove("visible");
 			whiteLogo.classList.add("hidden");
 			colorLogo.classList.remove("hidden");
 			colorLogo.classList.add("visible");
 		} else {
-			for (var i = 0; i < navbarelements.length; i++) {
-				navbarelements[i].classList.remove("black-navbar");
-			}
-			navigationBar.classList.remove("white-bg-navbar");
-			dropDownContent.classList.remove("white-bg-navbar");
 			whiteLogo.classList.remove("hidden");
 			whiteLogo.classList.add("visible");
 			colorLogo.classList.remove("visible");
@@ -92,7 +96,7 @@ function OnScrollDiv () {
     			</a>
 			</li> 
 	        <li class="dropdown">
-   				<a href="upcycling.html" name="dropbtn">UPCYCLING 
+   				<a href="#about" name="dropbtn">UPCYCLING 
     			</a>
 			</li>
 			<li class="dropdown">
@@ -129,92 +133,397 @@ function OnScrollDiv () {
 
 <div id="group0" class="parallaxGroup height-is-50">
 	<div class="iparallaxLayer backgroundLayer">
-		<h2 class="headline text-is-white fade-in header-translate" id="page-headline">Turning Waste into Opportunities
+		<h2 class="headline text-is-white fade-in header-translate" id="page-headline">Upcycling Innovation
 		</h2>
 		<p class="headline_description text-is-white fade-in header-translate" id="page-caption">
-		RethinkResource facilitiates Material Efficiency for the Producing Industry.
+		Responsible. Fair. Sustainable. Profitable.
 		</p>
 	</div>
 	<div class="iparallaxLayer deepBackgroundLayer">
-		<img src="img/RethinkResource_Island_bad.jpg" alt="RethinkResource Island" class="width-is-100" id="landing-image">
+		<img src="img/upcycling/about-balloon-bad.jpg" alt="RethinkResource Island" class="width-is-100" id="landing-image">
 	</div>
 </div>
 
 
-<div id="group1" class="parallaxGroup height-is-120">
+<div id="group1" class="parallaxGroup height-is-930">
   	<div class="iparallaxLayer baseLayer">
 
-		<div class="about background-is-white" id="about1">
+		<div class="about background-is-white height-is-30" id="about1">
 			<div class="quote">
-				<img src="img/LKW_Process_Flow.png" alt="truck image" id="truck"/>
 				<div class="quotew">
 				<p class="bar is-lowered gradient1">“There is a way to do it better. Find it!”</p><br>
 				<p class="tag gradient1"> - Thomas Edison</p>
 				</div>
 			</div>
 			<div class="design-container">
-				<img src="img/Receiving_Floor_Process_Flow.png" alt="receiving floor image" id="receivingFloor"/>
-				<div class="landing-linesshape3"></div>
-				<img src="img/Number_Indicator_Process_Flow.png" alt="number indicator image" id="indicator100"/>
-				<div class="landing-linesshape1"></div>
-				<div class="landing-linesshape2"></div>
-				<div class="landing-linesshape4"></div>
-				<div class="square-box" id="landing-box1"></div>
-				<img src="img/Conveyor_vertical_Process_Flow.png" alt="vertical conveyor image" id="vertical-conveyor"/>
-				<div class="square-box-with-diagonal" id="landing-box2"></div>
-				<img src="img/Arrow_Process_Flow.png" alt="process flow arrow image" id="process-flow-arrow"/>
 			</div>
-	    	<div class="text-column">
+	    	<div class="text-column width-is-40">
 	    		<h3>Welcome!</h3>
-				<p>We are RethinkResource, a Swiss startup with the mission to turn industrial side streams into sustainable and profitable business opportunities.</p>
-				<p>We believe that a responsible handling of resources is key to the resilient value chains of a sustainable future. This is why we see industrial side streams as strategic assets – with long-term competitive advantages. We focus on extracting the value in these stranded assets within the constraints of a modern production system.</p>
-	    		<p>Our daily business is the search and implementation of the best possible innovations through resource efficiency. Our team works with a hands-on approach to provide the necessary project management and business cases for the creation of sustainable consumer products, through open innovation, in collaboration with our customers and partners.</p>
-	    		<p>We understand our customers’ wish for a responsible handling of material streams.</p>
+				<p>Upcycling is the process of changing the application of a material from low value, such as incineration or bio-gas, to high value, such as food, cosmetics, fashion, etc.</p>
+				<p>Many industrial Side Streams today are Waste Streams, because no better application has been found and the material goes to waste. However, with the trends towards product diversification, responsible consumption and digitalisation, new applications appear every day. Start-ups and big players from all industries are pushing the boundaries of our perception of waste, resources and value.</p>
+	    		<p>Through this new mindset emerge products that are not only more sustainable than their counterparts, but more profitable as well.</p>
 			</div>
 	    </div>
-		  
-		<div class="slider">
-			<input type="radio" name="radio-btn" id="img-1" />
-			<input type="radio" name="radio-btn" id="img-2" />
-			<input type="radio" name="radio-btn" id="img-3" />
+		
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-45">
+				<img src="img/upcycling/victorinox_nespresso.jpg" alt="pocket knife image" id="sackmesser-image"/>
+			</div>
+			<div class="text-column width-is-35">
+				<h3>Secondary Single-Colour Anodised Aluminium:</h3>
+				<p>The pioneer pocket knife with scales made of recycled Nespresso capsules. To make the Alox scales, used Nespresso capsules are molten down and then cast. This saves enormous amounts of energy required for the production of virgin aluminium</p>
+				<p>The first knife was created in 2016, to celebrate the 25th anniversary of Nespresso’s recycling program. Thanks to the success of this knife, Victorinox and Nespresso have continued the partnership in 2017 and 2018.</p>
+				<p><a href="https://www.victorinox.com/ch/en/Explore/Company/Sustainability/Partnership-with-Nespresso/cms/nespresso-recycling">www.victorinox.com</a></p>
+			</div>
+		</div>
+  
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-50" id="petlamp-container">
+				<img src="img/upcycling/PET_lamp.jpg" alt="PET lamp image" id="petlamp-image"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Secondary PET as Form-Giving Design Element:</h3>
+				<p>PET Lamp believe in reuse as the counterpoint to recycling. PET Lamp is a project that mixes the reuse of PET plastic bottles with selected traditional weaving techniques from different corners of the world in order to create unique handmade lampshades.</p>
+				<p>They proudly created the magic moment when PET plastic stripes and natural fibres meet and perfectly fit together in order to turn into a long-lasting item. Each lampshade is unique and is offered as individual lamps as well as big installations that enhance the infinite variety of pieces.</p>
+				<p><a href="http://www.petlamp.org">petlamp.org</a></p>
+			</div>
+		</div>
 
-			<div class="slide" id="sld-1">
-				<p class="slide_head" id="slhead1">Create success stories, aligned with the current operations, to champion a new mindset.</p>
-				<p class="slide_link" id="sllink1">&#8594; read more about Ecosystem &amp; Strategy ...</p>
-				<p class="slide_head" id="slhead2">The realization of a closed system impacts our perception of the use of resources.</p>
-				<p class="slide_link" id="sllink2">&#8594; read more about Side-Stream Valorisation ...</p>
-				<p class="slide_head" id="slhead3">Circular innovation is triggered by the existence of a side stream that is currently undervalued.</p>			
-				<p class="slide_link" id="sllink3">&#8594; read more about Upcycling Solutions ...</p>
-				<img src="img/adam-krowitz-386852_bad.jpg" alt="image" id="slideimg1">
-				<img src="img/aaron-burden-151465_bad.jpg" alt="image">
-				<img src="img/RethinkResource_field_bad.jpg" alt="image">
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-45">
+				<img src="img/upcycling/regrained_protein_bar.jpg" alt="protein bar image" id="regrained-image"/>
 			</div>
-		  	<ul class="nav-dots">
-				<label for="img-1" class="nav-dot" id="img-dot-1"></label>
-		    	<label for="img-2" class="nav-dot" id="img-dot-2"></label>
-	    		<label for="img-3" class="nav-dot" id="img-dot-3"></label>
-	   	 	</ul>			
-		</div>	
-		  
-		<div class="about background-is-white" id="about2">
-			<div class="quote">
-				<div class="quotew">
-				<p class="gradient1 bar has-lots-of-text is-lowered">"In the current environment, competitive advantage flows to companies that know how to do more with less.</p><br>
-				<p class="bar has-lots-of-text gradient1"> Winning organizations are embedding sustainability into their business models and governance processes to capture growth opportunities, resource advantages, and cost savings."</p><br>
-				<p class="tag gradient1"> - The Boston Consulting Group</p>
-				</div>
+			<div class="text-column width-is-35">
+				<h3>Secondary Protein and Fibre from Spent Grain:</h3>
+				<p>ReGrained rescues the nutritious grain created every time that beer is brewed, and upcycles it into SuperGrain+ flour using their patent-pending tech.</p>
+				<p>Brewing beer processes the sugar out of the grain. This gives optimal access to protein, fiber, and a whole bunch of micronutrients that they upcycle into SuperGrain+. It not only out-performs nearly every other grain flour in nutrients like protein and fiber, but also packs incredible flavor and environmental regenerative impact. </p>
+				<p><a href="https://www.regrained.com">www.regrained.com</a></p>
 			</div>
-			<div class="design-container">
+		</div>
+  
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40" id="tschipps-container">
+				<img src="img/upcycling/locher_tschipps.png" alt="chips image" id="tschipps-image"/>
 			</div>
-	    	<div class="text-column">
-				<h3>How do you leverage unused potential?</h3>
-				<p>Circular innovation is triggered by the existence of a side stream that is currently undervalued. We apply  our wide range of expertise between product innovation and process engineering and activate our network to explore material properties and discover value by asking “What is the wasted side-stream, and what can it become?”</p>
-				<p>Not every innovation is an invention. Sometimes, it is about scaling up niche innovations and taking them to the mainstream. Sometimes it is about reproducing established innovations in a new industry, or just about making a new cross-industry link between buyers and sellers of secondary resources. In some cases, it is about highlighting the application of secondary resources and creating that critical upcycling value that conscious consumers love.</p>
-				<p>Whatever your case is, we provide the network and knowhow to implement the right upcycling innovations for your industry. We manage the process of open innovation with supplier and partner companies across Europe, and at the same time we take a close look at various business cases and reduce them to a concrete portfolio while they gain traction. It is particularly important to us to assist you with the implementation in order to create sustainable added value.</p><br>
-				<p class="is-indented">See what others have done in our UPCYCLING section</p>
+			<div class="text-column width-is-30">
+				<h3>Spent Grain as Potato-Replacer:</h3>
+				<p>Fresh Spent Grain from the brewhouse and vitamin-rich yeast from the fermenting cellar. Brauerei Locher from Appenzell is upcycling their side streams into an innovative Sn&auml;ck.
+				<p>The by-products from the brewery are usefully refined into a taste-intensive and authentic top-quality product. With many vegetable proteins, minerals and dietary fibers - a high-quality Appenzeller Sn&auml;ck with less fat.</p>
+				<p><a href="https://www.tschipps.ch">www.tschipps.ch</a></p>
 			</div>
-	    </div>
+		</div>
 
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-45">
+				<img src="img/upcycling/adidas-x-parley-ocean-plastic-footwear.jpg" alt="ocean plastics image" id="x-parley-image"/>
+			</div>
+			<div class="text-column width-is-35">
+				<h3>Secondary Plastics and Rubber:</h3>
+				<p>Adidas and Parley collaborate to prevent plastic entering our oceans and transform it into high performance sportswear.</p>
+				<p>Spinning the problem into a solution. The threat into a thread. They are driving eco innovation around materials, products and new ways of using them. New Methods. New Mindsets. New Future.</p>
+				<p><a href="https://www.adidas.ch/en/parley">www.adidas.ch</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-50" id="pure-waste-container">
+				<img src="img/upcycling/pure-waste-textiles.jpg" alt="upcycling sweater" id="pure-waste-textiles-image"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Secondary Single-Colour Respun Non-Dyed Fibre:</h3>
+				<p>The people at Pure Waste know, that everything we do has an impact on something, somewhere. They know that sustainability and quality go together. They believe that fashion and ecological thinking should go together too. “Pure Waste” is their promise to use only materials that would otherwise go to waste.</p>
+				<p>They also wish to challenge the whole perception of waste. Pure Waste is recycling upgraded. Their vision is to recreate the fashion industry, and lead it into a future of sustainability. They want to industrialise textile upcycling globally as a common practice.</p>
+				<p><a href="https://www.purewaste.org/">www.purewaste.org</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-45">
+				<img src="img/upcycling/Kaffeeform.jpg" alt="upcycled coffee cups image" id="kaffeeform-image"/>
+			</div>
+			<div class="text-column width-is-35">
+				<h3>Coffee Grounds as Food-Safe Structural Component:</h3>
+				<p>The starting point for Kaffeform UG was the simple question: What happens to all the coffee grounds after we have enjoyed our Espresso, Cappuccino or Americano? Is there no way to re-use this good and natural resource?</p>
+				<p>Characteristic features of Kaffeeform are the marbled, wood-like surface, the smell of coffee, the light weight, the long durability and washability (dishwasher safe).</p>
+				<p><a href="https://www.kaffeeform.com/en/">www.kaffeeform.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40">
+				<img src="img/upcycling/damn_good_bread_beer.jpg" alt="bread beer image" id="bread-beer-image"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Unsold Bread as Sustainable Malt-Replacer:</h3>
+				<p>We are used to having a large selection of freshly baked bread at any time of the day. That's why around one in four loaves remains unsold. The people at Damn Good Food &amp; Beverages AG thought: The long way from the seed to the crispy loaf should not have been in vain. So they chopped up the bread to crumbs and made their great bread beer out of it.</p>
+				<p>Besides bread crumbs, Damn Good Bread Beer is brewed with fresh spring water, yeast, hops and barley malt. This produces the amber and tasty specialty beer. 
+				<p><a href="https://www.breadbeer.ch">www.breadbeer.ch</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40">
+				<img src="img/upcycling/E6PR.jpg" alt="eco six pack ring image" id="E6PR-image"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>High-Fibre Side Streams as Structural Component &amp; Binder:</h3>
+				<p>The E6PR™ (Eco Six Pack Ring) is the first ecofriendly six pack ring made from by-product waste and other compostable materials, designed to replace the plastic rings, which are truly damaging to our environment.</p>
+				<p>When disposed of properly, the E6PR™ finds its way to a compostable facility, where it will degrade in days, and when, unfortunately, left out in open land or a water system, it will degrade within a week. It is made from compostable organic materials that do not cause harm to wildlife in case of ingestion.​</p>
+				<p><a href="https://www.e6pr.com/">www.e6pr.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-50" id="greentom-container">
+				<img src="img/upcycling/greentom-strollers.png" alt="baby stroller image" id="greentom-image"/>
+			</div>
+			<div class="text-column width-is-30">
+				<h3>Secondary Structural Plastics and Fibres:</h3>
+				<p>Innovation for a new generation. Greentom is different in every detail, completely made of recycled plastic, super lightweight. It grows up in 3 phases, following its precious petit passenger.</p>
+				<p>The Greentom frames are made of recycled Polypropylene. Fabrics of the Bottle Fabric Collection are entirely made out of recycled drinking bottles.</p>
+				<p><a href="https://www.greentom.com">www.greentom.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-45">
+				<img src="img/upcycling/ikea-kungsbacka.jpg" alt="kitchen front image" id="kungsbacka-image"/>
+			</div>
+			<div class="text-column width-is-35">
+				<h3>Secondary Food-Grade Surfaces:</h3>
+				<p>The KUNGSBACKA are the first kitchen fronts in the IKEA range made from both recycled wood and recycled plastic.</p>
+				<p>Together with an Italian supplier, IKEA has developed a new material on the market – a plastic foil made from recycled PET-bottles that is laminated on the kitchen fronts. It fulfils the same quality requirements as a foil made from virgin materials.</p>
+				<p><a href="https://www.ikea.com/us/en/about_ikea/newsitem/020117_recycled_PET-bottles_become_IKEA_kitchen_fronts">www.ikea.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40" id="pinatex-container">
+				<img src="img/upcycling/pinatex-bourgeois-boheme.jpg" alt="pinapple leather shoe image" id="pinatex-image"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Agricultural Side Stream as Vegan Leather Replacement:</h3>
+				<p>Pi&ntilde;atex&reg; is an innovative natural textile made from pineapple leaf ﬁbre. The raw material that forms the base of Pi&ntilde;atex&reg; is a by-product of the pineapple harvest. The leaves are the byproduct of existing agriculture, and their use creates an additional income stream for farming communities.</p>
+				<p>Pi&ntilde;atex&reg; is a non-woven textile, developed for use as a low-impact alternative to leather and PVC/PU materials. It has passed several ISO textile testing standards and is available in six colours.</p>
+				<p><a href="https://www.ananas-anam.com/products/">www.ananas-anam.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-35">
+				<img src="img/upcycling/interface-modular-carpet.jpg" alt="pocket knife image" id="sackmesser"/>
+			</div>
+			<div class="text-column width-is-45">
+				<h3>Secondary Fishing Net Nylon Yarn:</h3>
+				<p>An elegant design solution for the floor and a socially responsible design solution for a fragile economy. Net Effect's project Net-Works provides a source of income for small fishing villages in the Philippines while cleaning up their beaches and waters of discarded fishing nets that threaten their livelihood.</p>
+				<p>Discarded fishing nets are collected and sold to their yarn supplier and partner, Aquafil. Since 2011 they’ve been re-purposing waste nylon from discarded fishing nets and other sources, including yarn reclaimed through their own ReEntry® program, to provide recycled content nylon for Interface carpet tiles.</p>
+				<p><a href="http://www.interface.com/US/en-US/about/modular-carpet-tile/Net-Effect">www.interface.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40" id="patagonia-container">
+				<img src="img/upcycling/patagonia-jacket.jpg" alt="patagonia jacket image" id="patagonia-image"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Secondary Polyester Fibre for Garments:</h3>
+				<p>Patagonia began making recycled polyester from plastic soda bottles in 1993–the first outdoor clothing manufacturer to transform trash into fleece. It was a positive step toward a more sustainable system – one that uses fewer resources, discards less and better protects people’s health.</p>
+				<p>Today, they recycle used soda bottles, unusable manufacturing waste and worn-out garments (including their own) into polyester fibers to produce clothing. And they offer recycled polyester in a lot more garments, including Capilene&reg; baselayers, shell jackets, board shorts and fleece.</p>
+				<p><a href="http://www.patagonia.com/recycled-polyester.html">www.patagonia.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40">
+				<img src="img/upcycling/protix-image.jpg" alt="pocket knife image" id="sackmesser"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Secondary Protein Concentrate and Lipids:</h3>
+				<p>Insects are some of nature's most efficient converters of low grade organic materials to concentrated protein and lipids. In most cultures, reared insects are a highly regarded specialty.</p>
+				<p>Protix is the leading insect ingredient company with a broad range of ingredients made from the Black Soldier Fly, Mealworm, Cricket and Locust. Protix is dedicated to delivering sustainable, circular and natural proteins and ingredients from insects for the production of high quality food and animal feed.</p>
+				<p><a href="https://protix.eu/">protix.eu</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40" id="okara-container">
+				<img src="img/upcycling/furterer-okara.jpg" alt="okara cosmetics image" id="okara-image"/>
+			</div>
+			<div class="text-column width-is-35">
+				<h3>Soy Milk Side Stream as Cosmetic Ingredient:</h3>
+				<p>Rene Furterer's Okara Active Light Shampoo uses natural Okara extract as a main ingredient. The amino acids restructure and repair damaged hair and provide incredible brilliance.</p>
+				<p>In Japan, Korea and China, Okara is part of the traditional cuisines. The Western culture, lacking traditional application in food, has downcycled Okara as feed for livestock. Upcycling this high-quality ingredient in premium cosmetics is not only more sustainable, but also promotes the ingredient for other high-value applications.
+				<p><a href="https://www.renefurterer.com/de/de/okara-active-light/lichtreflex-maske">www.renefurterer.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-45">
+				<img src="img/upcycling/ecovatives-mushroom-board.jpg" alt="mycellium insulation board image" id="ecovatives-image"/>
+			</div>
+			<div class="text-column width-is-35">
+				<h3>High-Fibre Side Streams as Insulation Material:</h3>
+				<p>The company Ecovative Design developed a compound called Greensulate. It uses mycelium to bind natural insulating materials such as rice hulls or cotton husks—whatever agricultural byproducts are available in the area.</p>
+				<p>Currently there are two primary variants available, with different compressive strength, flexure strength and flame retardance. They also produce a mycellium-based textile that is used as leather replacement</p>
+				<p><a href="https://ecovativedesign.com/">ecovativedesign.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-45" id="timberland-container">
+				<img src="img/upcycling/timberland-tire-sole.jpg" alt="timberland sole image" id="timberland-image"/>
+			</div>
+			<div class="text-column width-is-35">
+				<h3>Secondary Rubber as Shoe Soles:</h3>
+				<p>Timberland Tires are the first premium automotive tires purposely created to be recycled into footwear outsoles at the end of their life on the road. When the tread wears out, the tire lives on, one day recycled into Timberland&reg; shoes.</p>
+				<p>Rather than being used for tire-derived fuel or ending up in a landfill, Timberland Tires will be given a second life within the outsole of a boot or shoe. Fewer tires end up in landfills; less virgin rubber gets used in footwear. </p>
+				<p><a href="https://www.timberlandtires.com/pdf/Timberland-and-Omni-United-Shared-Values%20March%202016.pdf">www.timberlandtires.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40">
+				<img src="img/upcycling/ice-stone-bathroom.jpg" alt="ice stone bathroom image" id="icestone-image"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Secondary Glass Compound as Marble Replacement:</h3>
+				<p>IceStone manufacture upcycled glass surfaces for kitchen countertops, bathroom vanities and desk tops in their state-of-the-art facility in the historic Brooklyn Navy Yard. They use just three core ingredients: 100% recycled glass, Portland cement, and non-toxic pigments.</p>
+				<p>They also created PaperStone, a heavy-duty solid surface known for its performance, warm touch, contemporary appearance and environmental sustainability. Its non-porous surface is made from 100% post-consumer recycled paper and a proprietary, petroleum-free resin.</p>
+				<p><a href="https://icestoneusa.com">icestoneusa.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-45" id="solidus-container">
+				<img src="img/upcycling/solidus-solutions.jpg" alt="tomato packaging image" id="solidus-image"/>
+			</div>
+			<div class="text-column width-is-45">
+				<h3>Agrigultural Side Stream for Packaging Synergy:</h3>
+				<p>For its new tomato product, Pure Hothouse Foods decided to use solid board enriched with tomato plant fibres, which is uniquely produced by Solidus Solutions, manufacturer of solid board and solid board packaging.</p>
+				<p>Every hectare of tomato plants can produce 100,000 tomato boxes (trays of 6kg), which is exactly the amount of packaging needed for the 600 tonnes of tomatoes that are grown on the same hectare. This means that this year's crop can provide next year's packaging - a perfect example of maximum use.</p>
+				<p><a href="http://solidus-solutions.com/en/">solidus-solutions.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-30">
+				<img src="img/upcycling/sealand.jpg" alt="sealand bags image" id="sealand-image"/>
+			</div>
+			<div class="text-column width-is-50">
+				<h3>Upcycling Product Innovation in Various Sheet Materials:</h3>
+				<p>Rooted in Cape Town’s southern peninsula where mountains and ocean so vividly connect, Sealand was born with a conviction of keeping the environment front and centre alongside inspired functional designs and longevity. Smart material selection, compelling functionality and product durability are all palpable features of what they make.</p>
+				<p>Sealand produces bags and accessories exclusively from upcycled Advertising Billboard Mesh, Yacht Sail, Beduin Stretch Tent, Advertising Nylon, Truck Tarpaulin and Nylon Ripstop by hand in their workshop in Cape Town.</p>
+				<p><a href="https://sealandgear.com/pages/our-story">sealandgear.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-35" id="bio-lutions-container">
+				<img src="img/upcycling/bio-lutions.png" alt="food packaging image" id="bio-lutions-image"/>
+			</div>
+			<div class="text-column width-is-45">
+				<h3>Secondary Fibre for Disposable Tableware and Packaging:</h3>
+				<p>BIO-LUTIONS offers packaging solutions and disposable tableware made of up-cycled agricultural excess. This raw material is converted through a mechanical process into self-binding Micro- and Nanofibrillated Natural Fibres.</p>
+				<p>BIO-LUTIONS uses no chemical additives and does not have to go through the energy-intensive process of cellulose extraction. This way, they avoid chemical contamination and excessive use of water, both common to cellulose production. Their technology makes it possible to use even the shortest fibres from most agricultural excess worldwide.</p>
+				<p><a href="https://www.bio-lutions.com">www.bio-lutions.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40">
+				<img src="img/upcycling/lenzing-refibra.jpg" alt="refibra fibre image" id="refibra-image"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Secondary Cotton &amp; Wood Fibre:</h3>
+				<p>The need for clothing will have doubled by the year 2025. This amount of clothing signals a major burden for our environment. Refibra&trade; fibers, the new TENCEL&trade; fibers, are made from pulp that contains cotton scraps left over from cutting operations and wood.</p>
+				<p>Lenzing is the first manufacturer to offer cellulose fibers featuring upcycled material on a commercial scale. With their technology, Lenzing pioneer the circular economy for textiles, reducing the need to extract additional raw materials.</p>
+				<p><a href="http://www.lenzing-fibers.com/en/tencel/refibra/">www.lenzing-fibres.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40" id="coco-pallet-container">
+				<img src="img/upcycling/coco-pallet.jpg" alt="coco pallet image" id="coco-pallet-image"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Structural Fibre and Binder from Coconut Side Stream:</h3>
+				<p>CocoPallet International has developed a sustainable and cost competitive Export Pallet made from Coconut Waste. CocoPallet is 100% bio-based. It replaces Timber Pallets and prevents logging and transportation of millions of trees.</p>
+				<p><a href="https://www.cocopallet.com">www.cocopallet.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-45">
+				<img src="img/upcycling/nae-footware.jpg" alt="vegan shoe image" id="nae-image"/>
+			</div>
+			<div class="text-column width-is-35">
+				<h3>Upcycling Product Innovation in Footware:</h3>
+				<p>Nae (No Animal Exploitation) is a Portuguese vegan footwear brand with a focus on natural and ecological materials. Their strategy is to create modern products designed for everyday use that are manufactured in Portugal.</p>
+				<p>In their products, Nae uniquely combine a variety of natural materials such as cork and pineapple, upcycled materials such as airbag and PET - plastic bottles, and ecological synthetic microfibers.</p>
+				<p><a href="https://www.nae-vegan.com/en/">www.nae-vegan.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-50">
+				<img src="img/upcycling/freitag-bags.jpeg" alt="freitag bags image" id="freitag-image"/>
+			</div>
+			<div class="text-column width-is-30">
+				<h3>Secondary Sheet Material from Truck Canvas:</h3>
+				<p>Freitag started with the development of a messenger bag from used truck tarpaulins, discarded bicycle inner tubes and car seat belts – each one upcycled, each one unique.</p>
+				<p>The messenger bag has since spawned a full range of over 80 different models for all your carrying needs: from smartphone and laptop sleeves via backpacks and on to handbags, shoppers and travel bags.</p>
+				<p><a href="https://www.freitag.ch/en/about">www.freitag.ch</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-45">
+				<img src="img/upcycling/echojazz-echopanel.jpg" alt="echopanel image" id="echojazz-image"/>
+			</div>
+			<div class="text-column width-is-35">
+				<h3>Secondary PET as Acoustic Absorbers:</h3>
+				<p>The people at ECOJAZZ turn pollution into high-performance acoustic absorbers and turn the waste problem into a solution. ECHOJAZZ upcyles between 47-72 PET bottles from landfills and the Pacific per square meter of product.</p>
+				<p>Their main product EchoPanel is more ecological, more robust, lighter and more flexible than any comparable product.</p>
+				<p><a href="http://echojazz.com/public/?lang=en">echojazz.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-50" id="toast-container">
+				<img src="img/upcycling/toast-ale.png" alt="toast ale image" id="toast-image"/>
+			</div>
+			<div class="text-column width-is-30">
+				<h3>Unsold Bread as Carbohydrate for Beer:</h3>
+				<p>The people at Toast Ale Ltd are on a mission to prevent food waste. Their delicious beer is brewed with unsold loaves from bakeries and unused crusts from sandwich makers.</p>
+				<p>They have taken secondary sourcing one step further and replaced all their barley malt with unsold bread. The only other ingredients are hops, yeast and water.</p>
+				<p><a href="https://www.toastale.com/surplus-story/">www.toastale.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40">
+				<img src="img/upcycling/fruu-cosmetics.jpg" alt="fruu lipsticks image" id="fruu-image"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Fruit Processing Side Streams as Cosmetics Ingredient:</h3>
+				<p>Fruu are a small cosmetics company from the UK. Their products are largely made of ingredients extracted and derived from more than 15 different types of nutrient bursting fruits.  100% bio-degradable.</p>
+				<p>Most of the ingredients are produced as a by-product of processed fruit waste, which generates vital extra revenue for small fruit farmers. All products are made in small batches in our UK workshop to make sure they are as fresh as possible.</p>
+				<p><a href="https://fruuurskin.com/pages/about-us">fruuurskin.com</a></p>
+			</div>
+		</div>
+		
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40" id="elvisandkresse-container">
+				<img src="img/upcycling/elvis-and-kresse-handbag.jpeg" alt="fire hose hand bag image" id="elvisandkresse-image"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Damaged Fire Hose as Sheet Material:</h3>
+				<p>In 2005 Elvis &amp; Kresse had a chance encounter with the London Fire Brigade. When they learned that London's damaged decommissioned hoses were headed to landfill they mounted a rescue. They established Elvis &amp; Kresse to save it.</p>
+				<p>For over a decade none of London's fire-hose has gone to landfill and over 170 tons of material have been reclaimed. The value created by their upcycling innovation is so high that they decided to donate 50&#37; of the profits from their firehose range to The Fire Fighters Charity.</p>
+				<p><a href="https://www.elvisandkresse.com/pages/our-story">www.elvisandkresse.com</a></p>
+			</div>
+		</div>
+  
 	</div>
 </div>
 
@@ -308,8 +617,7 @@ function OnScrollDiv () {
 		<p><a href="https://www.google.ch/maps/place/Technopark,+Technoparkstrasse+1,+8005+Z%C3%BCrich/@47.3901905,8.5136578,17z/data=!3m1!4b1!4m5!3m4!1s0x47900a473dddd8e3:0xed9948c1f7b2b01a!8m2!3d47.3901869!4d8.5158465" style="text-decoration: none; color: inherit;">CH-8005 Zürich</a></p>
 		<p class="phonumber">+41 44 500 24 11</p>
 		<p class="infomail"><a href="mailto:info@rethink-resource.com" style="text-decoration: none; color: inherit;">info@rethink-resource.com</a></p>
-    </ul>
-</div>
+    </ul></div>
 
 </div>
 	
