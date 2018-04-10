@@ -45,23 +45,26 @@ function OnScrollDiv () {
 			pageCaption.classList.add("fade-in");
 		}
 
-
-		if (relativeScrollHeight >= 90 && relativeScrollHeight < 335 && !(relativeScrollHeight >= 175 && relativeScrollHeight < 230)){
+		if (relativeScrollHeight >= 98 && relativeScrollHeight < 1952){
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.add("black-navbar");
 			}
-			navigationBar.classList.add("white-bg-navbar");
+			navigationBar.classList.add("half-white-bg-navbar");
 			dropDownContent.classList.add("white-bg-navbar");
+		} else {
+			for (var i = 0; i < navbarelements.length; i++) {
+				navbarelements[i].classList.remove("black-navbar");
+			}
+			navigationBar.classList.remove("half-white-bg-navbar");
+			dropDownContent.classList.remove("white-bg-navbar");
+		}
+
+		if (relativeScrollHeight >= 90 && relativeScrollHeight < 1950 && !(relativeScrollHeight >= 150 && relativeScrollHeight < 210) && !(relativeScrollHeight >= 270 && relativeScrollHeight < 330) && !(relativeScrollHeight >= 390 && relativeScrollHeight < 450) && !(relativeScrollHeight >= 510 && relativeScrollHeight < 570) && !(relativeScrollHeight >= 630 && relativeScrollHeight < 690) && !(relativeScrollHeight >= 750 && relativeScrollHeight < 810) && !(relativeScrollHeight >= 870 && relativeScrollHeight < 930) && !(relativeScrollHeight >= 990 && relativeScrollHeight < 1050) && !(relativeScrollHeight >= 1110 && relativeScrollHeight < 1170) && !(relativeScrollHeight >= 1230 && relativeScrollHeight < 1290) && !(relativeScrollHeight >= 1350 && relativeScrollHeight < 1410) && !(relativeScrollHeight >= 1470 && relativeScrollHeight < 1530) && !(relativeScrollHeight >= 1590 && relativeScrollHeight < 1650) && !(relativeScrollHeight >= 1710 && relativeScrollHeight < 1770) && !(relativeScrollHeight >= 1830 && relativeScrollHeight < 1890)){
 			whiteLogo.classList.remove("visible");
 			whiteLogo.classList.add("hidden");
 			colorLogo.classList.remove("hidden");
 			colorLogo.classList.add("visible");
 		} else {
-			for (var i = 0; i < navbarelements.length; i++) {
-				navbarelements[i].classList.remove("black-navbar");
-			}
-			navigationBar.classList.remove("white-bg-navbar");
-			dropDownContent.classList.remove("white-bg-navbar");
 			whiteLogo.classList.remove("hidden");
 			whiteLogo.classList.add("visible");
 			colorLogo.classList.remove("visible");
@@ -130,19 +133,19 @@ function OnScrollDiv () {
 
 <div id="group0" class="parallaxGroup height-is-50">
 	<div class="iparallaxLayer backgroundLayer">
-		<h2 class="headline text-is-white fade-in header-translate" id="page-headline">Turning Waste into Opportunities
+		<h2 class="headline text-is-white fade-in header-translate" id="page-headline">Upcycling Innovation
 		</h2>
 		<p class="headline_description text-is-white fade-in header-translate" id="page-caption">
-		RethinkResource facilitiates Material Efficiency for the Producing Industry.
+		Responsible. Fair. Sustainable. Profitable.
 		</p>
 	</div>
 	<div class="iparallaxLayer deepBackgroundLayer">
-		<img src="img/RethinkResource_Island_bad.jpg" alt="RethinkResource Island" class="width-is-100" id="landing-image">
+		<img src="img/upcycling/about-balloon-bad.jpg" alt="RethinkResource Island" class="width-is-100" id="landing-image">
 	</div>
 </div>
 
 
-<div id="group1" class="parallaxGroup height-is-900">
+<div id="group1" class="parallaxGroup height-is-930">
   	<div class="iparallaxLayer baseLayer">
 
 		<div class="about background-is-white height-is-30" id="about1">
@@ -156,19 +159,20 @@ function OnScrollDiv () {
 			</div>
 	    	<div class="text-column width-is-40">
 	    		<h3>Welcome!</h3>
-				<p>We are RethinkResource, a Swiss startup with the mission to turn industrial side streams into sustainable and profitable business opportunities.</p>
-				<p>We believe that a responsible handling of resources is key to the resilient value chains of a sustainable future. This is why we see industrial side streams as strategic assets – with long-term competitive advantages. We focus on extracting the value in these stranded assets within the constraints of a modern production system.</p>
-	    		<p>We understand our customers’ wish for a responsible handling of material streams.</p>
+				<p>Upcycling is the process of changing the application of a material from low value, such as incineration or bio-gas, to high value, such as food, cosmetics, fashion, etc.</p>
+				<p>Many industrial Side Streams today are Waste Streams, because no better application has been found and the material goes to waste. However, with the trends towards product diversification, responsible consumption and digitalisation, new applications appear every day. Start-ups and big players from all industries are pushing the boundaries of our perception of waste, resources and value.</p>
+	    		<p>Through this new mindset emerge products that are not only more sustainable than their counterparts, but more profitable as well.</p>
 			</div>
 	    </div>
 		
 		<div class="upcycler background-is-white height-is-30">
-			<div class="product-picture width-is-50">
-				<img src="img/upcycling/victorinox_nespresso.jpg" alt="pocket knife image" id="sackmesser"/>
+			<div class="product-picture width-is-45">
+				<img src="img/upcycling/victorinox_nespresso.jpg" alt="pocket knife image" id="sackmesser-image"/>
 			</div>
-			<div class="text-column width-is-30">
+			<div class="text-column width-is-35">
 				<h3>Secondary Single-Colour Anodised Aluminium:</h3>
-				<p>Collaborative Innovation made in Switzerland: The pioneer pocket knife with scales made of recycled Nespresso capsules. Thanks to the success of this knife, Victorinox and Nespresso have continued the partnership in 2017 and 2018.</p>
+				<p>The pioneer pocket knife with scales made of recycled Nespresso capsules. To make the Alox scales, used Nespresso capsules are molten down and then cast. This saves enormous amounts of energy required for the production of virgin aluminium</p>
+				<p>The first knife was created in 2016, to celebrate the 25th anniversary of Nespresso’s recycling program. Thanks to the success of this knife, Victorinox and Nespresso have continued the partnership in 2017 and 2018.</p>
 				<p><a href="https://www.victorinox.com/ch/en/Explore/Company/Sustainability/Partnership-with-Nespresso/cms/nespresso-recycling">www.victorinox.com</a></p>
 			</div>
 		</div>
@@ -210,10 +214,10 @@ function OnScrollDiv () {
 		</div>
 
 		<div class="upcycler background-is-white height-is-30">
-			<div class="product-picture width-is-50">
+			<div class="product-picture width-is-45">
 				<img src="img/upcycling/adidas-x-parley-ocean-plastic-footwear.jpg" alt="ocean plastics image" id="x-parley-image"/>
 			</div>
-			<div class="text-column width-is-30">
+			<div class="text-column width-is-35">
 				<h3>Secondary Plastics and Rubber:</h3>
 				<p>Adidas and Parley collaborate to prevent plastic entering our oceans and transform it into high performance sportswear.</p>
 				<p>Spinning the problem into a solution. The threat into a thread. They are driving eco innovation around materials, products and new ways of using them. New Methods. New Mindsets. New Future.</p>
@@ -330,6 +334,30 @@ function OnScrollDiv () {
 		</div>
 
 		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40">
+				<img src="img/upcycling/protix-image.jpg" alt="pocket knife image" id="sackmesser"/>
+			</div>
+			<div class="text-column width-is-40">
+				<h3>Secondary Protein Concentrate and Lipids:</h3>
+				<p>Insects are some of nature's most efficient converters of low grade organic materials to concentrated protein and lipids. In most cultures, reared insects are a highly regarded specialty.</p>
+				<p>Protix is the leading insect ingredient company with a broad range of ingredients made from the Black Soldier Fly, Mealworm, Cricket and Locust. Protix is dedicated to delivering sustainable, circular and natural proteins and ingredients from insects for the production of high quality food and animal feed.</p>
+				<p><a href="https://protix.eu/">protix.eu</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
+			<div class="product-picture width-is-40" id="okara-container">
+				<img src="img/upcycling/furterer-okara.jpg" alt="okara cosmetics image" id="okara-image"/>
+			</div>
+			<div class="text-column width-is-35">
+				<h3>Soy Milk Side Stream as Cosmetic Ingredient:</h3>
+				<p>Rene Furterer's Okara Active Light Shampoo uses natural Okara extract as a main ingredient. The amino acids restructure and repair damaged hair and provide incredible brilliance.</p>
+				<p>In Japan, Korea and China, Okara is part of the traditional cuisines. The Western culture, lacking traditional application in food, has downcycled Okara as feed for livestock. Upcycling this high-quality ingredient in premium cosmetics is not only more sustainable, but also promotes the ingredient for other high-value applications.
+				<p><a href="https://www.renefurterer.com/de/de/okara-active-light/lichtreflex-maske">www.renefurterer.com</a></p>
+			</div>
+		</div>
+
+		<div class="upcycler background-is-white height-is-30">
 			<div class="product-picture width-is-45">
 				<img src="img/upcycling/ecovatives-mushroom-board.jpg" alt="mycellium insulation board image" id="ecovatives-image"/>
 			</div>
@@ -358,7 +386,7 @@ function OnScrollDiv () {
 				<img src="img/upcycling/ice-stone-bathroom.jpg" alt="ice stone bathroom image" id="icestone-image"/>
 			</div>
 			<div class="text-column width-is-40">
-				<h3>Secondary Glass Compound as Marble Replacement</h3>
+				<h3>Secondary Glass Compound as Marble Replacement:</h3>
 				<p>IceStone manufacture upcycled glass surfaces for kitchen countertops, bathroom vanities and desk tops in their state-of-the-art facility in the historic Brooklyn Navy Yard. They use just three core ingredients: 100% recycled glass, Portland cement, and non-toxic pigments.</p>
 				<p>They also created PaperStone, a heavy-duty solid surface known for its performance, warm touch, contemporary appearance and environmental sustainability. Its non-porous surface is made from 100% post-consumer recycled paper and a proprietary, petroleum-free resin.</p>
 				<p><a href="https://icestoneusa.com">icestoneusa.com</a></p>
@@ -406,7 +434,7 @@ function OnScrollDiv () {
 				<img src="img/upcycling/lenzing-refibra.jpg" alt="refibra fibre image" id="refibra-image"/>
 			</div>
 			<div class="text-column width-is-40">
-				<h3>Secondary Cotton &amp; Wood Fibre</h3>
+				<h3>Secondary Cotton &amp; Wood Fibre:</h3>
 				<p>The need for clothing will have doubled by the year 2025. This amount of clothing signals a major burden for our environment. Refibra&trade; fibers, the new TENCEL&trade; fibers, are made from pulp that contains cotton scraps left over from cutting operations and wood.</p>
 				<p>Lenzing is the first manufacturer to offer cellulose fibers featuring upcycled material on a commercial scale. With their technology, Lenzing pioneer the circular economy for textiles, reducing the need to extract additional raw materials.</p>
 				<p><a href="http://www.lenzing-fibers.com/en/tencel/refibra/">www.lenzing-fibres.com</a></p>
@@ -429,7 +457,7 @@ function OnScrollDiv () {
 				<img src="img/upcycling/nae-footware.jpg" alt="vegan shoe image" id="nae-image"/>
 			</div>
 			<div class="text-column width-is-35">
-				<h3>Upcycling Product Innovation in Footware</h3>
+				<h3>Upcycling Product Innovation in Footware:</h3>
 				<p>Nae (No Animal Exploitation) is a Portuguese vegan footwear brand with a focus on natural and ecological materials. Their strategy is to create modern products designed for everyday use that are manufactured in Portugal.</p>
 				<p>In their products, Nae uniquely combine a variety of natural materials such as cork and pineapple, upcycled materials such as airbag and PET - plastic bottles, and ecological synthetic microfibers.</p>
 				<p><a href="https://www.nae-vegan.com/en/">www.nae-vegan.com</a></p>
@@ -449,10 +477,10 @@ function OnScrollDiv () {
 		</div>
 
 		<div class="upcycler background-is-white height-is-30">
-			<div class="product-picture width-is-50">
+			<div class="product-picture width-is-45">
 				<img src="img/upcycling/echojazz-echopanel.jpg" alt="echopanel image" id="echojazz-image"/>
 			</div>
-			<div class="text-column width-is-30">
+			<div class="text-column width-is-35">
 				<h3>Secondary PET as Acoustic Absorbers:</h3>
 				<p>The people at ECOJAZZ turn pollution into high-performance acoustic absorbers and turn the waste problem into a solution. ECHOJAZZ upcyles between 47-72 PET bottles from landfills and the Pacific per square meter of product.</p>
 				<p>Their main product EchoPanel is more ecological, more robust, lighter and more flexible than any comparable product.</p>
@@ -473,39 +501,29 @@ function OnScrollDiv () {
 		</div>
 
 		<div class="upcycler background-is-white height-is-30">
-			<div class="product-picture width-is-40" id="okara-container">
-				<img src="img/upcycling/furterer-okara.jpg" alt="okara cosmetics image" id="okara-image"/>
+			<div class="product-picture width-is-40">
+				<img src="img/upcycling/fruu-cosmetics.jpg" alt="fruu lipsticks image" id="fruu-image"/>
 			</div>
 			<div class="text-column width-is-40">
-				<h3>Soy Milk Side Stream as Cosmetic Ingredient:</h3>
-				<p>Rene Furterer's Okara Active Light Shampoo uses natural Okara extract as a main ingredient. The amino acids restructure and repair damaged hair and provides incredible brilliance.</p>
-				<p>Upcycling of Okara in premium cosmetics not only
-				<p><a href="https://www.victorinox.com/ch/en/Explore/Company/Sustainability/Partnership-with-Nespresso/cms/nespresso-recycling">www.victorinox.com</a></p>
+				<h3>Fruit Processing Side Streams as Cosmetics Ingredient:</h3>
+				<p>Fruu are a small cosmetics company from the UK. Their products are largely made of ingredients extracted and derived from more than 15 different types of nutrient bursting fruits.  100% bio-degradable.</p>
+				<p>Most of the ingredients are produced as a by-product of processed fruit waste, which generates vital extra revenue for small fruit farmers. All products are made in small batches in our UK workshop to make sure they are as fresh as possible.</p>
+				<p><a href="https://fruuurskin.com/pages/about-us">fruuurskin.com</a></p>
 			</div>
 		</div>
-
+		
 		<div class="upcycler background-is-white height-is-30">
-			<div class="product-picture width-is-50">
-				<img src="img/upcycling/victorinox_nespresso.jpg" alt="pocket knife image" id="sackmesser"/>
+			<div class="product-picture width-is-40" id="elvisandkresse-container">
+				<img src="img/upcycling/elvis-and-kresse-handbag.jpeg" alt="fire hose hand bag image" id="elvisandkresse-image"/>
 			</div>
-			<div class="text-column width-is-30">
-				<h3>Secondary Single-Colour Anodised Aluminium:</h3>
-				<p>Collaborative Innovation made in Switzerland: The pioneer pocket knife with scales made of recycled Nespresso capsules. Thanks to the success of this knife, Victorinox and Nespresso have continued the partnership in 2017 and 2018.</p>
-				<p><a href="https://www.victorinox.com/ch/en/Explore/Company/Sustainability/Partnership-with-Nespresso/cms/nespresso-recycling">www.victorinox.com</a></p>
-			</div>
-		</div>
-
-		<div class="upcycler background-is-white height-is-30">
-			<div class="product-picture width-is-50">
-				<img src="img/upcycling/victorinox_nespresso.jpg" alt="pocket knife image" id="sackmesser"/>
-			</div>
-			<div class="text-column width-is-30">
-				<h3>Secondary Single-Colour Anodised Aluminium:</h3>
-				<p>Collaborative Innovation made in Switzerland: The pioneer pocket knife with scales made of recycled Nespresso capsules. Thanks to the success of this knife, Victorinox and Nespresso have continued the partnership in 2017 and 2018.</p>
-				<p><a href="https://www.victorinox.com/ch/en/Explore/Company/Sustainability/Partnership-with-Nespresso/cms/nespresso-recycling">www.victorinox.com</a></p>
+			<div class="text-column width-is-40">
+				<h3>Damaged Fire Hose as Sheet Material:</h3>
+				<p>In 2005 Elvis &amp; Kresse had a chance encounter with the London Fire Brigade. When they learned that London's damaged decommissioned hoses were headed to landfill they mounted a rescue. They established Elvis &amp; Kresse to save it.</p>
+				<p>For over a decade none of London's fire-hose has gone to landfill and over 170 tons of material have been reclaimed. The value created by their upcycling innovation is so high that they decided to donate 50&#37; of the profits from their firehose range to The Fire Fighters Charity.</p>
+				<p><a href="https://www.elvisandkresse.com/pages/our-story">www.elvisandkresse.com</a></p>
 			</div>
 		</div>
-
+  
 	</div>
 </div>
 

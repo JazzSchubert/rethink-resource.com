@@ -130,3 +130,13 @@
 #okara-image{
 	object-fit: contain;
 }
+#elvisandkresse-container{
+	padding-left: 5vw;
+	padding-top: 5vw;
+	padding-bottom: 5vw;
+	width: 30vw;
+	height: 20vw;
+}
+#elvisandkresse-image{
+	object-fit: contain;
+}
