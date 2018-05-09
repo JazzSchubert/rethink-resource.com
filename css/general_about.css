@@ -32,9 +32,6 @@
 	text-align: center;
 	display: block;
 }
-.about#aboutc{
-	height: 50vw;
-}
 .text-column {
 	font-size: 1.2vw;
 	font-weight: 150;
@@ -98,7 +95,7 @@
 }
 .bar {
 	padding-top: 2vw;
-	margin-top: -0.01vw;
+	margin-top: -1px;
 	font-weight: 200;
 	float: left;
 	line-height: 2.7vw;
@@ -112,6 +109,9 @@
 	font-size: 1.7vw;
 	font-weight: 100;
 	line-height: 2.3vw;
+}
+.font-is-1-5{
+	font-size: 1.5vw;
 }
 #values-left {
 	padding-top: 11vw;
@@ -134,10 +134,22 @@
 }
 .tag {
 	padding-top: 2.5vw;
-	margin-top: -0.01vw;
 	font-size: 1.5vw;
 	font-weight: 150;
 	float: left;
+}
+.is-centered{
+	width: 30vw;
+	text-align: center;
+}
+.tight-tag{
+	line-height: 1.5vw;
+	padding-top: 0.5vw;
+	padding-bottom: 5vw;
+	font-size: 1.3vw;
+	font-weight: 150;
+	float: left;
+	text-align: center;
 }
 .is-indented{
 	padding-left: 5vw;
@@ -229,4 +241,17 @@
 }
 #seife{
 	height: 6vw;
+}
+#rerefunnel{
+	width: 30vw;
+	padding-top: 5vw;
+	margin-bottom: -4vw;
+}
+#rereatwork{
+	width: 37vw;
+	padding-top: 1vw;
+}
+#rereatworktag{
+	padding-left: 5vw;
+	margin-top: -0.5vw;
 }

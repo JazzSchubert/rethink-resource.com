@@ -2,16 +2,16 @@
 /* CSS Document */
 
 
-  body, html {
+ body, html {
     overflow: hidden;
     padding-bottom: 700px !important;
-  }
+ }
 
-  body {
+ body {
     font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	background-color: rgba(33,33,33,1.00);
 	transform: translateZ(0);
-  }
+ }
 .text-is-white{
 	color: rgba(255,255,255,1);
 }
@@ -42,6 +42,12 @@
 }
 .height-is-50{
 	height: 50vw;
+}
+.height-is-55{
+	height: 55vw;
+}
+.height-is-60{
+	height: 60vw;
 }
 .height-is-70{
 	height: 70vw;

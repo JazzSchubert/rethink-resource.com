@@ -60,23 +60,26 @@
 
 /* --- style the groups --- */
 
-  #group0, #groupa0 {
+#group0, #groupa0, #groupca0 {
 	font-size: 3vw;
   transform: translateY(50vw) translateY(-100vh);
-  z-index: 3
-  }
+  z-index: 3;
+}
 
 .shift-foooter{
     margin-top: 0vw;
     /*transform: translateY(35vw) translateY(-35vh);*/
 }
-  #group1 {
+#group1, #groupca1 {
     z-index: 5; /* slide over group 2 */
-  }
-  #group2,{
-    z-index: 3; /* slide under groups 1 and 3 */
-    /*transform: translateZ(0px) scale(1.0, 1.0);*/
-  }
+}
+#group2,{
+    z-index: 3;
+}
+#groupca2{
+    font-size: 3vw;
+    z-index: 4;
+}
 #partners-image{
    transform: translateY(-20vw) translateY(10vh);
 }
