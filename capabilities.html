@@ -21,10 +21,8 @@ document.getElementById("scrollcontainer").addEventListener ("scroll", handler, 
 function OnScrollDiv () {
 
 	var ww = window.innerWidth;
-
-    const div = document.getElementById ("scrollcontainer");
-    var relativeScrollHeight = (div.scrollTop / window.innerWidth * 200).toFixed(1);
     var RSH = (document.getElementById("scrollcontainer").scrollTop / ww * 100).toFixed(2);
+
 	const navbarelements = document.getElementsByName("dropbtn");
 	const pageHeadline = document.getElementById("page-headline");
 	const pageCaption = document.getElementById("page-caption");
@@ -34,7 +32,7 @@ function OnScrollDiv () {
 	const colorLogo = document.getElementById("top-page-logo-color");
 	const strategyImage = document.getElementById("strategy-image");
 
-		if (relativeScrollHeight >= 50) {
+		if (RSH >= 25) {
 			pageHeadline.classList.remove("fade-in");
 			pageCaption.classList.remove("fade-in");
 			pageHeadline.classList.add("fade-out");
@@ -54,12 +52,11 @@ function OnScrollDiv () {
 			strategyImage.classList.add("hidden");
 		}
 
-		if (relativeScrollHeight >= 90 && relativeScrollHeight < 335 && !(relativeScrollHeight >= 175 && relativeScrollHeight < 230)){
+		if (RSH >= 45 && RSH < 237 && !(RSH >= 87 && RSH < 115) || (RSH >= 265 && RSH < 322)){
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.add("black-navbar");
 			}
 			navigationBar.classList.add("white-bg-navbar");
-			dropDownContent.classList.add("white-bg-navbar");
 			whiteLogo.classList.remove("visible");
 			whiteLogo.classList.add("hidden");
 			colorLogo.classList.remove("hidden");
@@ -69,7 +66,6 @@ function OnScrollDiv () {
 				navbarelements[i].classList.remove("black-navbar");
 			}
 			navigationBar.classList.remove("white-bg-navbar");
-			dropDownContent.classList.remove("white-bg-navbar");
 			whiteLogo.classList.remove("hidden");
 			whiteLogo.classList.add("visible");
 			colorLogo.classList.remove("visible");
