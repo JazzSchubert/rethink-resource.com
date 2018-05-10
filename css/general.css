@@ -70,8 +70,8 @@
 .height-is-230{
 	height: 230vw;
 }
-.height-is-930{
-	height: 930vw;
+.height-is-990{
+	height: 990vw;
 }
 
 .width-is-30{
@@ -85,6 +85,9 @@
 }
 .width-is-45{
 	width: 45vw;
+}
+.width-is-49{
+	width: 49vw;
 }
 .width-is-50{
 	width: 50vw;
