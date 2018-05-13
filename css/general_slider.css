@@ -66,10 +66,6 @@
 	float:left;
 }
 
-.slider {
-	/*animation: slidy 40s infinite;*/
-}
-
 input:checked:nth-child(1) ~ .slide#sld-1 {
 	position: relative;
 	z-index: 6;
@@ -102,6 +98,7 @@ input:checked:nth-child(1) ~ .slide#sld-1 {
 	position: fixed;
 	text-align: center;
 	z-index: 7;
+	pointer-events: none;
 }
 .nav-dots .nav-dot {
 	top: 0.4vw;
@@ -112,6 +109,7 @@ input:checked:nth-child(1) ~ .slide#sld-1 {
 	border-radius: 100%;
 	display: inline-block;
 	background-color: rgba(0,0,0,0.6);
+	pointer-events: all;
 }
 .nav-dot:hover {
 	cursor: pointer;

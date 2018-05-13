@@ -95,7 +95,7 @@
 }
 .bar {
 	padding-top: 2vw;
-	margin-top: -1px;
+	margin-top: -0.01px;
 	font-weight: 200;
 	float: left;
 	line-height: 2.7vw;
@@ -182,6 +182,12 @@
 	-moz-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
 	box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);*/
 	text-align: left;
+}
+.design-box-partner > div > a{
+	position: absolute;
+	height: inherit;
+	width: inherit;
+	z-index: 10;
 }
 #truck{
 	/*position: absolute;
