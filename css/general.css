@@ -32,8 +32,9 @@
 }
 
 /* -- Height of parallax groups -- */
-
-
+.height-is-25{
+	height: 25vw;
+}
 .height-is-30{
 	height: 30vw;
 }
@@ -94,6 +95,10 @@
 }
 .width-is-100{
 	width: 100vw;
+}
+
+.width-is-full{
+	width: 100%;
 }
 
 .shift-is-10-20{
