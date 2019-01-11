@@ -33,7 +33,7 @@ function OnScrollDiv () {
     	group6height = ((1120 + ww / 10) / ww * 100).toFixed(2);
     } else if (1245 <= ww && ww < 1661) {
     	group4height = ((1680 + ww / 10) / ww * 100).toFixed(2);
-    	group6height = ((560 + ww / 10) / ww * 100).toFixed(2);
+    	group6height = ((1120 + ww / 10) / ww * 100).toFixed(2);
     } else if (1661 <= ww) {
     	group4height = ((1120 + ww / 10) / ww * 100).toFixed(2);
     	group6height = ((560 + ww / 10) / ww * 100).toFixed(2);
@@ -309,7 +309,7 @@ requestAnimationFrame(OnScrollDiv);
 				<div class="personalstats">
 					<p class="tinydescription">Latte Art</p>
 					<div class="statsbar">
-						<div class="skilllvl" currentlvl="60"></div>
+						<div class="skilllvl" currentlvl="70"></div>
 					</div>
 				</div>
 			</div>
@@ -362,7 +362,7 @@ requestAnimationFrame(OnScrollDiv);
 				<div class="personalhead">
 					<p class="personalname">Evelyne Z&uuml;rcher</p>
 					<p class="titleline"></p>
-					<h3 class="personaltitlelong">Senior Project Manager</h3>
+					<h3 class="personaltitle">Senior Project Manager</h3>
 				</div>
 				<div class="personalstats">
 					<p class="tinydescription">Innovation Management</p>
@@ -390,7 +390,7 @@ requestAnimationFrame(OnScrollDiv);
 				</div>
 			</div>
 
-			<div class="card background-is-white-ish">
+			<!--div class="card background-is-white-ish">
 				<div class="circontain">
 					<div class="cutoutcircle"></div>
 				</div>
@@ -424,6 +424,44 @@ requestAnimationFrame(OnScrollDiv);
 					<p class="tinydescription">Blogging</p>
 					<div class="statsbar">
 						<div class="skilllvl" currentlvl="80"></div>
+					</div>
+				</div>
+			</div-->
+
+			<div class="card background-is-white-ish">
+				<div class="circontain">
+					<div class="cutoutcircle"></div>
+				</div>
+				<div class="imgcontain">
+					<img class="teamimg" src="img/Fabian.jpg" alt="limage">
+				</div>
+				<div class="personalhead">
+					<p class="personalname">Fabian Weinländer</p>
+					<!--p class="titleline"></p-->
+					<h3 class="personaltitlelong">Business Development Manager</h3>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Project Development</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="80"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Business Modelling</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="80"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Product Development</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="70"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Networking</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="100"></div>
 					</div>
 				</div>
 			</div>
@@ -466,7 +504,7 @@ requestAnimationFrame(OnScrollDiv);
 				</div>
 			</div>
 			
-			<div class="card background-is-white-ish">
+			<!--div class="card background-is-white-ish">
 				<div class="circontain">
 					<div class="cutoutcircle"></div>
 				</div>
@@ -498,6 +536,44 @@ requestAnimationFrame(OnScrollDiv);
 				</div>
 				<div class="personalstats">
 					<p class="tinydescription">Portuguese</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="100"></div>
+					</div>
+				</div>
+			</div-->
+
+			<div class="card background-is-white-ish">
+				<div class="circontain">
+					<div class="cutoutcircle"></div>
+				</div>
+				<div class="imgcontain">
+					<img class="teamimg" src="img/Alessandro.jpg" alt="limage">
+				</div>
+				<div class="personalhead">
+					<p class="personalname">Alessandro Stolfo</p>
+					<p class="titleline"></p>
+					<h3 class="personaltitle">Junior Back-End Developer</h3>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Functional Programming</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="80"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Single Page Applications</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="90"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Web Development</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="80"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Italian</p>
 					<div class="statsbar">
 						<div class="skilllvl" currentlvl="100"></div>
 					</div>
@@ -542,17 +618,19 @@ requestAnimationFrame(OnScrollDiv);
 				</div>
 			</div-->
 			
-			<div class="card background-is-white-ish">
+			<div class="card background-is-white-ish" id="open-position">
 				<div class="circontain">
 					<div class="cutoutcircle"></div>
 				</div>
 				<div class="imgcontain">
-					<img class="teamimg" src="img/Alessio.png" alt="limage">
+					<a href="files/RethinkResource_Software_Engineering.pdf" target="_blank">
+						<img class="teamimg" src="img/Alessio.png" alt="limage">
+					</a>
 				</div>
 				<div class="personalhead">
 					<p class="personalname">- Open Position -</p>
 					<p class="titleline"></p>
-					<h3 class="personaltitle">(Junior) Front-End Developer</h3>
+					<h3 class="personaltitle">Back-End Developer</h3>
 				</div>
 				<div class="personalstats">
 					<p class="tinydescription">Functional Programming</p>
@@ -561,15 +639,15 @@ requestAnimationFrame(OnScrollDiv);
 					</div>
 				</div>
 				<div class="personalstats">
-					<p class="tinydescription">Web Development</p>
+					<p class="tinydescription">Project Management</p>
 					<div class="statsbar">
-						<div class="skilllvl" currentlvl="100"></div>
+						<div class="skilllvl" currentlvl="80"></div>
 					</div>
 				</div>
 				<div class="personalstats">
-					<p class="tinydescription">UX Design</p>
+					<p class="tinydescription">Dev Ops</p>
 					<div class="statsbar">
-						<div class="skilllvl" currentlvl="80"></div>
+						<div class="skilllvl" currentlvl="90"></div>
 					</div>
 				</div>
 				<div class="personalstats">
@@ -605,7 +683,7 @@ requestAnimationFrame(OnScrollDiv);
 			<div class="design-bar-h-5-w-90"></div>
 			<div class="card background-is-grey">
 				<span class="recommendation">Advisor</span>
-				<span class="general">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+				<!--span class="general">&#9733; &#9733; &#9733; &#9733; &#9733;</span-->
 				<div class="circontain">
 					<div class="cutoutcircle"></div>
 				</div>
@@ -659,6 +737,26 @@ requestAnimationFrame(OnScrollDiv);
 					<p>His current research includes material and energetic utilization of plant based side streams, novel protein sources from algae and insects to improve food security as well as life cycle sustainability assessment as basic analysis in food processing.</p>
 				</div>
 			</div>
+
+			<div class="card background-is-grey">
+				<span class="recommendation">Advisor</span>
+				<div class="circontain">
+					<div class="cutoutcircle"></div>
+				</div>
+				<div class="imgcontain">
+					<img class="teamimg" src="img/max.JPG" alt="limage">
+				</div>
+				<div class="personalhead">
+					<p class="personalname">Dr. Max Egli</p>
+					<h3 class="personaltitle">Innovation Consultant</h3>
+					<h3 class="personaltitlelong">&amp; Entrepreneur</h3>
+				</div>
+				<div class="personal-short-cv">
+					<p>Lorem ipsum dolor amet magna kale chips bushwick ut tofu. Mollit gluten-free raw denim, migas bicycle rights aesthetic la croix kale chips messenger bag. In truffaut cliche cred shoreditch.</p>
+					<p>Kickstarter you probably haven't heard of 8-bit microdosing drinking vinegar incididunt, prism vinyl ipsum in viral woke everyday carry. Magna wolf trust fund, squid pariatur cornhole four dollar toast palo santo ut tumeric cold-pressed.</p>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
