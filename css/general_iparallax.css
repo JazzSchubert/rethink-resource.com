@@ -131,9 +131,6 @@
   #groupa4{
     height: calc(1680px + 10vw);
   }
-  #groupa6{
-    height: calc(560px + 10vw);
-  }
 }
 @media (min-width: 1411px) {
   #groupa12{
@@ -143,5 +140,8 @@
 @media (min-width: 1661px) {
   #groupa4{
     height: calc(1120px + 10vw);
+  }
+  #groupa6{
+    height: calc(560px + 10vw);
   }
 }
