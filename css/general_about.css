@@ -48,13 +48,21 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+
+
+
+
 .logo-row{
-	width: 90vw;
 	display: flex;
+	align-items: center;
 	flex-wrap: wrap;
-	height: 26vw;
 	padding-top: 4vw;
 }
+
+
+
+
+
 .quote {
 	width: 30vw;
 	text-align: left;
@@ -154,8 +162,23 @@
 .is-indented{
 	padding-left: 5vw;
 }
-.design-box-press{
+
+
+
+
+.design-box{
 	position: relative;
+	display: inline-block;
+	text-align: left;
+}
+
+
+
+
+
+
+.press{
+	/*position: relative;
 	display: inline-block;
     /*background: #FFFFFF;*/
     width: 220px;
@@ -167,11 +190,11 @@
 	margin-right: 15px;
 	/*-webkit-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
 	-moz-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
-	box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);*/
-	text-align: left;
+	box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
+	text-align: left;*/
 }
-.design-box-partner{
-	position: relative;
+.partner{
+	/*position: relative;
 	display: inline-block;
     /*background: #FFFFFF;*/
     width: 13vw;
@@ -180,15 +203,36 @@
 	margin: 2.5vw;
 	/*-webkit-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
 	-moz-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
-	box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);*/
-	text-align: left;
+	box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
+	text-align: left;*/
 }
-.design-box-partner > div > a{
+.partner > div > a{
 	position: absolute;
 	height: inherit;
 	width: inherit;
 	z-index: 10;
 }
+.download{
+	width: 13vw;
+    height: 15vw;
+	color: #777777;
+	margin: 2.5vw;
+}
+.download p{
+	text-align: center;
+	margin-top: 1vw;
+}
+.download p a{
+	text-decoration: none;
+	font-size: 1.7vw;
+	font-weight: 150;
+	line-height: 2.04vw;
+	color: #666666;
+}
+
+
+
+
 #truck{
 	/*position: absolute;
 	top: 3.5vw; left: 5vw;*/
