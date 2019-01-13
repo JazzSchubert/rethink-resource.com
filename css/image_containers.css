@@ -9,7 +9,10 @@
 
 .contains-image img{
 	object-fit: contain;
-	height: inherit;
+}
+
+.contains-image a{
+	object-fit: contain;
 	width: inherit;
 }
 
