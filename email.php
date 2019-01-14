@@ -87,16 +87,6 @@ function displayForm($messages)
 ?>
 <html>
 <head>
-<?php
-	# Bring in Accountable style sheet if we are using Accountable.
-	# Your accountable chrome folder could be somewhere else,
-	# so fix the href if you need to
-	if ($login) {
-?>
-<link href="/accountable/chrome/login.css" rel="stylesheet" type="text/css">
-<?php
-	}
-?>
 <title>Contact Us</title>
 </head>
 <body>
