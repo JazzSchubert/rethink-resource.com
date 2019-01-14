@@ -75,7 +75,12 @@ function OnScrollDiv () {
 			colorLogo.classList.add("hidden");
 		}
 }
-	
+
+var refreshButton = document.querySelector(".refresh-captcha");
+refreshButton.onclick = function() {
+  document.querySelector(".captcha-image").src = 'captcha.php?' + Date.now();
+}
+
 </script>
 
 </head>
@@ -174,7 +179,7 @@ function OnScrollDiv () {
 					    <input class="" type="formtext" name="realname" placeholder="Your name...">
 
 					    <label for="lname">and your email</label>
-					    <input type="formtext" id="email" name="email" placeholder="Your email...">
+					    <input type="formtext" name="email" placeholder="Your email...">
 
 					    <label for="subject">and a message for us</label>
 					    
@@ -182,6 +187,8 @@ function OnScrollDiv () {
 
 					    <textarea id="formsubject" name="body" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw"></textarea>
 
+					    <img src="captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
+					    <input type="text" id="captcha" name="captcha" pattern="[A-Z]{6}">
 					    <input type="submit" value="Reach out!">
 
 					</form>
