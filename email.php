@@ -22,7 +22,7 @@
 
 #require "login.php";
 
-require '/home/boutell/html/tools/accountable/login.php';
+#require '/home/boutell/html/tools/accountable/login.php';
 
 # OPTIONAL: use my Captcha system to prevent automated
 # abuse of the contact form. You'll need to install and
@@ -35,7 +35,7 @@ require '/home/boutell/html/tools/accountable/login.php';
 # See: http://www.boutell.com/newfaq/creating/captcha.html
 
 #require "captcha.php";
-require '/home/boutell/html/tools/captcha/captcha.php';
+require '/captcha/captcha.php';
 
 # The person who receives the email messages
 #$recipient = 'example@example.com';
