@@ -35,7 +35,6 @@
 # See: http://www.boutell.com/newfaq/creating/captcha.html
 
 #require "captcha.php";
-require './captcha/captcha.php';
 
 # The person who receives the email messages
 #$recipient = 'example@example.com';
@@ -159,25 +158,6 @@ function displayForm($messages)
 	name="body" 
 	rows="10" 
 	cols="60"><?php echo $escapedBody?></textarea>
-<?php
-	# Display the captcha if we're using my captcha.php system
-	# and the user is not logged in to an Accountable account
-	if ((!$_SESSION['id']) && (function_exists('captchaImgUrl'))) {
-?>
-<p>
-<b>Please help us prevent fraud</b> by entering the code displayed in the 
-image in the text field. Alternatively,
-you may click <b>Listen To This</b> to hear the code spoken aloud.
-</p>
-<p>
-<img style="vertical-align: middle" 
-	src="<?php echo /captcha.php()?>"/> 
-	<input name="captcha" size="8"/> 
-	<a href="<?php echo captchaWavUrl()?>">Listen To This</a>
-</p>
-<?php
-	}
-?>
 <p>
 <input type="submit" name="send" value="Send Your Message"/>
 <input type="submit" name="cancel" value="Cancel - Never Mind"/>
