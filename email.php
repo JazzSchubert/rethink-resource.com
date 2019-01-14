@@ -171,7 +171,7 @@ you may click <b>Listen To This</b> to hear the code spoken aloud.
 </p>
 <p>
 <img style="vertical-align: middle" 
-	src="<?php echo ./captcha/captcha.php()?>"/> 
+	src="<?php echo /captcha.php()?>"/> 
 	<input name="captcha" size="8"/> 
 	<a href="<?php echo captchaWavUrl()?>">Listen To This</a>
 </p>
