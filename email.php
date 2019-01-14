@@ -59,11 +59,10 @@ function displayForm($messages)
 {
 	# Import $login object from accountable. If we're not using
 	# accountable this is null, which is not a problem
-	global $login;
 
 	# Re-display existing input so that the user doesn't have to enter
 	# things again when correcting a problem with just one field.
-	# Make sure ", <, >, etc. entered by the user are not treated 
+	# Make sure etc. entered by the user are not treated 
 	# as part of the HTML of the page
 
 	# If the email address and real name haven't been entered yet,
