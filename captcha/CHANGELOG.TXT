@@ -1,0 +1,6 @@
+20071217: 
+
+No longer produces warnings when PHP is in strict mode. Validated
+in both PHP4 and PHP5. Works properly in server environments that provide
+only REQUEST_URI (PHP5 for RHEL5, for instance).
+
