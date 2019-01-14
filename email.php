@@ -35,7 +35,7 @@
 # See: http://www.boutell.com/newfaq/creating/captcha.html
 
 #require "captcha.php";
-require '/staging.rethink-resource.com/captcha/captcha.php';
+require '/captcha/captcha.php';
 
 # The person who receives the email messages
 #$recipient = 'example@example.com';
