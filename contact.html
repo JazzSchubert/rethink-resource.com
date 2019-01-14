@@ -166,10 +166,12 @@ function OnScrollDiv () {
 			</div>
 	    	<div class="text-column width-is-40">
 	    		<div class="formcontainer">
-	    		 	<form action="email.php">
+	    		 	<form method="POST" action="email.php">
+
+	    		 		<input type="hidden"name="recipient" value="boutell">
 
 					    <label for="fname">Please leave your name</label>
-					    <input class="" type="formtext" id="name" name="firstandlastname" placeholder="Your name...">
+					    <input class="" type="formtext" id="name" name="name" placeholder="Your name...">
 
 					    <label for="lname">and your email</label>
 					    <input type="formtext" id="email" name="email" placeholder="Your email...">
