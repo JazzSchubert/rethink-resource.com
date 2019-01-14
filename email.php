@@ -113,7 +113,7 @@ function displayForm($messages)
 	# Shift back into PHP mode for a moment to display
 	# the error message, if there was one
 	if (count($messages) > 0) {
-		$message = implode("<br>\n", $messages);
+		$message = implode("<br>", $messages);
 		echo("<h3>$message</h3>\n");
 	}
 ?>
