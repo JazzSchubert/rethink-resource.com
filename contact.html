@@ -1,3 +1,7 @@
+<?php
+// Always at the VERY TOP of the page.
+require 'captcha.php';
+?>
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -187,7 +191,7 @@ refreshButton.onclick = function() {
 
 					    <textarea id="formsubject" name="body" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw"></textarea>
 
-					    <img src="captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
+					    <img src="<?php echo ./captcha/captcha.php()?>"" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
 					    <input type="text" id="captcha" name="captcha" pattern="[A-Z]{6}">
 					    <input type="submit" value="Reach out!">
 
