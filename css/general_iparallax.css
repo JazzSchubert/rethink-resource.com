@@ -100,10 +100,10 @@
 }
 #groupa6{
     z-index: 5;
-    height: calc(1680px + 10vw);
+    height: calc(2240px + 10vw);
 }
 #groupa12{
-    height: calc(2520px + 10vw);
+    height: calc(3920px + 10vw);
     z-index: 5;
 }
 #groupa8, #groupa10{
@@ -111,7 +111,7 @@
 }
 @media (min-width: 561px) {
   #groupa12{
-    height: calc(1400px + 10vw);
+    height: calc(1960px + 10vw);
   }
 }
 @media (min-width: 828px) {
@@ -124,7 +124,12 @@
 }
 @media (min-width: 845px) {
   #groupa12{
-    height: calc(840px + 10vw);
+    height: calc(1400px + 10vw);
+  }
+}
+@media (min-width: 1128px) {
+  #groupa12{
+    height: calc(1120px + 10vw);
   }
 }
 @media (min-width: 1245px) {
@@ -134,7 +139,7 @@
 }
 @media (min-width: 1411px) {
   #groupa12{
-    height: calc(560px + 10vw);
+    height: calc(840px + 10vw);
   }
 }
 @media (min-width: 1661px) {
