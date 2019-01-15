@@ -53,7 +53,7 @@ if ($_POST['send']) {
 	displayForm([]);
 }
 
-function displayForm($messages)
+function oldDisplayForm($messages)
 {
 	# Import $login object from accountable. If we're not using
 	# accountable this is null, which is not a problem
@@ -140,6 +140,45 @@ function displayForm($messages)
 </form>
 </body>
 </html>
+<?php
+}
+
+function displayForm($messages)
+{
+	# Import $login object from accountable. If we're not using
+	# accountable this is null, which is not a problem
+
+	# Re-display existing input so that the user doesn't have to enter
+	# things again when correcting a problem with just one field.
+	# Make sure etc. entered by the user are not treated 
+	# as part of the HTML of the page
+
+	# If the email address and real name haven't been entered yet,
+	# check $_SESSION for them. If Accountable is in use, we can
+	# pre-fill these fields for the user.
+	$escapedEmail = htmlspecialchars($_POST['email']);
+	$escapedRealName = htmlspecialchars($_POST['realname']);
+	$escapedSubject = htmlspecialchars($_POST['subject']);
+	$escapedBody = htmlspecialchars($_POST['body']);
+	$returnUrl = $_POST['returnurl'];
+	if (!strlen($returnUrl)) {
+		# We'll return the user to the page they came from
+		$returnUrl = $_SERVER['HTTP_REFERER'];
+		if (!strlen($returnUrl)) {
+			# Stubborn browser won't give us a referring
+			# URL, so return to the home page of our site instead
+			$returnUrl = '/';
+		}
+	}
+	$escapedReturnUrl = htmlspecialchars($returnUrl);
+	# Shift back into HTML mode to send the form
+	redirect('contact.html');
+?>
+<script type="text/javascript">
+    document.getElementById("realname").value = "<?php echo $escapedRealName?>";
+    document.getElementById("email").value = "<?php echo $escapedEmail?>";
+    document.getElementById("body").value = "<?php echo $escapedBody?>";
+</script>
 <?php
 }
 

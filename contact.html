@@ -174,16 +174,16 @@ refreshButton.onclick = function() {
 	    		 	<form method="POST" action="email.php">
 
 					    <label for="fname">Please leave your name</label>
-					    <input class="" type="formtext" name="realname" placeholder="Your name...">
+					    <input id="realname" type="formtext" name="realname" placeholder="Your name...">
 
 					    <label for="lname">and your email</label>
-					    <input type="formtext" name="email" placeholder="Your email...">
+					    <input id="email" name="email" placeholder="Your email...">
 
 					    <label for="subject">and a message for us</label>
 					    
 						<input type="hidden" name="subject" value="Contact Form @ rethink-resource.com">
 
-					    <textarea id="formsubject" name="body" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw"></textarea>
+					    <textarea id="body" name="body" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw"></textarea>
 
 					    <input type="submit" name="send" value="Reach out!">
 
