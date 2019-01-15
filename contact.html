@@ -202,9 +202,15 @@ refreshButton.onclick = function() {
 						</script>
 
 	    		 		<script type="text/javascript">
-						    document.getElementById("realname").value = JSON.parse(localStorage.getItem("realName"));
-						    document.getElementById("email").value = JSON.parse(localStorage.getItem("escapedEmail"));
-						    document.getElementById("body").value = JSON.parse(localStorage.getItem("escapedBody"));
+	    		 			if(localStorage.getItem("realName")!=null){
+						    	document.getElementById("realname").value = JSON.parse(localStorage.getItem("realName"));
+							}
+							if(localStorage.getItem("realName")!=null){
+						    	document.getElementById("email").value = JSON.parse(localStorage.getItem("escapedEmail"));
+						    }
+						    if(localStorage.getItem("realName")!=null){
+						    	document.getElementById("body").value = JSON.parse(localStorage.getItem("escapedBody"));
+						    }
 						</script>
 
 					</form>
