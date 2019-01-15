@@ -171,19 +171,19 @@ refreshButton.onclick = function() {
 			</div>
 	    	<div class="text-column width-is-40">
 	    		<div class="formcontainer">
-	    		 	<form method="POST" action="email.php">
+	    		 	<form id="contactform" method="POST" action="email.php">
 
 					    <label for="fname">Please leave your name</label>
-					    <input id="realname" type="formtext" name="realname" placeholder="Your name..." minlength="5" maxlength="30">
+					    <input id="realname" type="formtext" name="realname" placeholder="Your name..." minlength="5" maxlength="30" required>
 
 					    <label for="lname">and your email</label>
-					    <input id="email" name="email" placeholder="Your email..." minlength="5" maxlength="30">
+					    <input id="email" name="email" type="email" placeholder="Your email..." minlength="5" maxlength="30" required>
 
 					    <label for="subject">and a message for us</label>
 					    
 						<input type="hidden" name="subject" value="Contact Form @ rethink-resource.com">
 
-					    <textarea id="body" name="body" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw" minlength="5" maxlength="200"></textarea>
+					    <textarea id="body" name="body" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw" minlength="5" maxlength="200" required></textarea>
 
 					    <input type="submit" name="send" value="Reach out!">
 
@@ -194,9 +194,17 @@ refreshButton.onclick = function() {
 						</script>
 
 						<script type="text/javascript">
-							localStorage.setItem("realName", JSON.stringify(document.getElementById("realname").value));
-						    localStorage.setItem("escapedEmail", JSON.stringify(document.getElementById("email").value));
-						    localStorage.setItem("escapedBody", JSON.stringify(document.getElementById("body").value));
+							var contactform = document.getElementById("contactform");
+								if(contactform.addEventListener){
+								    contactform.addEventListener("submit", storeForm, false);  //Modern browsers
+								}else if(contactform.attachEvent){
+								    contactform.attachEvent('onsubmit', storeForm);            //Old IE
+								}
+							storeForm(){
+								localStorage.setItem("realName", JSON.stringify(document.getElementById("realname").value));
+							    localStorage.setItem("escapedEmail", JSON.stringify(document.getElementById("email").value));
+							    localStorage.setItem("escapedBody", JSON.stringify(document.getElementById("body").value));
+							}
 						</script>
 
 					</form>
