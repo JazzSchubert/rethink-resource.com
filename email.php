@@ -53,96 +53,6 @@ if ($_POST['send']) {
 	displayForm([]);
 }
 
-function oldDisplayForm($messages)
-{
-	# Import $login object from accountable. If we're not using
-	# accountable this is null, which is not a problem
-
-	# Re-display existing input so that the user doesn't have to enter
-	# things again when correcting a problem with just one field.
-	# Make sure etc. entered by the user are not treated 
-	# as part of the HTML of the page
-
-	# If the email address and real name haven't been entered yet,
-	# check $_SESSION for them. If Accountable is in use, we can
-	# pre-fill these fields for the user.
-	$escapedEmail = htmlspecialchars($_POST['email']);
-	$escapedRealName = htmlspecialchars($_POST['realname']);
-	$escapedSubject = htmlspecialchars($_POST['subject']);
-	$escapedBody = htmlspecialchars($_POST['body']);
-	$returnUrl = $_POST['returnurl'];
-	if (!strlen($returnUrl)) {
-		# We'll return the user to the page they came from
-		$returnUrl = $_SERVER['HTTP_REFERER'];
-		if (!strlen($returnUrl)) {
-			# Stubborn browser won't give us a referring
-			# URL, so return to the home page of our site instead
-			$returnUrl = '/';
-		}
-	}
-	$escapedReturnUrl = htmlspecialchars($returnUrl);
-	# Shift back into HTML mode to send the form
-?>
-<html>
-<head>
-<title>Contact Us</title>
-</head>
-<body>
-<h1>Contact Us</h1>
-<?php
-	# Shift back into PHP mode for a moment to display
-	# the error message, if there was one
-	if (count($messages) > 0) {
-		$message = implode("<br>\n",$messages);
-		echo("<h3>$message</h3>\n");
-	}
-?>
-<form method="POST" action="<?php echo $_SERVER['DOCUMENT_URL']?>">
-<p>
-<input 
-	name="email" 
-	size="64" 
-	maxlength="64" 
-	value="<?php echo $escapedEmail?>"/>
-	<b>Your</b> Email Address
-</p>
-<p>
-<input 
-	name="realname" 
-	size="64" 
-	maxlength="64" 
-	value="<?php echo $escapedRealName?>"/>
-	Your Real Name (<i>so our reply won't get stuck in your spam folder</i>)
-</p>
-<p>
-<input 
-	name="subject" 
-	size="64" 
-	maxlength="64"
-	value="<?php echo $escapedSubject?>"/> 
-	Subject Of Your Message
-</p>
-<p>
-<i>Please enter the text of your message in the field that follows.</i>
-</p>
-<textarea 
-	name="body" 
-	rows="10" 
-	cols="60"><?php echo $escapedBody?></textarea>
-<p>
-<input type="submit" name="send" value="Send Your Message"/>
-<input type="submit" name="cancel" value="Cancel - Never Mind"/>
-</p>
-<input 
-	type="hidden"
-	name="returnurl" 
-	value="<?php echo $escapedReturnUrl?>"/>
-</form>
-</body>
-</html>
-<?php
-}
-
 function displayForm($messages)
 {
 	# Import $login object from accountable. If we're not using
@@ -171,13 +81,7 @@ function displayForm($messages)
 		}
 	}
 	$escapedReturnUrl = htmlspecialchars($returnUrl);
-?>
-<script>
-	localStorage.setItem("escapedEmail", JSON.stringify("<?php echo $escapedBody?>"));
-	localStorage.setItem("escapedRealName", JSON.stringify("<?php echo $escapedRealName?>"));
-	localStorage.setItem("body", JSON.stringify("<?php echo $escapedBody?>"));
-</script>
-<?php
+
 	redirect('contact.html');
 
 }
