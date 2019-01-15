@@ -188,9 +188,9 @@ refreshButton.onclick = function() {
 					    <input type="submit" name="send" value="Reach out!">
 
 	    		 		<script type="text/javascript">
-						    document.getElementById("realname").value = '@Session["escapedRealName"]';
-						    document.getElementById("email").value = '@Session["escapedEmail"]';
-						    document.getElementById("body").value = '@Session["escapedBody"]';
+						    document.getElementById("realname").value = localStorage.getItem("escapedRealName");
+						    document.getElementById("email").value = localStorage.getItem("escapedEmail");
+						    document.getElementById("body").value = localStorage.getItem("escapedBody");
 						</script>
 
 					</form>

@@ -171,14 +171,15 @@ function displayForm($messages)
 		}
 	}
 	$escapedReturnUrl = htmlspecialchars($returnUrl);
-	# Shift back into HTML mode to send the form
-	session_start();
-	$_SESSION["escapedEmail"] = $escapedEmail;
-	$_SESSION["escapedRealName"] = $escapedRealName;
-	$_SESSION["body"] = $escapedBody;
-	redirect('contact.html')
 ?>
+<script>
+	localStorage.setItem("escapedEmail", JSON.stringify("<?php echo $escapedBody?>"));
+	localStorage.setItem("escapedRealName", JSON.stringify("<?php echo $escapedRealName?>"));
+	localStorage.setItem("body", JSON.stringify("<?php echo $escapedBody?>"));
+</script>
 <?php
+	redirect('contact.html');
+
 }
 
 function redirect($url, $permanent = false)
