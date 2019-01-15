@@ -145,26 +145,7 @@ function sendMail()
 	# we direct them to the page they came from. Don't allow
 	# unreasonable characters in the URL
 	$escapedReturnUrl = htmlspecialchars($_POST['returnurl']);
-?>
-<html>
-<head>
-<title>Thank You</title>
-</head>
-<body>
-<h1>Thank You</h1>
-<p>
-Thank you for contacting us! Your message has been sent. 
-</p>
-<form method="POST" action="<?php echo $_SERVER['DOCUMENT_URL']?>">
-<input type="submit" name="continue" value="Click Here To Continue"/>
-<input 
-	type="hidden"
-	name="returnurl" 
-	value="<?php echo $escapedReturnUrl?>"/>
-</form>
-</body>
-</html>
-<?php
+	redirect('contact.html');
 }
 ?>
 
