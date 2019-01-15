@@ -49,6 +49,7 @@ if ($_POST['send']) {
 	sendMail();
 } elseif (($_POST['cancel']) || ($_POST['continue'])) {
 	redirect('contact.html');
+	exit();
 } else {
 	displayForm([]);
 }
@@ -149,6 +150,7 @@ function sendMail()
 	# unreasonable characters in the URL
 	$escapedReturnUrl = htmlspecialchars($_POST['returnurl']);
 	redirect('contact.html');
+	exit();
 }
 ?>
 
