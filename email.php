@@ -119,7 +119,7 @@ function sendMail()
 ?>
 <html>
 <script type="text/javascript">
-localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
+	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
 </script>
 </html>
 <?php
