@@ -70,7 +70,13 @@ function displayForm($messages)
 	$escapedRealName = htmlspecialchars($_POST['realname']);
 	$escapedSubject = htmlspecialchars($_POST['subject']);
 	$escapedBody = htmlspecialchars($_POST['body']);
-
+?>
+<html>
+<script type="text/javascript">
+	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
+</script>
+</html>
+<?php
 	redirect('contact.html');
 }
 
@@ -114,14 +120,6 @@ function sendMail()
 		# the error messages and let the user correct
 		# the problem
 
-
-?>
-<html>
-<script type="text/javascript">
-	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
-</script>
-</html>
-<?php
 		displayForm($messages);
 		return;
 
