@@ -211,7 +211,7 @@ refreshButton.onclick = function() {
 						    if(localStorage.getItem("realName")!=null){
 						    	document.getElementById("body").value = JSON.parse(localStorage.getItem("escapedBody"));
 						    }
-						    if(localStorage.getItem("submitSuccess")==true){
+						    if(JSON.parse(localStorage.getItem("submitSuccess"))==true){
 						    	console.log("Success!")
 						    } else {
 						    	console.log(JSON.parse(localStorage.getItem("submitSuccess")))
