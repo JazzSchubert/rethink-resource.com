@@ -185,7 +185,7 @@ function sendMail()
 	if (!preg_match("/^[\w\ \+\-\'\"]+$/", $realName)) {
 		$messages[] = "The real name field must contain only alphabetical characters, numbers, spaces, and the + and - signs. We apologize for any inconvenience.";
 	}
-	$subject = $_POST['subject'];
+	$subject = $_POST['A message from' ++ 'realname'];
 	# CAREFUL: don't allow hackers to sneak line breaks and additional
 	# headers into the message and trick us into spamming for them!
 	$subject = preg_replace('/\s+/', ' ', $subject);
