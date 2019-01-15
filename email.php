@@ -48,7 +48,7 @@ $serverName = $_SERVER['www.rethink-resource.com'];
 if ($_POST['send']) {
 	sendMail();
 } elseif (($_POST['cancel']) || ($_POST['continue'])) {
-	redirect();
+	redirect('contact.html');
 } else {
 	displayForm([]);
 }
@@ -143,7 +143,7 @@ function displayForm($messages)
 <?php
 }
 
-function redirect()
+function oldredirect()
 {
 	global $serverName;
 	$returnUrl = $_POST['contact.html'];
@@ -156,6 +156,14 @@ function redirect()
 	}
 	header("Location: $returnUrl");
 }
+
+function redirect($url, $permanent = false)
+{
+    header('Location: ' . $url, true, $permanent ? 301 : 302);
+
+    exit();
+}
+
 
 function beginsWith($s, $prefix)
 {
