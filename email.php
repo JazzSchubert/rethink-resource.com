@@ -38,7 +38,6 @@
 
 # The person who receives the email messages
 #$recipient = 'example@example.com';
-$recipient = 'webmaster@rethink-resource.com';
 
 # Usually $_SERVER['SERVER_NAME'] is fine, but if you have an unusual
 # hosting setup, you might need to set this manually to 'www.mysite.com'
@@ -182,8 +181,6 @@ function beginsWith($s, $prefix)
 
 function sendMail()
 {
-	# Global variables must be specifically imported in PHP functions
-	global $recipient;
 	$messages = array();
 	$email = $_POST['email'];
 	# Allow only reasonable email addresses. Don't let the
@@ -218,7 +215,7 @@ function sendMail()
 		return;
 	}
 	# No errors - send the email	
-	mail($recipient,
+	mail('webmaster@rethink-resource.com',
 		$subject,
 		$body,
 		"From: $realName <$email>\r\n" .
