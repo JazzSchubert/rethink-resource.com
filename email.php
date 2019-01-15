@@ -39,7 +39,6 @@
 # The person who receives the email messages
 #$recipient = 'example@example.com';
 $recipient = 'webmaster@rethink-resource.com';
-$messages = array();
 
 # Usually $_SERVER['SERVER_NAME'] is fine, but if you have an unusual
 # hosting setup, you might need to set this manually to 'www.mysite.com'
