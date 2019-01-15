@@ -174,23 +174,29 @@ refreshButton.onclick = function() {
 	    		 	<form method="POST" action="email.php">
 
 					    <label for="fname">Please leave your name</label>
-					    <input id="realname" type="formtext" name="realname" placeholder="Your name...">
+					    <input id="realname" type="formtext" name="realname" placeholder="Your name..." minlength="5" maxlength="30">
 
 					    <label for="lname">and your email</label>
-					    <input id="email" name="email" placeholder="Your email...">
+					    <input id="email" name="email" placeholder="Your email..." minlength="5" maxlength="30">
 
 					    <label for="subject">and a message for us</label>
 					    
 						<input type="hidden" name="subject" value="Contact Form @ rethink-resource.com">
 
-					    <textarea id="body" name="body" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw"></textarea>
+					    <textarea id="body" name="body" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw" minlength="5" maxlength="200"></textarea>
 
 					    <input type="submit" name="send" value="Reach out!">
 
 	    		 		<script type="text/javascript">
-						    document.getElementById("realname").value = localStorage.getItem("escapedRealName");
+						    document.getElementById("realname").value = localStorage.getItem("realName");
 						    document.getElementById("email").value = localStorage.getItem("escapedEmail");
 						    document.getElementById("body").value = localStorage.getItem("escapedBody");
+						</script>
+
+						<script type="text/javascript">
+							localStorage.setItem("realName", JSON.stringify(document.getElementById("realname").value));
+						    localStorage.setItem("escapedEmail", JSON.stringify(document.getElementById("email").value));
+						    localStorage.setItem("escapedBody", JSON.stringify(document.getElementById("body").value));
 						</script>
 
 					</form>
