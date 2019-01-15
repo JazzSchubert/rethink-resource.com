@@ -70,20 +70,8 @@ function displayForm($messages)
 	$escapedRealName = htmlspecialchars($_POST['realname']);
 	$escapedSubject = htmlspecialchars($_POST['subject']);
 	$escapedBody = htmlspecialchars($_POST['body']);
-	$returnUrl = $_POST['returnurl'];
-	if (!strlen($returnUrl)) {
-		# We'll return the user to the page they came from
-		$returnUrl = $_SERVER['HTTP_REFERER'];
-		if (!strlen($returnUrl)) {
-			# Stubborn browser won't give us a referring
-			# URL, so return to the home page of our site instead
-			$returnUrl = '/';
-		}
-	}
-	$escapedReturnUrl = htmlspecialchars($returnUrl);
 
 	redirect('contact.html');
-
 }
 
 function redirect($url, $permanent = false)
