@@ -83,7 +83,63 @@ function displayForm($messages)
 	$escapedReturnUrl = htmlspecialchars($returnUrl);
 	# Shift back into HTML mode to send the form
 ?>
-contact.html
+<html>
+<head>
+<title>Contact Us</title>
+</head>
+<body>
+<h1>Contact Us</h1>
+<?php
+	# Shift back into PHP mode for a moment to display
+	# the error message, if there was one
+	if (count($messages) > 0) {
+		$message = implode("<br>\n",$messages);
+		echo("<h3>$message</h3>\n");
+	}
+?>
+<form method="POST" action="<?php echo $_SERVER['DOCUMENT_URL']?>">
+<p>
+<input 
+	name="email" 
+	size="64" 
+	maxlength="64" 
+	value="<?php echo $escapedEmail?>"/>
+	<b>Your</b> Email Address
+</p>
+<p>
+<input 
+	name="realname" 
+	size="64" 
+	maxlength="64" 
+	value="<?php echo $escapedRealName?>"/>
+	Your Real Name (<i>so our reply won't get stuck in your spam folder</i>)
+</p>
+<p>
+<input 
+	name="subject" 
+	size="64" 
+	maxlength="64"
+	value="<?php echo $escapedSubject?>"/> 
+	Subject Of Your Message
+</p>
+<p>
+<i>Please enter the text of your message in the field that follows.</i>
+</p>
+<textarea 
+	name="body" 
+	rows="10" 
+	cols="60"><?php echo $escapedBody?></textarea>
+<p>
+<input type="submit" name="send" value="Send Your Message"/>
+<input type="submit" name="cancel" value="Cancel - Never Mind"/>
+</p>
+<input 
+	type="hidden"
+	name="returnurl" 
+	value="<?php echo $escapedReturnUrl?>"/>
+</form>
+</body>
+</html>
 <?php
 }
 
