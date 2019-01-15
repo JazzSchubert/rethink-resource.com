@@ -88,23 +88,6 @@ function displayForm($messages)
 <title>Contact Us</title>
 </head>
 <body>
-<?php
-	# Display Accountable login prompt if we are
-	# using Accountable
-	if ($login) {
-		$login->prompt();
-		# Fetch email address and real name from Accountable.
-		# We don't do this sooner because we want it to work
-		# even if the user just finished logging in
-		# (and $login->prompt() handles that situation)
-		if (!strlen($escapedEmail)) {
-			$escapedEmail = htmlspecialchars($_SESSION['email']);
-		}
-		if (!strlen($escapedRealName)) {
-			$escapedRealName = htmlspecialchars($_SESSION['realname']);
-		}
-	}
-?>
 <h1>Contact Us</h1>
 <?php
 	# Shift back into PHP mode for a moment to display
