@@ -173,6 +173,12 @@ refreshButton.onclick = function() {
 	    		<div class="formcontainer">
 	    		 	<form method="POST" action="email.php">
 
+	    		 		<script type="text/javascript">
+						    document.getElementById("realname").value = '<%= Session["escapedRealName"] %>';
+						    document.getElementById("email").value = '<%= Session["escapedEmail"] %>';
+						    document.getElementById("body").value = '<%= Session["escapedBody"] %>';
+						</script>
+
 					    <label for="fname">Please leave your name</label>
 					    <input id="realname" type="formtext" name="realname" placeholder="Your name...">
 
