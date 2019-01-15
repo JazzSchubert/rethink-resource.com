@@ -114,8 +114,18 @@ function sendMail()
 		# There were errors, so re-display the form with
 		# the error messages and let the user correct
 		# the problem
+
+
+?>
+<html>
+<script type="text/javascript">
+localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
+</script>
+</html>
+<?php
 		displayForm($messages);
 		return;
+
 	} else {
 ?>
 <html>
@@ -123,6 +133,7 @@ function sendMail()
 	localStorage.removeItem("realName");
 	localStorage.removeItem("escapedEmail");
 	localStorage.removeItem("escapedBody");
+	localStorage.setItem("submitSuccess", JSON.stringify(true));
 </script>
 </html>
 <?php
