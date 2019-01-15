@@ -71,11 +71,13 @@ function displayForm($messages)
 	$escapedSubject = htmlspecialchars($_POST['subject']);
 	$escapedBody = htmlspecialchars($_POST['body']);
 ?>
+<html>
 <script type="text/javascript">
 	localStorage.removeItem("realName");
 	localStorage.removeItem("escapedEmail");
 	localStorage.removeItem("escapedBody");
 </script>
+</html>
 <?php
 
 	redirect('contact.html');
