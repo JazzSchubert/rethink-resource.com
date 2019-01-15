@@ -74,11 +74,16 @@ function displayForm($messages)
 ?>
 
 <html>
+<head>
+<title>Error</title>
+</head>
+<body>
 <script type="text/javascript">
 	console.log("<?php echo $messages?>");
 	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
 </script>
 <p>POPEL</p>
+</body>
 </html>
 
 <?php
