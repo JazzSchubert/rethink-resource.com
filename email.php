@@ -146,7 +146,7 @@ function displayForm($messages)
 function redirect()
 {
 	global $serverName;
-	$returnUrl = $_POST['rethink-resource.com/contact.html'];
+	$returnUrl = $_POST['contact.html'];
 	# Don't get tricked into redirecting somewhere
 	# unpleasant. You never know. Reject the return URL
 	# unless it points to somewhere on our own site.	
