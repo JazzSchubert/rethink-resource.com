@@ -146,7 +146,7 @@ function displayForm($messages)
 function redirect()
 {
 	global $serverName;
-	$returnUrl = $_POST['returnurl'];
+	$returnUrl = $_POST['rethink-resource.com/contact.html'];
 	# Don't get tricked into redirecting somewhere
 	# unpleasant. You never know. Reject the return URL
 	# unless it points to somewhere on our own site.	
@@ -154,7 +154,7 @@ function redirect()
 	if (!beginsWith($returnUrl, $prefix)) {
 		$returnUrl = "http://$serverName/"; 
 	}
-	header("Location: $_POST['www.rethink-resource.com/contact.html']");
+	header("Location: $returnUrl");
 }
 
 function beginsWith($s, $prefix)
