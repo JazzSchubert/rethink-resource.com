@@ -187,12 +187,6 @@ refreshButton.onclick = function() {
 
 					    <input type="submit" name="send" value="Reach out!">
 
-	    		 		<script type="text/javascript">
-						    document.getElementById("realname").value = localStorage.getItem("realName");
-						    document.getElementById("email").value = localStorage.getItem("escapedEmail");
-						    document.getElementById("body").value = localStorage.getItem("escapedBody");
-						</script>
-
 						<script type="text/javascript">
 							var contactform = document.getElementById("contactform");
 								if(contactform.addEventListener){
@@ -200,11 +194,17 @@ refreshButton.onclick = function() {
 								}else if(contactform.attachEvent){
 								    contactform.attachEvent('onsubmit', storeForm);            //Old IE
 								}
-							storeForm(){
+							function storeForm(){
 								localStorage.setItem("realName", JSON.stringify(document.getElementById("realname").value));
 							    localStorage.setItem("escapedEmail", JSON.stringify(document.getElementById("email").value));
 							    localStorage.setItem("escapedBody", JSON.stringify(document.getElementById("body").value));
 							}
+						</script>
+
+	    		 		<script type="text/javascript">
+						    document.getElementById("realname").value = localStorage.getItem("realName");
+						    document.getElementById("email").value = localStorage.getItem("escapedEmail");
+						    document.getElementById("body").value = localStorage.getItem("escapedBody");
 						</script>
 
 					</form>
