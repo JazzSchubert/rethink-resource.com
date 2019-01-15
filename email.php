@@ -75,6 +75,7 @@ function displayForm($messages)
 <script type="text/javascript">
 	localStorage.setItem("submitSuccess", JSON.stringify("messages"));
 </script>
+<body>
 </html>
 <?php
 	redirect('contact.html');
@@ -133,6 +134,7 @@ function sendMail()
 	localStorage.removeItem("escapedBody");
 	localStorage.setItem("submitSuccess", JSON.stringify(true));
 </script>
+<body>
 </html>
 <?php
 	}
