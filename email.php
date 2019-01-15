@@ -43,7 +43,7 @@
 # hosting setup, you might need to set this manually to 'www.mysite.com'
 #$serverName = $_SERVER['SERVER_NAME'];
 
-$serverName = $_SERVER['SERVER_NAME'];
+$serverName = $_SERVER['www.rethink-resource.com'];
 
 if ($_POST['send']) {
 	sendMail();
