@@ -172,14 +172,14 @@ function displayForm($messages)
 	}
 	$escapedReturnUrl = htmlspecialchars($returnUrl);
 	# Shift back into HTML mode to send the form
-	redirect('contact.html');
+	header('Location: ' . $url, true, $permanent ? 301 : 302);
 ?>
 <script type="text/javascript">
     document.getElementById("realname").value = "<?php echo $escapedRealName?>";
     document.getElementById("email").value = "<?php echo $escapedEmail?>";
     document.getElementById("body").value = "<?php echo $escapedBody?>";
 </script>
-<?php
+<?php exit();
 }
 
 function redirect($url, $permanent = false)
