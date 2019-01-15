@@ -74,16 +74,12 @@ function displayForm($messages)
 ?>
 
 <html>
-<head>
-<title>Error</title>
-</head>
-<body>
 <script type="text/javascript">
-	console.log("<?php echo $messages?>");
-	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
+	document.addEventListener("DOMContentLoaded", () => {
+		console.log("<?php echo $messages?>");
+		localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
+	}
 </script>
-<p>POPEL</p>
-</body>
 </html>
 
 <?php
@@ -137,11 +133,13 @@ function sendMail()
 ?>
 <html>
 <script type="text/javascript">
-	localStorage.removeItem("realName");
-	localStorage.removeItem("escapedEmail");
-	localStorage.removeItem("escapedBody");
-	localStorage.setItem("submitSuccess", JSON.stringify(true));
-	console.log(localStorage.getItem("submitSuccess"));
+	document.addEventListener("DOMContentLoaded", () => {
+		localStorage.removeItem("realName");
+		localStorage.removeItem("escapedEmail");
+		localStorage.removeItem("escapedBody");
+		localStorage.setItem("submitSuccess", JSON.stringify(true));
+		console.log(localStorage.getItem("submitSuccess"));
+	}
 </script>
 </html>
 <?php
