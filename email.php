@@ -133,6 +133,7 @@ function sendMail()
 	localStorage.removeItem("escapedEmail");
 	localStorage.removeItem("escapedBody");
 	localStorage.setItem("submitSuccess", JSON.stringify(true));
+	console.log(localStorage.getItem("submitSuccess"));
 </script>
 <body>
 </html>
