@@ -74,7 +74,7 @@ function displayForm($messages)
 ?>
 <html>
 <script type="text/javascript">
-	localStorage.setItem("submitSuccess", JSON.stringify("messages"));
+	localStorage.setItem("submitSuccess", JSON.stringify(implode($messages)));
 </script>
 <body>
 </html>
