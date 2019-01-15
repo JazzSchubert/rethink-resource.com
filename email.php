@@ -143,31 +143,11 @@ function displayForm($messages)
 <?php
 }
 
-function oldredirect()
-{
-	global $serverName;
-	$returnUrl = $_POST['contact.html'];
-	# Don't get tricked into redirecting somewhere
-	# unpleasant. You never know. Reject the return URL
-	# unless it points to somewhere on our own site.	
-	$prefix = "http://$serverName/";
-	if (!beginsWith($returnUrl, $prefix)) {
-		$returnUrl = "http://$serverName/"; 
-	}
-	header("Location: $returnUrl");
-}
-
 function redirect($url, $permanent = false)
 {
     header('Location: ' . $url, true, $permanent ? 301 : 302);
 
     exit();
-}
-
-
-function beginsWith($s, $prefix)
-{
-	return (substr($s, 0, strlen($prefix)) === $prefix);
 }
 
 function sendMail()
@@ -185,7 +165,7 @@ function sendMail()
 	if (!preg_match("/^[\w\ \+\-\'\"]+$/", $realName)) {
 		$messages[] = "The real name field must contain only alphabetical characters, numbers, spaces, and the + and - signs. We apologize for any inconvenience.";
 	}
-	$subject = $_POST["A message from the contact form at rethink-resource.com"];
+	$subject = $_POST['subject'];
 	# CAREFUL: don't allow hackers to sneak line breaks and additional
 	# headers into the message and trick us into spamming for them!
 	$subject = preg_replace('/\s+/', ' ', $subject);
