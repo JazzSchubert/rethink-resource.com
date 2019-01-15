@@ -211,12 +211,6 @@ function sendMail()
         if (preg_match('/^\s*$/', $body)) {
 		$messages[] = "Your message was blank. Did you mean to say something? Click the Cancel button if you do not wish to send a message.";
 	}
-	# Check the captcha code if the user is NOT logged in to an account
-	if ((!$_SESSION['id']) && function_exists('captchaImgUrl')) {
-		if ($_POST['captcha'] != $_SESSION['captchacode']) {
-			$messages[] = "You did not enter the security code, or what you entered did not match the code. Please try again.";
-		}
-	}
 	if (count($messages)) {
 		# There were errors, so re-display the form with
 		# the error messages and let the user correct
