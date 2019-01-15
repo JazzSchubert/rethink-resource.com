@@ -154,7 +154,7 @@ function redirect()
 	if (!beginsWith($returnUrl, $prefix)) {
 		$returnUrl = "http://$serverName/"; 
 	}
-	header("Location: $returnUrl");
+	header("Location: $_POST['www.rethink-resource.com/contact.html']");
 }
 
 function beginsWith($s, $prefix)
