@@ -78,6 +78,7 @@ function displayForm($messages)
 	console.log("<?php echo $messages?>");
 	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
 </script>
+<p>POPEL</p>
 </html>
 
 <?php
