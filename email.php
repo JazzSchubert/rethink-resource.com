@@ -70,15 +70,6 @@ function displayForm($messages)
 	$escapedRealName = htmlspecialchars($_POST['realname']);
 	$escapedSubject = htmlspecialchars($_POST['subject']);
 	$escapedBody = htmlspecialchars($_POST['body']);
-?>
-<html>
-<script type="text/javascript">
-	localStorage.removeItem("realName");
-	localStorage.removeItem("escapedEmail");
-	localStorage.removeItem("escapedBody");
-</script>
-</html>
-<?php
 
 	redirect('contact.html');
 }
@@ -125,6 +116,16 @@ function sendMail()
 		# the problem
 		displayForm($messages);
 		return;
+	} else {
+?>
+<html>
+<script type="text/javascript">
+	localStorage.removeItem("realName");
+	localStorage.removeItem("escapedEmail");
+	localStorage.removeItem("escapedBody");
+</script>
+</html>
+<?php
 	}
 	# No errors - send the email	
 	mail('webmaster@rethink-resource.com',
