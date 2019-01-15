@@ -50,7 +50,7 @@ if ($_POST['send']) {
 } elseif (($_POST['cancel']) || ($_POST['continue'])) {
 	redirect();
 } else {
-	displayForm(false);
+	displayForm([]);
 }
 
 function displayForm($messages)
