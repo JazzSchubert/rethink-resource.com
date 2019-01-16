@@ -148,8 +148,6 @@ function sendMail()
 	localStorage.removeItem("realName");
 	localStorage.removeItem("escapedEmail");
 	localStorage.removeItem("escapedBody");
-	localStorage.setItem("submitSuccess", JSON.stringify(true));
-	console.log(localStorage.getItem("submitSuccess"));
 </script>
 </html>
 <?php
@@ -164,7 +162,17 @@ function sendMail()
 	# we direct them to the page they came from. Don't allow
 	# unreasonable characters in the URL
 	$escapedReturnUrl = htmlspecialchars($_POST['returnurl']);
-	redirect('contact.html');
+
+?>
+<html>
+<script type="text/javascript">
+	localStorage.setItem("submitSuccess", JSON.stringify(true));
+	console.log(localStorage.getItem("submitSuccess"));
+	if (localStorage.getItem("submitSuccess")) {"<?php redirect('contact.html') ?>"}
+</script>
+</html>
+<?php
+
 	exit();
 }
 ?>
