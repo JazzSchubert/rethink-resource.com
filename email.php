@@ -44,6 +44,18 @@
 #$serverName = $_SERVER['SERVER_NAME'];
 
 $serverName = $_SERVER['www.rethink-resource.com'];
+?>
+
+<html>
+<head>
+</head>
+<body>
+</body>
+</html>
+
+<?php
+
+
 
 if ($_POST['send']) {
 	sendMail();
