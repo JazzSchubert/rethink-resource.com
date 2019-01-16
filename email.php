@@ -90,11 +90,12 @@ function displayForm($messages)
 <script type="text/javascript">
 	console.log("<?php echo $messages?>");
 	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
+	if (localStorage.getItem("submitSuccess")) {"<?php redirect('contact.html') ?>"}
 </script>
 </html>
 
 <?php
-	redirect('contact.html');
+	
 }
 
 function redirect($url, $permanent = false)
