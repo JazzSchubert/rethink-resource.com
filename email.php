@@ -50,6 +50,7 @@ $serverName = $_SERVER['www.rethink-resource.com'];
 <head>
 </head>
 <body>
+	Test
 </body>
 </html>
 
@@ -87,10 +88,8 @@ function displayForm($messages)
 
 <html>
 <script type="text/javascript">
-	document.addEventListener("DOMContentLoaded", () => {
-		console.log("<?php echo $messages?>");
-		localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
-	}
+	console.log("<?php echo $messages?>");
+	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
 </script>
 </html>
 
@@ -145,13 +144,11 @@ function sendMail()
 ?>
 <html>
 <script type="text/javascript">
-	document.addEventListener("DOMContentLoaded", () => {
-		localStorage.removeItem("realName");
-		localStorage.removeItem("escapedEmail");
-		localStorage.removeItem("escapedBody");
-		localStorage.setItem("submitSuccess", JSON.stringify(true));
-		console.log(localStorage.getItem("submitSuccess"));
-	}
+	localStorage.removeItem("realName");
+	localStorage.removeItem("escapedEmail");
+	localStorage.removeItem("escapedBody");
+	localStorage.setItem("submitSuccess", JSON.stringify(true));
+	console.log(localStorage.getItem("submitSuccess"));
 </script>
 </html>
 <?php
