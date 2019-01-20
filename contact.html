@@ -216,7 +216,8 @@ refreshButton.onclick = function() {
 						    if(localStorage.getItem("realName")!=null){
 						    	document.getElementById("body").value = JSON.parse(localStorage.getItem("escapedBody"));
 						    }
-						    if(JSON.parse(localStorage.getItem("submitSuccess"))==true){
+						    if (JSON.parse(localStorage.getItem("submitSuccess"))==null){
+						    } else if (JSON.parse(localStorage.getItem("submitSuccess"))==true){
 						    	console.log("Success!");
 						    	localStorage.removeItem("submitSuccess");
 						    	toastr.success("Thanks for reaching out!");
