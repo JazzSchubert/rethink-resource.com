@@ -53,8 +53,8 @@ function sendMail()
 	mail('info@rethink-resource.com',
 		'Contact Form at rethink-resource.com',
 		$body,
-		'From: $realName <$email>\r\n' .
-		'Reply-To: $realName <$email>\r\n');
+		"From: $realName <$email>\r\n" .
+		"Reply-To: $realName <$email>\r\n");
 	}
 ?>
 <script type="text/javascript">
