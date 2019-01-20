@@ -179,16 +179,16 @@ refreshButton.onclick = function() {
 	    		 	<form id="contactform" method="POST" action="email.php">
 
 					    <label for="realname">Please leave your name</label>
-					    <input id="realname" type="formtext" name="realname" placeholder="Your name..." minlength="5" maxlength="30" required>
+					    <input id="realname" type="formtext" name="realname" placeholder="Your name..." minlength="5" maxlength="40" required>
 
 					    <label for="email">and your email</label>
-					    <input id="email" class="formtext" name="email" type="email" placeholder="Your email..." minlength="5" maxlength="30" required>
+					    <input id="email" class="formtext" name="email" type="email" placeholder="Your email..." minlength="5" maxlength="40" required>
 
 					    <label for="subject">and a message for us</label>
 					    
-						<input type="hidden" name="subject" value="Contact Form at rethink-resource.com">
+						<input type="hidden" name="subject" value="Contact Form at rethink-resource.com" minlength="5" maxlength="40" >
 
-					    <textarea id="body" name="body" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw" maxlength="200"></textarea>
+					    <textarea id="body" name="body" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw" minlength="3" maxlength="300" required></textarea>
 
 					    <input type="submit" name="send" value="Reach out!">
 
@@ -218,11 +218,9 @@ refreshButton.onclick = function() {
 						    }
 						    if (JSON.parse(localStorage.getItem("submitSuccess"))==null){
 						    } else if (JSON.parse(localStorage.getItem("submitSuccess"))==true){
-						    	console.log("Success!");
 						    	localStorage.removeItem("submitSuccess");
 						    	toastr.success("Thanks for reaching out!");
 						    } else {
-						    	console.log(localStorage.getItem("submitSuccess"));
 						    	toastr.error(localStorage.getItem("submitSuccess"));
 
 						    }
