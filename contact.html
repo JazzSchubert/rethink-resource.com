@@ -222,6 +222,8 @@ refreshButton.onclick = function() {
 						    	toastr.success("Thanks for reaching out!");
 						    } else {
 						    	console.log(localStorage.getItem("submitSuccess"));
+						    	toastr.success(localStorage.getItem("submitSuccess"));
+
 						    }
 						</script>
 
