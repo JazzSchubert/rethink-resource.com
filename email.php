@@ -51,7 +51,7 @@ function sendMail()
 
 	} else {
 	mail('info@rethink-resource.com',
-		'Contact Form at rethink-resource.com'
+		'Contact Form at rethink-resource.com',
 		$body,
 		'From: $realName <$email>\r\n' .
 		'Reply-To: $realName <$email>\r\n');
