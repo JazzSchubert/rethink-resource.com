@@ -78,7 +78,6 @@ function displayForm($messages)
 	console.log("<?php echo $messages?>");
 	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
 	if (localStorage.getItem("submitSuccess")) {"<?php redirect('contact.html') ?>"}
-</script>
 
 <?php
 	
@@ -129,11 +128,10 @@ function sendMail()
 
 	} else {
 ?>
-<script type="text/javascript">
 	localStorage.removeItem("realName");
 	localStorage.removeItem("escapedEmail");
 	localStorage.removeItem("escapedBody");
-</script>
+
 <?php
 	}
 	# No errors - send the email	
@@ -148,7 +146,6 @@ function sendMail()
 	$escapedReturnUrl = htmlspecialchars($_POST['returnurl']);
 
 ?>
-<script type="text/javascript">
 	localStorage.setItem("submitSuccess", JSON.stringify(true));
 	console.log(localStorage.getItem("submitSuccess"));
 	if (localStorage.getItem("submitSuccess")) {"<?php redirect('contact.html') ?>"}
