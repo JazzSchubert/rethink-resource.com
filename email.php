@@ -1,7 +1,5 @@
 <?php
-
 $serverName = $_SERVER['www.rethink-resource.com'];
-
 if ($_POST['send']) {
 	sendMail();
 } elseif (($_POST['cancel']) || ($_POST['continue'])) {
@@ -10,7 +8,6 @@ if ($_POST['send']) {
 } else {
 	displayForm([]);
 }
-
 function displayForm($messages)
 {
 	$escapedEmail = htmlspecialchars($_POST['email']);
@@ -24,26 +21,24 @@ function displayForm($messages)
 </script>
 <?php
 }
-
 function redirect($url, $permanent = false)
 {
     header('Location: ' . $url, true, $permanent ? 301 : 302);
     exit();
 }
-
 function sendMail()
 {
 	$email = $_POST['email'];
 	if (!preg_match("/^[\w\+\-\.\~]+\@[\-\w\.\!]+$/", $email)) {
-		$messages[] = "That is not a valid email address. Perhaps you left out the @something.com part?";
+		$messages[] = "That is not a valid email address.";
 	}
 	$realName = $_POST['realname'];
 	if (!preg_match("/^[\w\ \+\-\'\"]+$/", $realName)) {
-		$messages[] = "The real name field must contain only alphabetical characters, numbers, spaces, and the + and - signs. We apologize for any inconvenience.";
+		$messages[] = "The name field must contain only alphabetical characters, numbers, spaces, and the + and - signs.";
 	}
 	$body = $_POST['body'];
     if (preg_match('/^\s*$/', $body)) {
-		$messages[] = "Your message was blank. Did you mean to say something? Click the Cancel button if you do not wish to send a message.";
+		$messages[] = "Your message was blank. Did you mean to say something?";
 	}
 	if (count($messages)) {
 		displayForm($messages);
@@ -66,7 +61,6 @@ function sendMail()
 	if (localStorage.getItem("submitSuccess")) {window.location.replace("contact.html");}
 </script>
 <?php
-
 	exit();
 }
 ?>
