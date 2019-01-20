@@ -90,7 +90,6 @@ function redirect($url, $permanent = false)
 
 function sendMail()
 {
-	$messages = array();
 	$email = $_POST['email'];
 	# Allow only reasonable email addresses. Don't let the
 	# user trick us into backscattering spam to many people.
