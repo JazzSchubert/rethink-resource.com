@@ -72,13 +72,11 @@ function displayForm($messages)
 	$escapedSubject = htmlspecialchars($_POST['subject']);
 	$escapedBody = htmlspecialchars($_POST['body']);
 ?>
-
-<html>
 <script type="text/javascript">
 	console.log("<?php echo $messages?>");
 	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
-	if (localStorage.getItem("submitSuccess")) {"<?php redirect('contact.html') ?>"}
-
+	if (localStorage.getItem("submitSuccess")) {window.location.replace("contact.html");}
+</script>
 <?php
 	
 }
@@ -127,13 +125,7 @@ function sendMail()
 		return;
 
 	} else {
-?>
-	localStorage.removeItem("realName");
-	localStorage.removeItem("escapedEmail");
-	localStorage.removeItem("escapedBody");
 
-<?php
-	}
 	# No errors - send the email	
 	mail('webmaster@rethink-resource.com',
 		$subject,
@@ -144,13 +136,16 @@ function sendMail()
 	# we direct them to the page they came from. Don't allow
 	# unreasonable characters in the URL
 	$escapedReturnUrl = htmlspecialchars($_POST['returnurl']);
-
+	}
 ?>
+<script type="text/javascript">
+	localStorage.removeItem("realName");
+	localStorage.removeItem("escapedEmail");
+	localStorage.removeItem("escapedBody");
 	localStorage.setItem("submitSuccess", JSON.stringify(true));
 	console.log(localStorage.getItem("submitSuccess"));
-	if (localStorage.getItem("submitSuccess")) {"<?php redirect('contact.html') ?>"}
+	if (localStorage.getItem("submitSuccess")) {window.location.replace("contact.html");}
 </script>
-</html>
 <?php
 
 	exit();
