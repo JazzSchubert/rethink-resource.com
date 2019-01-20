@@ -74,7 +74,7 @@ function displayForm($messages)
 ?>
 <script type="text/javascript">
 	console.log("<?php echo $messages?>");
-	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages?>"));
+	localStorage.setItem("submitSuccess", JSON.stringify("<?php echo $messages[0]?>"));
 	if (localStorage.getItem("submitSuccess")) {window.location.replace("contact.html");}
 </script>
 <?php
