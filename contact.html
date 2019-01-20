@@ -218,7 +218,7 @@ refreshButton.onclick = function() {
 						    if(JSON.parse(localStorage.getItem("submitSuccess"))==true){
 						    	console.log("Success!");
 						    	localStorage.removeItem("submitSuccess");
-						    	toastr.info("Thanks for reaching out!");
+						    	toastr.success("Thanks for reaching out!");
 						    } else {
 						    	console.log(localStorage.getItem("submitSuccess"));
 						    }
