@@ -17,6 +17,8 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 <script>
 
 document.getElementById("scrollcontainer").addEventListener ("scroll", handler, useCapture);
@@ -191,7 +193,7 @@ refreshButton.onclick = function() {
 							var contactform = document.getElementById("contactform");
 								if(contactform.addEventListener){
 								    contactform.addEventListener("submit", storeForm, false);  //Modern browsers
-								}else if(contactform.attachEvent){
+								}else(contactform.attachEvent){
 								    contactform.attachEvent('onsubmit', storeForm);            //Old IE
 								}
 							function storeForm(){
@@ -214,6 +216,7 @@ refreshButton.onclick = function() {
 						    if(JSON.parse(localStorage.getItem("submitSuccess"))==true){
 						    	console.log("Success!");
 						    	localStorage.removeItem("submitSuccess");
+						    	toastr.info("Thanks for reaching out!");
 						    } else {
 						    	console.log(localStorage.getItem("submitSuccess"));
 						    }
