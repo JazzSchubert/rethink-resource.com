@@ -41,11 +41,6 @@ function sendMail()
 	if (!preg_match("/^[\w\ \+\-\'\"]+$/", $realName)) {
 		$messages[] = "The real name field must contain only alphabetical characters, numbers, spaces, and the + and - signs. We apologize for any inconvenience.";
 	}
-	$subject = $_POST['subject'];
-	$subject = preg_replace('/\s+/', ' ', $subject);
-	if (preg_match('/^\s*$/', $subject)) {
-		$messages[] = "Please specify a subject for your message.";
-	}
 	$body = $_POST['body'];
     if (preg_match('/^\s*$/', $body)) {
 		$messages[] = "Your message was blank. Did you mean to say something? Click the Cancel button if you do not wish to send a message.";
