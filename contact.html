@@ -193,9 +193,9 @@ refreshButton.onclick = function() {
 
 						<script type="text/javascript">
 							var contactform = document.getElementById("contactform");
-								if(contactform.addEventListener){
+								if (contactform.addEventListener) {
 								    contactform.addEventListener("submit", storeForm, false);  //Modern browsers
-								}else(contactform.attachEvent){
+								} else if (contactform.attachEvent) {
 								    contactform.attachEvent('onsubmit', storeForm);            //Old IE
 								}
 							function storeForm(){
