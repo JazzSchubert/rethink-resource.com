@@ -17,6 +17,11 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 <script>
 
 document.getElementById("scrollcontainer").addEventListener ("scroll", handler, useCapture);
@@ -55,7 +60,7 @@ function OnScrollDiv () {
 			strategyImage.classList.add("hidden");
 		}
 
-		if (RSH >= 45 && RSH < 167 && !(RSH >= 87 && RSH < 115) || (RSH >= 195 && RSH < 252)){
+		if (RSH >= 45 && RSH < 177 && !(RSH >= 87 && RSH < 115) || (RSH >= 205 && RSH < 257)){
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.add("black-navbar");
 			}
@@ -75,7 +80,12 @@ function OnScrollDiv () {
 			colorLogo.classList.add("hidden");
 		}
 }
-	
+
+var refreshButton = document.querySelector(".refresh-captcha");
+refreshButton.onclick = function() {
+  document.querySelector(".captcha-image").src = 'captcha.php?' + Date.now();
+}
+
 </script>
 
 </head>
@@ -166,21 +176,52 @@ function OnScrollDiv () {
 			</div>
 	    	<div class="text-column width-is-40">
 	    		<div class="formcontainer">
-	    		 	<form method="POST" action="email.php">
+	    		 	<form id="contactform" method="POST" action="email.php">
 
-	    		 		<input type="hidden"name="recipient" value="boutell">
+					    <label for="realname">Please leave your name</label>
+					    <input id="realname" type="formtext" name="realname" placeholder="Your name..." minlength="5" maxlength="40" required>
 
-					    <label for="fname">Please leave your name</label>
-					    <input class="" type="formtext" id="name" name="name" placeholder="Your name...">
+					    <label for="email">and your email</label>
+					    <input id="email" class="formtext" name="email" type="email" placeholder="Your email..." minlength="5" maxlength="40" required>
 
-					    <label for="lname">and your email</label>
-					    <input type="formtext" id="email" name="email" placeholder="Your email...">
+					    <label for="body">and a message for us</label>
+					    <textarea id="body" name="body" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw" minlength="3" maxlength="300" required></textarea>
 
-					    <label for="subject">and a message for us</label>
-					    
-					    <textarea id="formsubject" name="subject" placeholder="Dear RethinkResource Team,&#10;&#10;I was browsing your website and just wanted to ask you about..." style="height:9vw"></textarea>
+					    <input type="submit" name="send" value="Reach out!">
 
-					    <input type="submit" value="Reach out!">
+						<script type="text/javascript">
+							var contactform = document.getElementById("contactform");
+								if (contactform.addEventListener) {
+								    contactform.addEventListener("submit", storeForm, false);  //Modern browsers
+								} else if (contactform.attachEvent) {
+								    contactform.attachEvent('onsubmit', storeForm);            //Old IE
+								}
+							function storeForm(){
+								localStorage.setItem("realName", JSON.stringify(document.getElementById("realname").value));
+							    localStorage.setItem("escapedEmail", JSON.stringify(document.getElementById("email").value));
+							    localStorage.setItem("escapedBody", JSON.stringify(document.getElementById("body").value));
+							}
+						</script>
+
+	    		 		<script type="text/javascript">
+	    		 			if(localStorage.getItem("realName")!=null){
+						    	document.getElementById("realname").value = JSON.parse(localStorage.getItem("realName"));
+							}
+							if(localStorage.getItem("realName")!=null){
+						    	document.getElementById("email").value = JSON.parse(localStorage.getItem("escapedEmail"));
+						    }
+						    if(localStorage.getItem("realName")!=null){
+						    	document.getElementById("body").value = JSON.parse(localStorage.getItem("escapedBody"));
+						    }
+						    if (JSON.parse(localStorage.getItem("submitSuccess"))==null){
+						    } else if (JSON.parse(localStorage.getItem("submitSuccess"))==true){
+						    	localStorage.removeItem("submitSuccess");
+						    	toastr.success("Thanks for reaching out!");
+						    } else {
+						    	toastr.error(localStorage.getItem("submitSuccess"));
+
+						    }
+						</script>
 
 					</form>
 				</div>
@@ -206,81 +247,92 @@ function OnScrollDiv () {
 </div>
 
 
-<div id="groupca1" class="parallaxGroup height-is-70">
+<div id="groupca1" class="parallaxGroup height-is-65">
   	<div class="iparallaxLayer baseLayer">
 
-		<div class="about background-is-white height-is-70">
+		<div class="about background-is-white height-is-65">
 
-			<div class="height-is-55 width-is-90 logo-row">
+			<div class="height-is-50 width-is-90 logo-row" style="padding-top: 2vw;">
 
 				<div class="design-box download">
-					<div class="contains-image logo" style="flex-direction: column">
-						<img class="has-shadow" src="img/Icon_Flyer_ReRe.jpg" alt="brauerfly">
+					<div class="contains-image thumb" style="flex-direction: column">
+						<a href="files/Flyer_ReRe.pdf" target="_blank">
+							<img class="has-shadow" src="img/Icon_Flyer_ReRe.jpg" alt="brauerfly">
+						</a>
 					</div>
-					<p><a href="files/Flyer_ReRe.pdf" target="_blank">For Producers</a></p>
+					<p><a href="files/Flyer_ReRe.pdf" target="_blank">RethinkResource Flyer</a></p>
 				</div>
 
 				<div class="design-box download">
-					<div class="contains-image logo" style="flex-direction: column">
-						<img class="has-shadow" src="img/Icon_Flyer_Chocolate_RethinkResource.jpg" alt="brauerfly">
+					<div class="contains-image thumb" style="flex-direction: column">
+						<a href="files/About_RethinkResource.pdf" target="_blank">
+							<img class="has-shadow" src="files/Icon_About_ReRe.png" alt="brauerfly">
+						</a>
+					</div>
+					<p><a href="files/About_RethinkResource.pdf" target="_blank">About RethinkResource</a></p>
+				</div>
+
+				<div class="design-box download">
+					<div class="contains-image thumb" style="flex-direction: column">
+						<a href="files/Flyer_Chocolate_RethinkResource.pdf" target="_blank">
+							<img class="has-shadow" src="img/Icon_Flyer_Chocolate_RethinkResource.jpg" alt="brauerfly">
+						</a>
 					</div>
 					<p><a href="files/Flyer_Chocolate_RethinkResource.pdf" target="_blank">For Chocolate-Producers</a></p>
 				</div>
 
 				<div class="design-box download">
-					<div class="contains-image logo" style="flex-direction: column">
-						<img class="has-shadow" src="img/Icon_Flyer_Brauerei_RethinkResource.jpg" alt="brauerfly">
+					<div class="contains-image thumb" style="flex-direction: column">
+						<a href="files/Flyer_Brauerei_RethinkResource.pdf" target="_blank">
+							<img class="has-shadow" src="img/Icon_Flyer_Brauerei_RethinkResource.jpg" alt="brauerfly">
+						</a>
 					</div>
-					<p><a href="files/Flyer_Brauerei_RethinkResource.pdf" target="_blank">For Brewers</a></p>
+					<p><a href="files/Flyer_Brauerei_RethinkResource.pdf" target="_blank">For <br> Brewers</a></p>
 				</div>
 
 				<div class="design-box download">
-					<div class="contains-image logo" style="flex-direction: column">
-						<img class="has-shadow" src="img/Icon_Flyer_Circado.jpg" alt="brauerfly">
+					<div class="contains-image thumb" style="flex-direction: column">
+						<a href="files/Flyer_Circado.pdf" target="_blank">
+							<img class="has-shadow" src="img/Icon_Flyer_Circado.jpg" alt="brauerfly">
+						</a>
 					</div>
-					<p><a href="files/Flyer_Circado_compressed.pdf" target="_blank">For Buyers and Sellers of Side-Streams</a></p>
+					<p><a href="files/Flyer_Circado.pdf" target="_blank">For Buyers and Sellers of Side-Streams</a></p>
 				</div>
 
 				<div class="design-box download">
-					<div class="contains-image logo" style="flex-direction: column">
-						<img class="has-shadow" src="img/Icon_CLCA_Bread_Beer.jpg" alt="brauerfly">
+					<div class="contains-image thumb" style="flex-direction: column">
+						<a href="files/Flyer_Circado_D.pdf" target="_blank">
+							<img class="has-shadow" src="img/Icon_Flyer_Circado.jpg" alt="brauerfly">
+						</a>
 					</div>
-					<p><a href="files/CLCA_Bread_Beer.pdf" target="_blank">Sample CLCA</a></p>
+					<p><a href="files/Flyer_Circado_D.pdf" target="_blank">Für Käufer und Verkäufer von Nebenströmen</a></p>
 				</div>
 
 				<div class="design-box download">
-					<div class="contains-image logo" style="flex-direction: column">
-						<img class="has-shadow" src="img/Icon_Flyer_ReRe.jpg" alt="brauerfly">
+					<div class="contains-image thumb" style="flex-direction: column">
+						<a href="files/CLCA_Bread_Beer.pdf" target="_blank">
+							<img class="has-shadow" src="img/Icon_CLCA_Bread_Beer.jpg" alt="brauerfly">
+						</a>
 					</div>
-					<p><a href="files/Flyer_ReRe.pdf" target="_blank">For Producers</a></p>
+					<p><a href="files/CLCA_Bread_Beer.pdf" target="_blank">CLCA of Damn Good Bread Beer</a></p>
 				</div>
 
 				<div class="design-box download">
-					<div class="contains-image logo" style="flex-direction: column">
-						<img class="has-shadow" src="img/Icon_Flyer_Chocolate_RethinkResource.jpg" alt="brauerfly">
+					<div class="contains-image thumb" style="flex-direction: column">
+						<a href="files/Case_Study_Flour_Mill_RethinkResource.pdf" target="_blank">
+							<img class="has-shadow" src="files/Icon_Case_Study.png" alt="brauerfly">
+						</a>
 					</div>
-					<p><a href="files/Flyer_Chocolate_RethinkResource.pdf" target="_blank">For Chocolate-Producers</a></p>
+					<p><a href="files/Case_Study_Flour_Mill_RethinkResource.pdf" target="_blank">Case Study: Flour Mill</a></p>
 				</div>
 
 				<div class="design-box download">
-					<div class="contains-image logo" style="flex-direction: column">
-						<img class="has-shadow" src="img/Icon_Flyer_Brauerei_RethinkResource.jpg" alt="brauerfly">
+					<div class="contains-image thumb" style="flex-direction: column">
+						<a href="files/RethinkResource_Software_Engineering.pdf" target="_blank">
+							<img class="has-shadow" src="files/Icon_Open_Position.png" alt="brauerfly">
+						</a>
 					</div>
-					<p><a href="files/Flyer_Brauerei_RethinkResource.pdf" target="_blank">For Brewers</a></p>
-				</div>
-
-				<div class="design-box download">
-					<div class="contains-image logo" style="flex-direction: column">
-						<img class="has-shadow" src="img/Icon_Flyer_Circado.jpg" alt="brauerfly">
-					</div>
-					<p><a href="files/Flyer_Circado_compressed.pdf" target="_blank">For Buyers and Sellers of Side-Streams</a></p>
-				</div>
-
-				<div class="design-box download">
-					<div class="contains-image logo" style="flex-direction: column">
-						<img class="has-shadow" src="img/Icon_CLCA_Bread_Beer.jpg" alt="brauerfly">
-					</div>
-					<p><a href="files/CLCA_Bread_Beer.pdf" target="_blank">Sample CLCA</a></p>
+					<p><a href="files/RethinkResource_Software_Engineering.pdf" target="_blank">Open Position: Back-End Developer</a></p>
 				</div>
 
 			</div>
@@ -305,40 +357,42 @@ function OnScrollDiv () {
 </div>
 
 
-<div id="groupca1" class="parallaxGroup height-is-55">
+<div id="groupca5" class="parallaxGroup height-is-50">
   	<div class="iparallaxLayer baseLayer background-is-white">
-		<div class="about" id="about3">
+		<div class="about" id="about3" style="display: flex; flex-wrap: wrap; justify-content: center">
 
 			<div class="design-bar-h-5-w-90"></div>
 
-			<div class="card background-is-white-ish">
+			<div class="card background-is-white-ish" id="open-position">
 				<div class="circontain">
 					<div class="cutoutcircle"></div>
 				</div>
 				<div class="contains-image image">
-					<img class="width-is-full" src="img/team-placeholder.png" alt="limage">
+					<a href="files/RethinkResource_Software_Engineering.pdf" target="_blank">
+						<img class="width-is-full" src="img/team-placeholder.png" alt="limage">
+					</a>
 				</div>
 				<div class="personalhead">
 					<p class="personalname">- Open Position -</p>
 					<p class="titleline"></p>
-					<h3 class="personaltitle">Team Assistant</h3>
+					<h3 class="personaltitle">Back-End Developer</h3>
 				</div>
 				<div class="personalstats">
-					<p class="tinydescription">Accounting</p>
+					<p class="tinydescription">Functional Programming</p>
 					<div class="statsbar">
 						<div class="skilllvl" currentlvl="90"></div>
 					</div>
 				</div>
 				<div class="personalstats">
-					<p class="tinydescription">Powerpoint</p>
+					<p class="tinydescription">Project Management</p>
 					<div class="statsbar">
 						<div class="skilllvl" currentlvl="80"></div>
 					</div>
 				</div>
 				<div class="personalstats">
-					<p class="tinydescription">Commercial Administration</p>
+					<p class="tinydescription">Dev Ops</p>
 					<div class="statsbar">
-						<div class="skilllvl" currentlvl="100"></div>
+						<div class="skilllvl" currentlvl="90"></div>
 					</div>
 				</div>
 				<div class="personalstats">
@@ -348,8 +402,46 @@ function OnScrollDiv () {
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="card background-is-white-ish">
+				<div class="circontain">
+					<div class="cutoutcircle"></div>
+				</div>
+				<div class="contains-image image">
+					<img class="width-is-full" src="img/team-placeholder.png" alt="limage">
+				</div>
+				<div class="personalhead">
+					<p class="personalname">- Open Application -</p>
+					<p class="titleline"></p>
+					<h3 class="personaltitle">...</h3>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">...</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="0"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">...</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="0"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">...</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="0"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">...</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="0"></div>
+					</div>
+				</div>
+			</div>
+			
+			<!--div class="card background-is-white-ish">
 				<div class="circontain">
 					<div class="cutoutcircle"></div>
 				</div>
@@ -385,18 +477,41 @@ function OnScrollDiv () {
 						<div class="skilllvl" currentlvl="70"></div>
 					</div>
 				</div>
+			</div-->
+
+			<div style="display: flex; flex-direction: column; flex-wrap: wrap; margin-top: 20px; margin-bottom: 20px; margin-left: 75px; margin-right: 25px; text-align: left; overflow: hidden; font-size: 15px; color: #666666;" id="addressContainer">
+				<h3 id="addressBlock1">Our cosy office in the heart of Zürich</h3>
+	    		<p id="addressBlock2">Our office is located in Technopark in the Kreis 5 in Zürich.</p>
+	    		<div class="contains-image" id="embededMap">
+	    			<a href="https://www.google.com/maps/place/Technopark,+Technoparkstrasse+1,+8005+Z%C3%BCrich/@47.3924846,8.5148289">
+						<img class="width-is-full" src="img/ReRe_location.png" alt="limage">
+					</a>
+				</div>
+				<div id="addressBlock3">
+		    		<h3>RethinkResource GmbH</h3>
+		    		<p>Technoparkstrasse 1</p>
+		    		<p>CH-8005 Zürich</p>
+		    		<p>+41 79 726 35 00</p>
+		    		<a href="mailto:info@rethink-resource.com" style="text-decoration: none; color: #666666;">info@rethink-resource.com</p>
+	    		</div>
 			</div>
 
-			<div class="text-column width-is-30" style="padding-top: 1vw; display: flex; flex-direction: column; height: 40vw">
-	    		<h3>Our coszy office in the hear of Zürich</h3>
-	    		<p>Our office is located in Technopark in the Kreis 5 in Zürich.</p><br><br><br>
-	    		<p>THE MAP GOES HERE</p><br><br><br>
-	    		<h3>RethinkResource GmbH</h3>
-	    		<p>Technoparkstrasse 1</p>
-	    		<p>CH-8005 Zürich</p>
-	    		<p>+41 79 726 35 00</p>
-	    		<p>info@rethink-resource.com</p>
-			</div>
+			<!--div class="text-column width-is-30" style="padding-top: 1vw; display: flex; flex-direction: column; height: 35vw">
+	    		<h3>Our cosy office in the heart of Zürich</h3>
+	    		<p>Our office is located in Technopark in the Kreis 5 in Zürich.</p>
+	    		<div class="contains-image width-is-20">
+	    			<a href="https://www.google.com/maps/place/Technopark,+Technoparkstrasse+1,+8005+Z%C3%BCrich/@47.3924846,8.5148289">
+						<img class="width-is-full" src="img/ReRe_location.png" alt="limage">
+					</a>
+				</div>
+				<div>
+		    		<h3>RethinkResource GmbH</h3>
+		    		<p>Technoparkstrasse 1</p>
+		    		<p>CH-8005 Zürich</p>
+		    		<p>+41 79 726 35 00</p>
+		    		<p>info@rethink-resource.com</p>
+	    		</div>
+			</div-->
 
 	    </div>
 	</div>

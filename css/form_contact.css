@@ -39,4 +39,15 @@ input[type=submit]:hover {
 	flex-direction: column;
 	align-content: center;
     /*background-color: #f2f2f2;*/
-} 
+}
+
+.formtext {
+    width: 100%;
+    padding: 1vw;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 0.5vw;
+    margin-bottom: 1.5vw;
+    resize: vertical;
+    font-size: 1vw;
+}
