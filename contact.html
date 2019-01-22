@@ -24,11 +24,16 @@
 
 <script>
 
-document.getElementById("scrollcontainer").addEventListener ("scroll", handler, useCapture);
-
 function OnScrollDiv () {
 
 	var ww = window.innerWidth;
+
+    var groupca5height = ((560 + ww / 10) / ww * 100).toFixed(2);
+
+	if (ww < 1289) {
+    	groupca5height = ((900 + ww / 12) / ww * 100).toFixed(2);
+    }
+
     var RSH = (document.getElementById("scrollcontainer").scrollTop / ww * 100).toFixed(2);
 
 	const navbarelements = document.getElementsByName("dropbtn");
@@ -60,7 +65,7 @@ function OnScrollDiv () {
 			strategyImage.classList.add("hidden");
 		}
 
-		if (RSH >= 45 && RSH < 177 && !(RSH >= 87 && RSH < 115) || (RSH >= 205 && RSH < 257)){
+		if (RSH >= 45 && RSH < 177 && !(RSH >= 87 && RSH < 115) || (RSH >= 205 && RSH - groupca5height < 209)){
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.add("black-navbar");
 			}
@@ -79,12 +84,10 @@ function OnScrollDiv () {
 			colorLogo.classList.remove("visible");
 			colorLogo.classList.add("hidden");
 		}
+	requestAnimationFrame(OnScrollDiv);
 }
 
-var refreshButton = document.querySelector(".refresh-captcha");
-refreshButton.onclick = function() {
-  document.querySelector(".captcha-image").src = 'captcha.php?' + Date.now();
-}
+requestAnimationFrame(OnScrollDiv);
 
 </script>
 
@@ -106,6 +109,10 @@ refreshButton.onclick = function() {
     <nav>
       	<ul>
 			<li class="dropdown">
+	            <a href="index.html" name="dropbtn">HOME
+	            </a>
+	        </li>
+	        <li class="dropdown">
    				<a href="about.html" name="dropbtn">ABOUT 
     			</a>
 			</li> 
@@ -114,7 +121,7 @@ refreshButton.onclick = function() {
     			</a>
 			</li>
 			<li class="dropdown">
-   				<a href="capabilities.html" name="dropbtn" id="dropbutton">CAPABILITIES 
+   				<a href="capabilities.html" id="dropbutton" name="dropbtn">CAPABILITIES 
     			</a>
 				<!--div class="dropdown-content" id="dropdown-cont">
 	     			<a href="#" name="dropbtn">CIRCULAR ECOSYSTEM
