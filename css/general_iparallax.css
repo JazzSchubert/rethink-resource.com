@@ -109,6 +109,31 @@
 #groupa8, #groupa10{
     z-index: 5;
 }
+#groupca5{
+    height: calc(900px + 12vw);
+    z-index: 5;
+}
+#addressContainer{
+    width: 740px;
+    height: 300px;
+    justify-content: space-evenly;
+}
+#embededMap{
+    width: 320px;
+    order: 0;
+}
+#addressBlock1{
+    order: 1;
+    width: 320px;
+}
+#addressBlock2{
+    order: 2;
+    width: 320px;
+}
+#addressBlock3{
+    order: 3;
+    width: 320px;
+}
 @media (min-width: 561px) {
   #groupa12{
     height: calc(1960px + 10vw);
@@ -131,6 +156,23 @@
   #groupa12{
     height: calc(1120px + 10vw);
   }
+}
+@media (min-width: 1289px) {
+  #groupca5{
+    height: calc(560px + 10vw);
+  }
+  #addressContainer{
+    width: 320px;
+    height: 520px;
+    justify-content: space-between;
+  }
+  #embededMap{
+    width: 250px;
+    order: 2;
+  }
+  #addressBlock1{ order: 0; }
+  #addressBlock2{ order: 1; }
+  #addressBlock3{ order: 3; }
 }
 @media (min-width: 1245px) {
   #groupa4{
