@@ -58,3 +58,20 @@
 	-moz-box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
 	box-shadow: inset -2px 2px 7px 0px rgba(140,140,140,0.5);
 }
+
+.thumb {
+	height: inherit;
+	width: inherit;
+	overflow: visible;
+}
+.thumb a {
+	height: inherit;
+	width: inherit;
+	overflow: visible;
+}
+.thumb a img {
+	height: inherit;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
