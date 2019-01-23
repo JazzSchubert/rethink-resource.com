@@ -68,6 +68,9 @@
 .height-is-130{
 	height: 130vw;
 }
+.height-is-135{
+	height: 135vw;
+}
 .height-is-140{
 	height: 140vw;
 }
@@ -101,6 +104,9 @@
 }
 .width-is-50{
 	width: 50vw;
+}
+.width-is-60{
+	width: 60vw;
 }
 .width-is-100{
 	width: 100vw;
