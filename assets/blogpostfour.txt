@@ -1,0 +1,26 @@
+{
+	"postNumber" : 4,
+	"date" : "2019-02-04",
+	"head" : "Easy Ways to Conserve Energy",
+	"body" : [
+		{"PARAGRAPH": "Not only can you keep your bill down by paying attention to your energy usage, but you can also do something good for the environment. Here are some easy ways to conserve energy:"},
+		{"SUBHEADER": "Turn the A/C Down"},
+		{"PARAGRAPH": "Die meisten Kunden des Startups sind selbst Produzenten, sie finden über RethinkResource Innovationen, schliessen Partnerschaften und entwickeln Produkte, immer mit dem Material im Blick. Dabei maximieren sie den Wert von Nebenströmen, senken Entsorgungs- und Rohstoffkosten und erleichtern deren Beschaffung. “Bei der Zusammenarbeit mit unseren Kunden ist uns schnell klar geworden, dass es einer effizienten und transparenten Art bedarf, um Nebenströme als Rohstoffe zu handeln”, so Grieder."},
+		{"SUBHEADER": "Shut the Doors"},
+		{"PARAGRAPH": "If you only use one room in your house, only cool down or heat the area you actually need. By shutting the doors to the other rooms, you can save a lot of energy."},
+		{"SUBHEADER": "Use a Fan"},
+		{"PARAGRAPH": "An A/C unit uses 3,500 watts of energy when running compared to a ceiling fan, which uses about 60 watts of energy. Keeping ceiling fans on can decrease the temperature in your home by as much as four degrees, allowing you to save a tremendous amount while cooling your home. In the warmer months, make sure your fan is switched to the counterclockwise direction, which creates a breeze effect in your home."},
+		{"SUBHEADER": "Rethink How you Wash and Dry Clothes"},
+		{"PARAGRAPH": "Buy a specially formulated detergent that works in cold water and wash your clothes in cold water instead of hot or warm. To save even more money on water heating costs, only wash clothes when you have a full load, being mindful of how much detergent you use, as too much detergent makes your washer work even harder, increasing your energy usage. When drying your clothes, be sure not to overload the dryer. Most people think loading the dryer down with clothes saves on time, but it really increases the amount of time to dry your clothes and makes them come out wrinkled.  Another great way to save energy is to adjust your dryer to auto dry, which should prevent from over-drying clothes."},
+		{"SUBHEADER": "Invest in Window Shades"},
+		{"PARAGRAPH": "Keeping window shades down during the hot summer months can help to combat increased energy costs. Blinds ir wundow shades can reduce the heat gain efficiently."},
+		{"PARAGRAPH": "Typically, the lighter the shade the better they are at keeping the heat outside. Furthermore, for optimum performance, make sure the shades are mounted as close to the glass as possible, thus maximizing the shade’s sun-blocking capabilities. Double cell shades, like ones that can be found at Payless Decor, come in a wide variety of colors and work double time by providing superior insulating power while aiding in the reduction of your energy costs."},
+		{"SUBHEADER": "Unplug Chargers"},
+		{"PARAGRAPH": "These days, with all the gadgets we carry on a daily basis, it’s easy to get lazy and leave the chargers plugged into the wall continuously.  Leaving your chargers plugged in still drains power, wasting time and money, so unplug your chargers when not in use, particularly when going on holidays or away for a longer period of time. "},
+		{"SUBHEADER": "Evaluate your Light Usage"},
+		{"PARAGRAPH": "How many times have you walked through your house only to find that virtually every light bulb in every room is on? Electricity costs $0.10 per kilowatt hour. When you leave a room, turn off a light. Next time you get ready to close the door to your house with your hands completely full and you see two lights on, quickly do the math—it’s better to turn the lights off and save money on electricity."},
+		{"SUBHEADER": "Turn off Electronics"},
+		{"PARAGRAPH": "Keeping electronics on constantly can obviously increase your energy usage (phantom load) , but we rarely think of this when we leave the house. An easy way to turn electronics off when not in use is to use a power strip. If you tie multiple electronics into a power strip, you can simply turn off the power strip before you leave the house or go to bed and watch the savings add up."},
+		{"PARAGRAPH": "Many of these tips apply not only at your personal residence but also your workplace. Conserving energy for a business is very fiscally prudent and rewarding both personally and for the bottom line. But to do so economically, we suggest seeking expert help. And if this type of work is of interest to you American Trainco has many HVAC, Maintenance Training, and Electrical Courses."}
+	]
+}
