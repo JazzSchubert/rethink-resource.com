@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+.blog-column {
+	padding-top: 5.5vw;
+	padding-bottom: 5vw;
+	padding-left: 17vw;
+	width: 60vw;
+}
+
+.blog-column {
+	font-size: 1.2vw;
+	font-weight: 150;
+	text-align: left;
+	line-height: 1.44vw;
+	float: right;
+	color: #666666;
+}
+
+
+.blog-column h1 {
+	margin-bottom: 4vw;
+	text-align: center;
+	line-height: 2vw;
+}
+
+.blog-column ul li {
+	list-style: none;
+	margin-bottom: 4vw;
+}
+
+
+.blog-column ul li p {
+	margin-top: 1vw;
+	margin-bottom: 1.5vw;
+}
+.blog-column ul li h2 {
+	margin-bottom: 2vw;
+}
+
+.post-line-1 {
+	position: absolute;
+	margin-top: 11.5vw;
+	width: 15vw;
+	height: 1.44vw;
+}
+.line-icon-1 {
+	position: absolute;
+	margin-top: 9.72vw;
+	margin-left: 14vw;
+	width: 5vw;
+	height: 5vw;
+}
+.post-line-2 {
+	position: absolute;
+	margin-top: 12.5vw;
+	width: 15vw;
+	height: 80vw;
+}
+.line-icon-2 {
+	position: absolute;
+	margin-top: 89.2vw;
+	margin-left: 14vw;
+	width: 5vw;
+	height: 5vw;
+}
+.post-line-3 {
+	position: absolute;
+	margin-top: 13.5vw;
+	width: 15vw;
+	height: 113.7vw;
+}
+.line-icon-3 {
+	position: absolute;
+	margin-top: 123.55vw;
+	margin-left: 14vw;
+	width: 5vw;
+	height: 5vw;
+}
+
+.non-scale-stroke {
+	vector-effect: non-scaling-stroke;
+}
+
+.blog-column a {
+	text-decoration: none;
+	background: green; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right top, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,1), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom left, rgba(111,181,75,1), rgba(94,174,91,1), rgba(82,169,104,1), rgba(64,164,119,1), rgba(44,158,130,255), rgba(0,154,142,1), rgba(0,149,155,1), rgba(0,143,176,1), rgba(0,138,191,1)); /* Standard syntax */
+	-webkit-text-fill-color: transparent;
+  	-webkit-background-clip: text;
+}

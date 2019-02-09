@@ -1,0 +1,10 @@
+{
+	"postNumber" : 2,
+	"date" : "2019-01-24",
+	"head" : "Why we should consider eating Insects",
+	"body" : [
+		{"PARAGRAPH": "In August 2018, the Swiss retailer Coop introduced the first insect burgers and balls in Switzerland. The burgers feature a mix of mealworms, rice, vegetables and spices. The balls are made with mealworms, chick peas, onions, garlic and spices. It is only since May 1st of last year, that selling insect products as food became legal in Switzerland. The permitted species are mealworms, crickets and grasshoppers. Currently, the insect products are produced by Essento, a startup based in Zurich which supplies Coop with the burgers and balls. Essento are still working on the insect production inside of Switzerland. So far, the creepy-crawlies have been imported from countries like the Netherlands or Belgium, two of very few countries in Europe, which have started to embrace entomophagy."},
+		{"PARAGRAPH": "Even though eating insects may seem unappetizing to many people, it should definitely be considered as an alternative to meat. Proponents say that the insects are far more sustainable than other types of meat and that they contain essential nutritional values. Furthermore, insect production needs less land and water and produce less CO2 than livestock. In an interview with The Guardian, Belgian entomologist Arnold van Huis suggests that farming insects emits 10 times less greenhouse gas than farming livestock."},
+		{"PARAGRAPH": "It is unclear whether there will be other European countries joining the example of the Netherlands, Belgium and Switzerland. The United Nations Food and Agriculture Organization dedicated a report to the topic in 2013, in which insects are propagated as a novel protein source for humans and fattening animals. Insects are a valuable source to help satisfy the hunger of the growing world population."}
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"index": [{
+		"postInfo" : {
+				"postNumber": 1,
+				"fileName": "blogpostone.txt",
+				"signLength": 0,
+				"paragraphNumber": 0,
+				"subHeaderNumber": 0
+			}
+		},
+		{
+		"postInfo" : {
+				"postNumber": 2,
+				"fileName": "blogposttwo.txt",
+				"signLength": 0,
+				"paragraphNumber": 0,
+				"subHeaderNumber": 0
+			}
+		},
+		{
+		"postInfo" : {
+				"postNumber": 3,
+				"fileName": "blogpostthree.txt",
+				"signLength": 0,
+				"paragraphNumber": 0,
+				"subHeaderNumber": 0
+			}
+		},
+		{
+		"postInfo" : {
+				"postNumber": 4,
+				"fileName": "blogpostfour.txt",
+				"signLength": 0,
+				"paragraphNumber": 0,
+				"subHeaderNumber": 0
+			}
+		}
+	]
+}
