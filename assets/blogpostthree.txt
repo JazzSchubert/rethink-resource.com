@@ -1,0 +1,13 @@
+{
+	"postNumber" : 3,
+	"date" : "2019-01-24",
+	"head" : "Digitaler Markt für Lebensmittelnebenströme",
+	"body" : [
+		{"SUBHEADER": "Die Mission des jungen Unternehmens RethinkResource ist es, Industrieabfälle in eine wertvolle Ressource zu verwandeln. Die Lösung dafür heisst Circado."},
+		{"PARAGRAPH": "Nehmen, verarbeiten, wegwerfen. Diese vorherrschende Produktionsweise ist überholt, findet RethinkResource. Das Startup aus Zürich glaubt an eine nachhaltige Zukunft durch einen verantwortungsvollen Umgang mit natürlichen Ressourcen. “Industrielle Nebenströme sind aus unserer Sicht ein wertvolles Kapital – mit dem Potential zu langfristigen Wettbewerbsvorteilen”, sagt CEO Linda Grieder, welche RethinkResource 2016 gründete."},
+		{"PARAGRAPH": "So kann beispielsweise Bier aus Bäckereiabfällen oder aus Biernebenprodukten wiederum Snacks hergestellt werden. Die Wertschöpfung aus sogenannten Sekundärressourcen ist zum Teil mehr als doppelt so hoch wie bei ihren primären Pendants, die Konsumenten lassen sich die Nachhaltigkeit gerne etwas mehr kosten."},
+		{"PARAGRAPH": "Die meisten Kunden des Startups sind selbst Produzenten, sie finden über RethinkResource Innovationen, schliessen Partnerschaften und entwickeln Produkte, immer mit dem Material im Blick. Dabei maximieren sie den Wert von Nebenströmen, senken Entsorgungs- und Rohstoffkosten und erleichtern deren Beschaffung. “Bei der Zusammenarbeit mit unseren Kunden ist uns schnell klar geworden, dass es einer effizienten und transparenten Art bedarf, um Nebenströme als Rohstoffe zu handeln”, so Grieder."},
+		{"PARAGRAPH": "Dafür entwickelt RethinkResource Circado, die führende digitale Handelsplattform für Käufer und Verkäufer von Sekundärressourcen. Circado basiert auf einem flexiblen und mit existierender IT-Infrastruktur integrierbaren System. Im Portal können sich Kunden einen Marktüberblick verschaffen, Handelspartner aus verschiedensten Industriebereichen finden und aktuelle Preisentwicklungen verfolgen. Zusätzlich werden Fluktuationen der Produktionsvolumina, Qualität und Verfügbarkeit beim Handel berücksichtigt."},
+		{"PARAGRAPH": "Die erste offene Prototyp-Version von Circado (circado.io) ist seit dem 23. Februar online. Produzierende Firmen können sich kostenlos registrieren und Nebenströme anbieten oder kaufen."}
+	]
+}

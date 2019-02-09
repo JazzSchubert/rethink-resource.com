@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-<title>RethinkResource</title>
 <link href="css/general.css" rel="stylesheet" type="text/css">
 <link href="css/general_header.css" rel="stylesheet" type="text/css">
 <link href="css/general_iparallax.css" rel="stylesheet" type="text/css">
@@ -17,410 +16,74 @@
 <link href="css/about_idcard.css" rel="stylesheet" type="text/css">
 <link href="css/blog.css" rel="stylesheet" type="text/css">
 
-
+<script src="main.js"></script>
 
 <script>
 
+var elmApp;
 
-function OnScrollDiv () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    var ww = window.innerWidth;
+    var RSH;
 
-    var group4height = ((6720 + ww / 10) / ww * 100).toFixed(2);
-    var group6height = ((1680 + ww / 10) / ww * 100).toFixed(2);
-    var group12height = ((3920 + ww / 10) / ww * 100).toFixed(2);
+    console.log("initializing")
+    var storageKey = "ReReBlog-Storage";
+    console.log(storageKey);
+    var flags = localStorage.getItem(storageKey);
+    console.log(flags);
+    var elmApp = Elm.Main.init({flags: flags});
 
-    if (828 <= ww && ww < 1245) {
-    	group4height = ((2240 + ww / 10) / ww * 100).toFixed(2);
-    	group6height = ((1120 + ww / 10) / ww * 100).toFixed(2);
-    } else if (1245 <= ww && ww < 1661) {
-    	group4height = ((1680 + ww / 10) / ww * 100).toFixed(2);
-    	group6height = ((1120 + ww / 10) / ww * 100).toFixed(2);
-    } else if (1661 <= ww) {
-    	group4height = ((1120 + ww / 10) / ww * 100).toFixed(2);
-    	group6height = ((560 + ww / 10) / ww * 100).toFixed(2);
+    // TODO:
+    // Detect Browser Language on Launch if no data are persisted (template below)
+    // Store Language and Session Separately
+    // Initialize elm app with either stored language or browser language
+
+    var userLang = navigator.language || navigator.userLanguage; 
+    console.log("The language is: " + userLang);
+
+    elmApp.ports.storeCache.subscribe(function(val) {
+        if (val === null) {
+            localStorage.removeItem(storageKey);
+            console.log("removedLocalStorage");
+        } else {
+            localStorage.setItem(storageKey, JSON.stringify(val));
+            console.log(val);
+            console.log("Received new key and stored it to browser cash");
+        }
+        // Report that the new session was stored succesfully.
+        setTimeout(function() { elmApp.ports.onStoreChange.send(val); }, 0);
+    });
+
+    // Whenever localStorage changes in another tab, report it if necessary.
+    window.addEventListener("ReReBlog-Storage", function(event) {
+        if (event.storageArea === localStorage && event.key === storageKey) {
+            elmApp.ports.onStoreChange.send(event.newValue);
+            console.log(event.newValue);
+        }
+    }, false);
+
+    // get and monitor scroll position.
+    function sendScrollHeight() {
+        if (document.getElementById("scrollcontainer") == null) {
+            requestAnimationFrame(sendScrollHeight);
+        } else if (RSH != (document.getElementById("scrollcontainer").scrollTop / window.innerWidth * 100).toFixed(3)) {
+            RSH = (document.getElementById("scrollcontainer").scrollTop / window.innerWidth * 100).toFixed(3);
+            setTimeout(function() { elmApp.ports.getScrollHeight.send(RSH); }, 0);
+            requestAnimationFrame(sendScrollHeight);
+        } else {
+            requestAnimationFrame(sendScrollHeight);
+        }
     }
+    requestAnimationFrame(sendScrollHeight);
 
-    if (561 <= ww && ww < 845) {
-    	group12height = ((1400 + ww / 10) / ww * 100).toFixed(2);
-    } else if (845 <= ww && ww < 1411) {
-    	group12height = ((1120 + ww / 10) / ww * 100).toFixed(2);
-    } else if (1411 <= ww) {
-    	group12height = ((840 + ww / 10) / ww * 100).toFixed(2);
-    }
-
-    var RSH = (document.getElementById("scrollcontainer").scrollTop / ww * 100).toFixed(2);
-
-
-	const navbarelements = document.getElementsByName("dropbtn");
-	const pageHeadline = document.getElementById("page-headline");
-	const pageCaption = document.getElementById("page-caption");
-	const navigationBar = document.getElementById("navigationbar");
-	const dropDownContent = document.getElementById("dropdown-cont");
-	const whiteLogo = document.getElementById("top-page-logo-white");
-	const colorLogo = document.getElementById("top-page-logo-color");
-	const teamImage = document.getElementById("team-image");
-	const valuesImage = document.getElementById("values-image");
-	const partnersImage = document.getElementById("partners-image");
-
-		if (RSH >= 25) {
-			pageHeadline.classList.remove("fade-in");
-			pageCaption.classList.remove("fade-in");
-			pageHeadline.classList.add("fade-out");
-			pageCaption.classList.add("fade-out");
-		} else {
-			pageHeadline.classList.remove("fade-out");
-			pageCaption.classList.remove("fade-out");
-			pageHeadline.classList.add("fade-in");
-			pageCaption.classList.add("fade-in");
-		}
-
-		if (RSH >= 25) {
-			teamImage.classList.remove("hidden")
-			teamImage.classList.add("visible")
-		} else {
-			teamImage.classList.remove("visible")
-			teamImage.classList.add("hidden")
-		}
-
-		if (RSH - group4height - group6height >= 95) {
-			valuesImage.classList.remove("hidden")
-			valuesImage.classList.add("visible")
-		} else {
-			valuesImage.classList.remove("visible")
-			valuesImage.classList.add("hidden")
-		}
-
-		if (RSH - group4height - group6height >= 177) {
-			partnersImage.classList.remove("hidden")
-			partnersImage.classList.add("visible")
-		} else {
-			partnersImage.classList.remove("visible")
-			partnersImage.classList.add("hidden")
-		}
-
-		if (RSH >= 45 && RSH - group4height < 130 && !(RSH >= 102 && RSH < 125) || (RSH -group4height >= 158 && RSH - group4height - group6height < 160) || (RSH - group4height - group6height >= 185 && RSH - group4height - group6height < 238) || (RSH - group4height - group6height >= 265 && RSH - group4height - group6height < 335) || (RSH - group4height - group6height >= 368 && RSH - group4height - group6height - group12height < 367)) {
-			for (var i = 0; i < navbarelements.length; i++) {
-				navbarelements[i].classList.add("black-navbar");
-			}
-			navigationBar.classList.add("white-bg-navbar");
-			whiteLogo.classList.remove("visible");
-			whiteLogo.classList.add("hidden");
-			colorLogo.classList.remove("hidden");
-			colorLogo.classList.add("visible");
-		} else {
-			for (var i = 0; i < navbarelements.length; i++) {
-				navbarelements[i].classList.remove("black-navbar");
-			}
-			navigationBar.classList.remove("white-bg-navbar");
-			whiteLogo.classList.remove("hidden");
-			whiteLogo.classList.add("visible");
-			colorLogo.classList.remove("visible");
-			colorLogo.classList.add("hidden");
-		}
-	requestAnimationFrame(OnScrollDiv);
-}
-
-requestAnimationFrame(OnScrollDiv);
+});
 
 </script>
 
 </head>
 
-
 <body>
 
-<input type="checkbox" name="disccb" id="dsccb1" class="hidden"/>
-
-<!-- Navigation -->
-
-<header id="navigationbar">
-	<div class="logosmall-container">
-	<img class="logosmall visible" src="img/ReRe_Icon_RGB_white.png" alt="image" id="top-page-logo-white"/>
-	<img class="logosmall hidden" src="img/ReRe_Icon_RGB_color.png" alt="image" id="top-page-logo-color"/>
-	<a  href="index.html"></a>
-	</div>
-    <nav>
-      	<ul>
-		    <li class="dropdown">
-		        <a href="index.html" name="dropbtn">HOME
-		        </a>
-		    </li>
-			<li class="dropdown">
-   				<a href="about.html" name="dropbtn">ABOUT
-    			</a>
-			</li>
-	        <li class="dropdown">
-   				<a href="upcycling.html" name="dropbtn">UPCYCLING
-    			</a>
-			</li>
-			<li class="dropdown">
-   				<a href="capabilities.html" id="dropbutton" name="dropbtn">CAPABILITIES
-    			</a>
-				<!--div class="dropdown-content" id="dropdown-cont">
-	     			<a href="#">CIRCULAR ECOSYSTEM
-	     			</a>
-	  			    <a href="#">SIDE STREAM VALORISATION
-	  			    </a>
-	   			    <a href="#">UPCYCLING SOLUTIONS
-	   			    </a>
-			  	</div-->
-			</li>
-			<li class="dropdown">
-   				<a href="circado.html" name="dropbtn">CIRCADO
-    		  	</a>
-			</li>
-	        <li class="dropdown">
-   				<a href="#about" name="dropbtn">BLOG
-    			</a>
-			</li>
-	        <li class="dropdown">
-   			  	<a href="contact.html" name="dropbtn">CONTACT 
-    		  	</a>
-			</li>
-      	</ul>
-    </nav>
-</header>
-
-<!-- Parallax Scrolling Section onscroll="OnScrollDiv ()"-->
-
-<div class="iparallax" id="scrollcontainer">
-
-<div id="groupa0" class="parallaxGroup height-is-50">
-	<div class="iparallaxLayer backgroundLayer">
-		<h2 class="headline text-is-white fade-in header-translate-vh-vw" id="page-headline">Name Here
-		</h2>
-		<p class="headline_description text-is-white fade-in header-translate-vh-vw" id="page-caption">
-		The RethinkResource Blog
-		</p>
-	</div>
-	<div class="iparallaxLayer deepBackgroundLayer">
-		<img src="img/stars_and_mountains.jpg" alt="RethinkResource Island" id="landing-image" class="width-is-100">
-	</div>
-</div>
-
-
-<div id="group1" class="parallaxGroup height-is-135">
-  	<div class="iparallaxLayer baseLayer">
-		<svg class="post-line-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-			<path class="non-scale-stroke" d="M0 50 h100" opacity="1" fill-opacity="0" stroke="#666666" stroke-width="2" stroke-opacity="1"/>
-		</svg>
-		<svg class="line-icon-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" width="100" height="100">
-			<defs>
-				<path class="non-scale-stroke" d="M87.5 50C87.5 70.7 70.7 87.5 50 87.5C29.3 87.5 12.5 70.7 12.5 50C12.5 29.3 29.3 12.5 50 12.5C70.7 12.5 87.5 29.3 87.5 50Z" id="b12xUtwuW6"></path>
-				<path class="non-scale-stroke" d="M50 50L0 50" id="cHpjir4U3"></path>
-				<path class="non-scale-stroke" d="M87.5 12.5L50 12.5" id="a1RizGBO"></path>
-				<path d="M75 18.75L87.5 12.5L75 6.25L75 18.75Z" id="b2jz1Wivi5"></path>
-				<path d="M37.5 56.25L50 50L37.5 43.75L37.5 56.25Z" id="a2Y96sH9Rv"></path>
-			</defs>
-			<g>
-				<g>
-					<g>
-						<g>
-							<use xlink:href="#b12xUtwuW6" opacity="1" fill-opacity="0" stroke="#666666" stroke-width="2" stroke-opacity="1"></use>
-						</g>
-					</g>
-					<g>
-						<g>
-							<use xlink:href="#cHpjir4U3" opacity="1" fill-opacity="0" stroke="#666666" stroke-width="2" stroke-opacity="1"></use>
-						</g>
-					</g>
-					<g>
-						<g>
-							<use xlink:href="#a1RizGBO" opacity="1" fill-opacity="0" stroke="#666666" stroke-width="2" stroke-opacity="1"></use>
-						</g>
-					</g>
-					<g>
-						<use xlink:href="#b2jz1Wivi5" opacity="1" fill="#666666" fill-opacity="1"></use>
-					</g>
-					<g>
-						<use xlink:href="#a2Y96sH9Rv" opacity="1" fill="#666666" fill-opacity="1"></use>
-					</g>
-				</g>
-			</g>
-		</svg>
-		<svg class="post-line-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-			<path class="non-scale-stroke" d="M0 1 h50 v98 h50" opacity="1" fill-opacity="0" stroke="#666666" stroke-width="2" stroke-opacity="1"/>
-		</svg>
-		<svg class="line-icon-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" width="100" height="100">
-			<defs>
-				<path class="non-scale-stroke" d="M87.5 50C87.5 70.7 70.7 87.5 50 87.5C29.3 87.5 12.5 70.7 12.5 50C12.5 29.3 29.3 12.5 50 12.5C70.7 12.5 87.5 29.3 87.5 50Z" id="b12xUtwuW6"></path>
-				<path class="non-scale-stroke" d="M50 50L0 50" id="cHpjir4U3"></path>
-				<path class="non-scale-stroke" d="M87.5 12.5L50 12.5" id="a1RizGBO"></path>
-				<path d="M75 18.75L87.5 12.5L75 6.25L75 18.75Z" id="b2jz1Wivi5"></path>
-				<path d="M37.5 56.25L50 50L37.5 43.75L37.5 56.25Z" id="a2Y96sH9Rv"></path>
-			</defs>
-			<g>
-				<g>
-					<g>
-						<g>
-							<use xlink:href="#b12xUtwuW6" opacity="1" fill-opacity="0" stroke="#666666" stroke-width="2" stroke-opacity="1"></use>
-						</g>
-					</g>
-					<g>
-						<g>
-							<use xlink:href="#cHpjir4U3" opacity="1" fill-opacity="0" stroke="#666666" stroke-width="2" stroke-opacity="1"></use>
-						</g>
-					</g>
-					<g>
-						<g>
-							<use xlink:href="#a1RizGBO" opacity="1" fill-opacity="0" stroke="#666666" stroke-width="2" stroke-opacity="1"></use>
-						</g>
-					</g>
-					<g>
-						<use xlink:href="#b2jz1Wivi5" opacity="1" fill="#666666" fill-opacity="1"></use>
-					</g>
-					<g>
-						<use xlink:href="#a2Y96sH9Rv" opacity="1" fill="#666666" fill-opacity="1"></use>
-					</g>
-				</g>
-			</g>
-		</svg>
-		<svg class="post-line-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-			<path class="non-scale-stroke" d="M0 1 h45 v98 h55" opacity="1" fill-opacity="0" stroke="#666666" stroke-width="2" stroke-opacity="1"/>
-		</svg>
-		<svg class="line-icon-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" width="100" height="100">
-			<defs>
-				<path class="non-scale-stroke" d="M0 50h12.5v12.5h50v12.5L87.5 50L62.5 25v12.5h-50v12.5" id="b3k2O5d8JZ"></path>
-			</defs>
-			<g>
-				<g>
-					<g>
-						<g>
-							<use xlink:href="#b3k2O5d8JZ" opacity="1" fill="#FFFFFF" fill-opacity="1" stroke="#666666" stroke-width="2" stroke-opacity="1"></use>
-						</g>
-					</g>
-				</g>
-			</g>
-		</svg>
-		<div class="about background-is-white height-is-135">
-			<div class="blog-column">
-				<h1>Wednesday, 23.01.2019</h1>
-				<ul>
-					<li>
-						<h2>A few things about the Circular Economy</h2>
-						<p>Circular economy is a concept that has recently received a lot of recognition and attention. But do you really know what circular economy means? What is the difference to recycling? And have you wondered how you can become a part of this sustainable business model? Here are five facts you need to know about the circular economy.</p>
-						<h3>What is the circular economy?</h3>
-						<p>The circular economy captures resources, recycles and refurbishes them and inserts them back (as secondary raw material) into the manufacturing circuit. Rather than discarding used goods, we can re-use them as parts of new products. Thereby, the circular economy intends to keep the values of the materials as high as possible. The establishment and proper functioning of the market for secondary raw materials is also crucial – the circular economy will bring the expected benefits only if recycled and refurbished materials can be traded and re-used in new products.</p>
-						<h3>Why should we even bother?</h3>
-						<p>Our current economy is linear and relies mainly on raw materials, natural resources and fossil energy. In the linear economy, we take resources, produce goods and ultimately dispose of them, generating enormous amounts of waste. As natural resources are not limitless and as the population is constantly growing, this system will not work in the long term. The resources used for the production thus need to be in a restorative and regenerative system, creating a sustainable material loop.</p>
-						<h3>How does the EU support the Circular Economy?</h3>
-						<p>As a robust regulatory and policy framework is crucial in Europe in order to make a circular economy work, the European Commission introduced the Circular Economy Package. It entails two main components: Firstly, a revision of the existing legislation on waste, including packaging waste, electronic waste, batteries, end-of-life vehicles and landfill. Secondly, an EU Action Plan, which introduces a programme of action with specific deadlines, covering the whole cycle from the product design to the market for secondary raw materials. The Action Plan identifies five priority areas: plastics, food waste, critical raw material, construction and demolition, and biomass and bio-based products.</p>
-						<h3>Is it not just recycling?</h3>
-						<p>While substituting secondary materials for primary materials can offer a part solution, recycling offers limited appeal as its processes are energy-intensive and generally downgrade materials. This leads to a continuing high demand for virgin materials. While this downcycling leads to a new lower-value product, upcycling, to transform waste or by-products into new materials of better quality, would be the preferable solution. The circular economy, on the other hand, goes beyond recycling. It is a restorative industrial system aiming at designing out waste. Recycling is a part of the circular economy. The goal is not just to design for better end-of-life recovery, but to minimise energy use.</p>
-						<h3>How can the consumer contribute to a more circular economy?</h3>
-						<p>It is the  choice if millions of consumers to support or neglect the transition from a linear to a circular economy. An obstacle for this transition is the consumer’s attitude, influenced by fashion and marketing than by concerns about sustainability. It is thus crucial to raise consumers’ awareness. Furthermore, increased demand of consumers for products and services that are supportive of the circular economy will also create new business opportunities.</p>
-						<p>Source 1: <a href=ncps-care.eu">ncps-care.eu</a>  Source 2: <a href="greenfacts.org/en/circular-economy/">greenfacts.org/en/circular-economy</a>  Source 3: <a href="gptwaste.com/">gptwaste.com</a></p>
-					</li>
-					<li>
-						<h2>Why we should consider eating Insects</h2>
-						<p>In August 2018, the Swiss retailer Coop introduced the first insect burgers and balls in Switzerland. The burgers feature a mix of mealworms, rice, vegetables and spices. The balls are made with mealworms, chick peas, onions, garlic and spices. It is only since May 1st of last year, that selling insect products as food became legal in Switzerland. The permitted species are mealworms, crickets and grasshoppers. Currently, the insect products are produced by Essento, a startup based in Zurich which supplies Coop with the burgers and balls. Essento are still working on the insect production inside of Switzerland. So far, the creepy-crawlies have been imported from countries like the Netherlands or Belgium, two of very few countries in Europe, which have started to embrace entomophagy.</p>
-						<p>Even though eating insects may seem unappetizing to many people, it should definitely be considered as an alternative to meat. Proponents say that the insects are far more sustainable than other types of meat and that they contain essential nutritional values. Furthermore, insect production needs less land and water and produce less CO2 than livestock. In an interview with The Guardian, Belgian entomologist Arnold van Huis suggests that farming insects emits 10 times less greenhouse gas than farming livestock.</p>
-						<p>It is unclear whether there will be other European countries joining the example of the Netherlands, Belgium and Switzerland. The United Nations Food and Agriculture Organization dedicated a report to the topic in 2013, in which insects are propagated as a novel protein source for humans and fattening animals. Insects are a valuable source to help satisfy the hunger of the growing world population.</p>
-					</li>
-					<li>
-						<h3><a href="upcycling.html">NEXT PAGE</a></h3>
-					</li>
-				</ul>
-			</div>
-	    </div>
-
-	</div>
-</div>
-
-<div id="groupa13" class="parallaxGroup height-is-50 hackyGroup">
-	<div class="iparallaxLayer baseLayer" id="closing-container">
-		<div class="legaldc">
-		<img class="visible logodisc" src="img/ReRe_Icon_RGB_white.png" alt="image" id="disclaimer-logo-white"/>
-		<h3>Datenschutzbestimmungen von RethinkResource</h3>
-		<div>
-			<li>
-				<h4>Die Sicherheit der Nutzer steht an erster Stelle</h4>
-				<p>RethinkResource GmbH (nachfolgend RethinkResource) respektiert die Privatsphäre der Nutzer der Webseite und des Online-Shops. Diese Datenschutzbestimmungen bilden die Grundlage für die Bearbeitung der personenbezogenen Daten und geben Aufschluss, welche Art von Nutzerdaten durch RethinkResource gesammelt werden und wie RethinkResource diese Daten verwendet. RethinkResource hält die geltenden Datenschutzrechte ein und verarbeitet die Personendaten einzig zu den Zwecken, für welche die Daten übermittelt wurden.</p>
-				<p>Diese Datenschutzbestimmungen werden von Zeit zu Zeit angepasst, ergänzt oder geändert. Mit jedem neuen Aufruf oder Besuch der Webseite gilt die jeweils aktuelle, abrufbare Version.</p>
-			</li>
-			<li>
-				<h4>Art der erfassten Daten</h4>
-				<p>Beim Besuch der Webseite von RethinkResource werden statistische Besucherdaten darüber erhoben, welche Teile des Webangebots vom jeweiligen Nutzer besonders häufig besucht werden. Hierbei können z.B. Daten hinsichtlich des vom Nutzer verwendeten Browsers, Betriebssystems, Weblogs und anderer Verbindungsdaten, erfasst werden, unabhängig davon, ob deren Erfassung für unsere oder andere Zwecke erforderlich ist. In diesem Zusammenhang ist es teilweise erforderlich, dass sogenannte Cookies zum Einsatz kommen. Diese gesammelten Daten beinhalten keinen Personenbezug oder sind genügend anonymisiert, um keine Rückschlüsse auf Ihre Person machen zu können.</p>
-				<p>RethinkResource nimmt keine automatische Sammlung von persönlichen Daten der Nutzer wie z.B. dem Namen, der Anschrift, Telefonnummer oder E-Mail-Adresse, vor. Eine Ausnahme davon bilden Angaben, welche der Nutzer freiwillig an RethinkResource übermittelt, indem Webseite-Formulare ausgefüllt werden oder RethinkResource auf andere Weise über die Webseite kontaktiert wird.</p>
-			</li>
-			<li>
-				<h4>Einsatz von Cookies</h4>
-				<p>Um den Webauftritt für die Nutzer laufend zu verbessern, kann RethinkResource Cookies einsetzen. Cookies sind kleine Software-Informationen, die durch Browser (z.B. Internet Explorer oder Mozilla Firefox) auf der Computerfestplatte des Nutzers abgespeichert werden, um die Nutzung der Webseite zu erleichtern (z.B. Sprachwahl, Warenkorb, etc.). Diese Cookies sind vollständig anonymisiert und enthalten keine Personendaten. Zu keinem Zeitpunkt wird Spionage-Software installiert oder verwendet, um auf dem Computer gespeicherte Daten und Informationen zugreifen zu können.</p>
-				<p>Die meisten Browser akzeptieren solche Cookies automatisch, jedoch können die Browser so konfiguriert werden, dass sie keine Cookies annehmen oder abspeichern. Einzelheiten hierzu sind der Bedienungsanleitung bzw. der Hilfe-Funktion des Browsers zu entnehmen.</p>
-			</li>
-			<li>
-				<h4>Verwendung der Daten</h4>
-				<p>Die anonymisierten Daten, welche beim Aufruf der RethinkResource-Webseite mittels Cookies festgehalten werden, können zu Analysezwecken, zur Optimierung der Webseite und für die Messung der Performance eingesetzt werden. RethinkResource kann dafür folgende Drittanbieter einsetzen, die teilweise eigene Datenschutzregelungen haben, auf welche RethinkResource keinen Einfluss hat:</p>
-				<h4>Google Analytics</h4>
-				<p>Daten, die Benutzer von sich aus als Nutzer des Internetauftritts übermitteln, dürfen von RethinkResource zum Zweck der Verbesserung der Webseite sowie der individuellen Betreuung der Nutzer verwendet werden. Dazu gehören unter anderem das Versenden von Informationen, Angeboten oder die Benachrichtigung mit Bezug auf die Produktpalette oder auf Dienstleistungen an. Der Versand des RethinkResource-Newsletters erfolgt nur, wenn der Nutzer dies wünscht (Newsletter Opt-in-Verfahren).</p>
-			</li>
-			<li>
-				<h4>Social-Media Content</h4>
-				<p>RethinkResource kann auf seiner Webseite Social Media Plugins, z.B. von Facebook, Google+ oder Twitter verwenden. Diese Plattformen haben eigene Datenschutzregelungen, auf welche RethinkResource keinen Einfluss hat.</p>
-				<p>Wünscht der Nutzer, dass keine dieser Plugins geladen werden, wird empfohlen, sich vom entsprechenden Social-Media-Dienst auszuloggen. Des Weiteren können verschiedene Browser so eingestellt oder mit Add-Ons (z.B. Facebook-Blocker) ergänzt werden, dass die Social-Media-Plugins nicht geladen werden.</p>
-			</li>
-			<li>
-				<h4>Weitergabe Ihrer Daten</h4>
-				<p>RethinkResource sowie allfällige Tochter- und Zweiggesellschaften in der Unternehmensgruppe können personenbezogenen Daten gemäss diesen Datenschutzbestimmungen nutzen. Darüber hinaus werden die personenbezogenen Daten gegenüber Dritten nicht offenlegen.</p>
-				<p>Ausgenommen davon ist, wenn der Nutzer der Weitergabe der Daten an Unternehmen, die nicht mit RethinkResource verbunden sind, zugestimmt hat oder wenn RethinkResource hierzu gesetzlich, behördlich oder gerichtlich verpflichtet wird. Ausserdem wenn Dienstleister, welche RethinkResource in der Datenverarbeitung, der Verwaltung der Webseite oder auf sonstige Weise sowie bei der Erbringung der vom Nutzer angeforderten Produkte und Dienstleistungen unterstützen, beigezogen werden. Diese Dritten werden verpflichtet, das gleiche Mass an Sicherheit und Datenschutz einzuhalten, wie RethinkResource.</p>
-			</li>
-			<li>
-				<h4>Datensicherheit</h4>
-				<p>Die Übermittlung von Daten über das Internet ist leider nicht absolut sicher. RethinkResource arbeitet mit Dienstleistern und Internetanbietern zusammen, welche angemessene technische und organisatorische Sicherheitsvorkehrungen treffen, um die personenbezogenen Daten der Nutzer zu schützen. RethinkResource kann jedoch keine Garantie für die Sicherheit der vom Nutzer übermittelten Daten übernehmen. Jede Datenübertragung erfolgt daher auf eigenes Risiko.</p>
-			</li>
-			<li>
-				<h4>Ihre Informations- und Widerrufsrechte</h4>
-				<p>Selbstverständlich steht es jedem Nutzer frei, RethinkResource jederzeit – beispielsweise in einer E-Mail – mitzuteilen, dass die personenbezogenen Daten zukünftig nicht zur Kontaktaufnahme verwendet werden sollen. Auch die Teilnahme an den besonderen Services der RethinkResource-Webseite, wie dem Newsletter-Service, kann jederzeit widerrufen werden.</p>
-				<p>Zusätzlich besteht die Möglichkeit, Informationen zur Verarbeitung der Daten einzuholen oder eine Kopie der personenbezogenen Daten, welche über die RethinkResource-Webseite erhoben wurden, zu verlangen. Entsprechende Anfragen sind bitte schriftlich an RethinkResource GmbH (Technoparkstrasse 1, CH-8005 Zürich) oder info@rethink-resource.com zu richten.</p>
-			</li>
-			<li>
-				<h4>Schlussbestimmungen</h4>
-				<p>Sollten sich einzelne Bestimmungen oder Teile dieser Datenschutzbestimmungen als nichtig oder unwirksam erweisen, so wird dadurch die Gültigkeit der Datenschutzbestimmungen im Übrigen nicht berührt.</p>
-				<p>Der Gerichtsstand ist Zürich und das anwendbare Recht Schweizer Recht.</p>
-				<p>(Version 26. Februar 2014)</p>
-			</li>
-			</div>
-		</div>
-		<img src="img/sweet-ice-cream-photography-258300_bad.jpg" alt="RethinkResource Circle" class="width-is-100" id="closing-image"/>
-	</div>
-</div>
-
-<!--input type="checkbox" name="disccb2" id="dsccb2" class="hidden"/-->
-
-<div class="gallery shift-footer">
-	<ul class="thumbnail tntext">
-    	<h3 class="stats"><a href="index.html" style="text-decoration: none; color: inherit;">RethinkResource</a></h3>
-    	<p><a href="about.html#press-headline" style="text-decoration: none; color: inherit;">Press</a></p>
-		<p style="text-decoration: none;">Jobs</p>
-		<p style="text-decoration: none;">Downloads</p>
-		<label for="dsccb1" class="clicklink" id="clicklink1" style="text-decoration: none;">Disclaimer</label>
-	</ul>
-    <ul class="thumbnail tntext">
-	    <h3 class="stats"><a href="about.html" style="text-decoration: none; color: inherit;">About Us</a></h3>
-		<p><a href="about.html#team-headline" style="text-decoration: none; color: inherit;">Team</a></p>
-		<p><a href="about.html#values-headline" style="text-decoration: none; color: inherit;">Values</a></p>
-		<p><a href="about.html#partners-headline" style="text-decoration: none; color: inherit;">Friends</a></p>
-		<p><a href="about.html#testemonials" style="text-decoration: none; color: inherit;">Testemonials</a></p>
-    </ul>
-    <ul class="thumbnail tntext">
-    	<h3 class="stats">Social Media</h3>
-    	<p>Blag</p>
-		<p><a href="https://www.linkedin.com/company/rethink-resource" style="text-decoration: none; color: inherit;">LinkedIn</a></p>
-		<p><a href="https://twitter.com/rethinkcircular" style="text-decoration: none; color: inherit;">Twitter</a></p>
-		<p><a href="https://www.facebook.com/RethinkResource/" style="text-decoration: none; color: inherit;">Facebook</a></p>
-    </ul>
-	<ul class="thumbnail tnright">
-		<img class="logofoot" src="img/ReRe_Logo_RGB_white.png" alt="image"/>
-    	<h3 class="stats">&copy; RethinkResource GmbH</h3>
-    	<p><a href="https://www.google.ch/maps/place/Technopark,+Technoparkstrasse+1,+8005+Z%C3%BCrich/@47.3901905,8.5136578,17z/data=!3m1!4b1!4m5!3m4!1s0x47900a473dddd8e3:0xed9948c1f7b2b01a!8m2!3d47.3901869!4d8.5158465" style="text-decoration: none; color: inherit;">Technoparkstrasse 1</a></p>
-		<p><a href="https://www.google.ch/maps/place/Technopark,+Technoparkstrasse+1,+8005+Z%C3%BCrich/@47.3901905,8.5136578,17z/data=!3m1!4b1!4m5!3m4!1s0x47900a473dddd8e3:0xed9948c1f7b2b01a!8m2!3d47.3901869!4d8.5158465" style="text-decoration: none; color: inherit;">CH-8005 Zürich</a></p>
-		<p class="phonumber">+41 79 726 35 00</p>
-		<p class="infomail"><a href="mailto:info@rethink-resource.com" style="text-decoration: none; color: inherit;">info@rethink-resource.com</a></p>
-    </ul>
-</div>
-
-</div>
-
 </body>
+
 </html>
