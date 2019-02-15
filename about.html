@@ -30,12 +30,15 @@ function OnScrollDiv () {
     var group12height = ((3920 + ww / 10) / ww * 100).toFixed(2);
 
     if (828 <= ww && ww < 1245) {
-    	group4height = ((2240 + ww / 10) / ww * 100).toFixed(2);
+    	group4height = ((2800 + ww / 10) / ww * 100).toFixed(2);
     	group6height = ((1120 + ww / 10) / ww * 100).toFixed(2);
     } else if (1245 <= ww && ww < 1661) {
     	group4height = ((1680 + ww / 10) / ww * 100).toFixed(2);
     	group6height = ((1120 + ww / 10) / ww * 100).toFixed(2);
-    } else if (1661 <= ww) {
+    } else if (1661 <= ww && ww < 2077) {
+    	group4height = ((1680 + ww / 10) / ww * 100).toFixed(2);
+    	group6height = ((560 + ww / 10) / ww * 100).toFixed(2);
+    } else if (2077 <= ww) {
     	group4height = ((1120 + ww / 10) / ww * 100).toFixed(2);
     	group6height = ((560 + ww / 10) / ww * 100).toFixed(2);
     }
@@ -98,7 +101,7 @@ function OnScrollDiv () {
 			partnersImage.classList.add("hidden")
 		}
 
-		if (RSH >= 45 && RSH - group4height < 130 && !(RSH >= 102 && RSH < 125) || (RSH -group4height >= 158 && RSH - group4height - group6height < 160) || (RSH - group4height - group6height >= 185 && RSH - group4height - group6height < 238) || (RSH - group4height - group6height >= 265 && RSH - group4height - group6height < 335) || (RSH - group4height - group6height >= 368 && RSH - group4height - group6height - group12height < 367)) {
+		if (RSH >= 45 && RSH - group4height < 130 && !(RSH >= 90 && RSH < 125) || (RSH -group4height >= 158 && RSH - group4height - group6height < 160) || (RSH - group4height - group6height >= 185 && RSH - group4height - group6height < 238) || (RSH - group4height - group6height >= 265 && RSH - group4height - group6height < 335) || (RSH - group4height - group6height >= 368 && RSH - group4height - group6height - group12height < 367)) {
 			for (var i = 0; i < navbarelements.length; i++) {
 				navbarelements[i].classList.add("black-navbar");
 			}
@@ -384,7 +387,7 @@ requestAnimationFrame(OnScrollDiv);
 				<div class="personalstats">
 					<p class="tinydescription">Technology Scouting</p>
 					<div class="statsbar">
-						<div class="skilllvl" currentlvl="60"></div>
+						<div class="skilllvl" currentlvl="70"></div>
 					</div>
 				</div>
 				<div class="personalstats">
@@ -466,7 +469,45 @@ requestAnimationFrame(OnScrollDiv);
 				<div class="personalstats">
 					<p class="tinydescription">Networking</p>
 					<div class="statsbar">
-						<div class="skilllvl" currentlvl="100"></div>
+						<div class="skilllvl" currentlvl="90"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card background-is-white-ish">
+				<div class="circontain">
+					<div class="cutoutcircle"></div>
+				</div>
+				<div class="contains-image image">
+					<img class="width-is-full" src="img/Claudia.jpg" alt="limage">
+				</div>
+				<div class="personalhead">
+					<p class="personalname">Claudia Pöpperl</p>
+					<!--p class="titleline"></p-->
+					<h3 class="personaltitlelong">Business Development Manager</h3>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Business Acumen</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="80"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Business Modelling</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="80"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Connecting Dots &amp; People</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="90"></div>
+					</div>
+				</div>
+				<div class="personalstats">
+					<p class="tinydescription">Listening</p>
+					<div class="statsbar">
+						<div class="skilllvl" currentlvl="70"></div>
 					</div>
 				</div>
 			</div>
