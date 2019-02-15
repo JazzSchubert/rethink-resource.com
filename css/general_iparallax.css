@@ -96,7 +96,7 @@
 }
 #groupa4{
     z-index: 5;
-    height: calc(4510px + 10vw);
+    height: calc(5070px + 10vw);
 }
 #groupa6{
     z-index: 5;
@@ -141,7 +141,7 @@
 }
 @media (min-width: 828px) {
   #groupa4{
-    height: calc(2240px + 10vw);
+    height: calc(2800px + 10vw);
   }
   #groupa6{
     height: calc(1120px + 10vw);
@@ -185,10 +185,12 @@
   }
 }
 @media (min-width: 1661px) {
-  #groupa4{
-    height: calc(1120px + 10vw);
-  }
   #groupa6{
     height: calc(560px + 10vw);
+  }
+}
+@media (min-width: 2077px) {
+  #groupa4{
+    height: calc(1120px + 10vw);
   }
 }

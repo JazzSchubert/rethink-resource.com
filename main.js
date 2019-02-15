@@ -6600,7 +6600,7 @@ var elm$http$Http$get = function (r) {
 var author$project$ReReBlog$Model$getBlogIndex = elm$http$Http$get(
 	{
 		expect: A2(elm$http$Http$expectJson, author$project$ReReBlog$Msg$GotIndex, author$project$ReReBlog$Model$decodeIndex),
-		url: 'https://blog.rethink-resource.com/assets/blogIndex.txt'
+		url: 'https://staging.rethink-resource.com/assets/blogIndex.txt'
 	});
 var elm$core$Platform$Cmd$batch = _Platform_batch;
 var author$project$ReReBlog$Model$init = F3(
@@ -6767,7 +6767,7 @@ var author$project$ReReBlog$Model$getBlogPost = function (postPath) {
 	return elm$http$Http$get(
 		{
 			expect: A2(elm$http$Http$expectJson, author$project$ReReBlog$Msg$GotBlogPost, author$project$ReReBlog$Model$decodeBlogPost),
-			url: 'https://blog.rethink-resource.com/assets/' + postPath
+			url: 'https://staging.rethink-resource.com/assets/' + postPath
 		});
 };
 var elm$core$Maybe$destruct = F3(
